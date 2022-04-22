@@ -1,0 +1,48 @@
+@import '../../../styles/var';
+
+.btn {
+  background-color: $primary;
+  color: $white;
+  @include regular-18;
+  white-space: nowrap;
+  border-radius: 6px;
+  max-width: 323px;
+  width: 100%;
+  padding: 14px 15px 16px 15px;
+}
+
+.btnArrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &::after {
+    content: '';
+    display: block;
+    background-image: url(../../../../public/icons/arrow.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 18px;
+    height: 12px;
+    margin-top: 3px;
+    margin-left: 14px;
+  }
+}
+
+.btnText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background-color: transparent;
+  color: $primary;
+  width: auto;
+  &::before {
+    content: '';
+    display: block;
+    width: 28px;
+    height: 1px;
+    background-color: $primary;
+    margin-top: 3px;
+    margin-right: 13px;
+  }
+}

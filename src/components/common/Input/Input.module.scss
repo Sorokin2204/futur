@@ -1,0 +1,22 @@
+@import '../../../styles/var';
+
+.input {
+  @include regular-16;
+  padding: 20px;
+  width: 100%;
+  background-color: $white;
+  border: 1px solid $light-grey;
+  border-radius: 4px;
+  font-family: inherit;
+  &::placeholder {
+    @include regular-16;
+    color: $light-grey;
+  }
+}
+.inputLabel {
+}
+
+.inputTextLabel {
+  @include semibold-16;
+  margin-bottom: 6px;
+}

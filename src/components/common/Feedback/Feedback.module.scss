@@ -1,0 +1,63 @@
+@import '../../../styles/var';
+
+.feedback {
+  overflow: hidden;
+  background-color: $bg-light;
+  padding: 144px 0 122px;
+}
+.container {
+}
+.feedbackInner {
+  position: relative;
+}
+.feedbackContent {
+  max-width: 660px;
+}
+.feedbackTitle {
+  margin-bottom: 40px;
+}
+.feedbackText {
+  @include regular-18;
+  max-width: 550px;
+  margin-bottom: 28px;
+}
+.feedbackInput {
+  &:first-child {
+    margin-right: 20px;
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+  &:last-child {
+    grid-row: 1/2;
+    grid-column: 2/3;
+  }
+}
+.feedbackCheckbox {
+  grid-row: 2/3;
+  grid-column: 1/2;
+  margin-bottom: 28px;
+  margin-top: 24px;
+}
+.feedbackSubmit {
+  grid-row: 3/4;
+  grid-column: 1/2;
+  margin-bottom: 12px;
+}
+.feedbackTextAccept {
+  color: $mid-grey;
+  max-width: 550px;
+  @include regular-16;
+}
+.feedbackPlan {
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  bottom: -338px;
+  right: -336px;
+  width: 749px;
+  height: 743px;
+}
+.feedbackForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}

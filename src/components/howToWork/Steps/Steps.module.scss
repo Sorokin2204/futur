@@ -1,0 +1,39 @@
+@import '../../../styles/var';
+.steps {
+  padding: 120px 0 100px;
+}
+.container {
+}
+.stepsInner {
+}
+.stepsTitle {
+  margin-bottom: 60px;
+}
+.stepsList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 77px;
+  row-gap: 133px;
+}
+.stepsItem {
+  position: relative;
+  &::after {
+    content: attr(data-counter);
+    display: block;
+    @include semibold-200;
+    color: $light;
+    opacity: 0.08;
+    position: absolute;
+    right: 10px;
+    top: -52px;
+    width: 230px;
+  }
+  max-height: 155px;
+}
+.stepsName {
+  @include semibold-26;
+  margin-bottom: 24px;
+}
+.stepsText {
+  @include regular-18;
+}

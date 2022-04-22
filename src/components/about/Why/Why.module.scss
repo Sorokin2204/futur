@@ -1,0 +1,36 @@
+@import '../../../styles/var';
+
+.why {
+  padding: 134px 0 119px;
+  background-color: $bg-light;
+}
+.container {
+}
+.whyInner {
+}
+.whyTitle {
+  margin-bottom: 70px;
+}
+.whyList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 30px;
+}
+.whyItem {
+  padding: 30px 30px 43px 20px;
+  background-color: $white;
+  border-radius: 4px;
+  filter: drop-shadow(0px 4px 14px rgba(221, 221, 221, 0.42));
+}
+.whyItemIcon {
+  width: 46px;
+  height: 46px;
+  margin-bottom: 24px;
+}
+.whyItemTitle {
+  @include semibold-22;
+  margin-bottom: 20px;
+}
+.whyItemText {
+  @include regular-18;
+}

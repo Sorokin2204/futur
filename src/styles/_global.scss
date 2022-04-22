@@ -1,0 +1,98 @@
+body {
+  font-family: $font-family;
+  color: $black;
+  @include regular-18;
+}
+
+a {
+  color: $primary;
+}
+
+* {
+  box-sizing: border-box !important;
+}
+
+a,
+button,
+img,
+input,
+label,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  display: block;
+}
+
+.container {
+  max-width: 1308px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.container-fluid {
+}
+// CLASS COMPONENTS
+.swiper-home-reviews-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  height: 12px;
+  & .swiper-pagination-bullet {
+    flex-shrink: 1;
+    opacity: 1 !important;
+    display: block !important;
+    width: 9px !important;
+    height: 9px !important;
+    min-width: 9px !important;
+    min-height: 9px !important;
+    max-width: 9px !important;
+    max-height: 9px !important;
+    margin: 0px !important;
+    margin: 0px 8px !important;
+    background-color: #ddecee;
+  }
+
+  & .swiper-pagination-bullet-active {
+    background-color: $primary;
+  }
+
+  & > * {
+    flex: 0 0;
+  }
+}
+
+.swiper-home-reviews-button-prev,
+.swiper-home-reviews-button-next {
+  background-color: $primary;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  &.swiper-button-disabled {
+    background-color: #e5e5e5;
+  }
+  position: relative;
+  &::after {
+    content: '';
+    display: block;
+    width: 9px;
+    height: 16px;
+    background-image: url('../../public/icons/chevron.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 50%;
+    right: 28%;
+    transform: translate(-50%, -50%);
+  }
+}
+.swiper-home-reviews-button-prev {
+  margin-right: 20px;
+  &::after {
+    right: 34%;
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+}

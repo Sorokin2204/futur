@@ -1,0 +1,33 @@
+@import '../../../styles/var';
+
+.header {
+  padding: 25px 0;
+}
+
+.container {
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.logo {
+  margin-right: 64px;
+}
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menuItem {
+  & + & {
+    margin-left: 38px;
+  }
+}
+.menuLink {
+  white-space: nowrap;
+  text-decoration: none;
+  color: $black;
+  @include regular-18;
+}

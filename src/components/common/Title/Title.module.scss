@@ -1,0 +1,17 @@
+@import '../../../styles/var';
+
+.title {
+  @include semibold-48;
+  position: relative;
+  &::after {
+    content: attr(data-title);
+    white-space: nowrap;
+    position: absolute;
+    top: -154%;
+    left: 0;
+    display: block;
+    @include bold-120;
+    color: $black;
+    opacity: 0.04;
+  }
+}

@@ -1,0 +1,50 @@
+@import '../../styles/var';
+
+.faq {
+  padding: 36px 0 190px;
+}
+.container {
+}
+.faqInner {
+  display: grid;
+  grid-template-columns: 275px 1fr;
+  column-gap: 166px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.faqImg {
+  width: 400px;
+  height: 480px;
+  object-fit: contain;
+  max-width: 400px;
+  position: absolute;
+  top: 220px;
+  left: -86px;
+}
+.faqTitle {
+  display: block;
+  grid-column: 1/3;
+  grid-row: 1/2;
+  justify-self: flex-start;
+  @include semibold-38;
+  margin-bottom: 30px;
+  &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: $primary;
+    margin-top: 4px;
+  }
+}
+.faqCaption {
+  @include regular-18;
+  color: $dark-grey;
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.faqQuestionList {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}

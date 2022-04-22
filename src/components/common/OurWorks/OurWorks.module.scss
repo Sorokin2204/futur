@@ -1,0 +1,26 @@
+@import '../../../styles/var';
+.ourWorks {
+  background-color: $bg-light;
+  padding: 144px 0 100px;
+}
+.ourWorksAboutPage {
+  background-color: $white;
+}
+.container {
+}
+.ourWorksInner {
+}
+.ourWorksTitle {
+  margin-bottom: 60px;
+}
+.ourWorksList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 76px;
+  row-gap: 80px;
+}
+.ourWorksItem {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}

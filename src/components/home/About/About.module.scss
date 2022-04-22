@@ -1,0 +1,72 @@
+@import '../../../styles/var';
+.about {
+  overflow: hidden;
+  padding: 144px 0 100px;
+  background-color: $bg-light;
+}
+
+.aboutPage {
+  padding: 120px 0;
+  background-color: $white;
+}
+
+.container {
+}
+.aboutInner {
+  position: relative;
+  display: grid;
+  grid-template-columns: 554px 486px;
+  justify-content: space-between;
+}
+.aboutContent {
+}
+.aboutTitle {
+  margin-bottom: 40px;
+}
+
+.aboutPlan {
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: -449px;
+  right: -361px;
+  width: 696px;
+  height: 731px;
+}
+
+.aboutPlanThree {
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: -595px;
+  right: -395px;
+  width: 749px;
+  height: 743px;
+}
+.aboutText {
+  @include regular-18;
+  span {
+    font-weight: 600;
+  }
+}
+.aboutBtn {
+  margin-top: 62px;
+  justify-self: flex-start;
+}
+.aboutList {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  align-self: flex-end;
+}
+.aboutItem {
+}
+.aboutNumber {
+  display: block;
+  @include regular-74;
+  margin-bottom: 12px;
+}
+.aboutNumberText {
+  display: block;
+  @include regular-18;
+}

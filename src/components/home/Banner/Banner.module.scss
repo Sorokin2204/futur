@@ -1,0 +1,46 @@
+@import '../../../styles/var';
+
+.banner {
+  overflow: hidden;
+  position: relative;
+  padding: 138px 0 196px;
+}
+
+.plan {
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: -527px;
+  left: -316px;
+  width: 696px;
+  height: 731px;
+}
+.container {
+}
+.inner {
+  position: relative;
+  display: grid;
+  grid-template-columns: 490px auto;
+}
+.bannerCol {
+}
+.bannerTitle {
+  @include bold-54;
+  margin-bottom: 22px;
+}
+.bannerText {
+  display: block;
+  color: $dark-grey;
+  @include regular-18;
+  margin-bottom: 102px;
+}
+.bannerBtn {
+}
+.bannerImgBox {
+  position: absolute;
+  top: 40px;
+  right: 0;
+}
+.bannerImg {
+  width: 56vw;
+}

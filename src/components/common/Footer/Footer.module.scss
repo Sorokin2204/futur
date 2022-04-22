@@ -1,0 +1,71 @@
+@import '../../../styles/var';
+.footer {
+  background: #063a42;
+}
+.container {
+}
+.footerInner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 60px 0 84px;
+}
+.footerLogo {
+  margin-right: 84px;
+}
+.footerMenu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footerMenuItem {
+  & + & {
+    margin-left: 38px;
+  }
+}
+.footerMenuLink {
+  @include regular-18;
+  text-decoration: none;
+  color: $white;
+}
+.footerSocial {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+.footerSocialItem {
+  width: 44px;
+  height: 44px;
+  & + & {
+    margin-left: 8px;
+  }
+}
+.footerSocialLink {
+  background: #084c56;
+  border-radius: 50%;
+  height: 44px;
+  position: relative;
+}
+.footerSocialIcon {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 22px;
+  max-height: 22px;
+}
+.footerBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 50px;
+}
+.footerRights {
+  color: $primary;
+}
+.footerPolicy {
+  text-decoration: none;
+}

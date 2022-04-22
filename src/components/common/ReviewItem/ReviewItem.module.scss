@@ -1,0 +1,61 @@
+@import '../../../styles/var';
+
+.reviewItem {
+  display: grid;
+  grid-template-columns: 41% 1fr;
+  column-gap: 34px;
+  max-width: 578px;
+}
+.reviewImgBox {
+  position: relative;
+  &:hover {
+    &::after {
+      transform: translate(-50%, -50%) scale(1.3);
+    }
+  }
+  &::after {
+    content: '';
+    transition: transform 0.3s;
+    display: block;
+    background-image: url('../../../../public/icons/play.svg');
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.reviewImg {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+.reviewContent {
+}
+.reviewRoom {
+  @include regular-18;
+  color: rgba(88, 88, 88, 0.5);
+  margin-bottom: 12px;
+}
+.reviewText {
+  margin-bottom: 34px;
+}
+.reviewName {
+  margin-bottom: 8px;
+}
+.reviewAddress {
+  display: flex;
+  align-items: center;
+  color: $dark-grey;
+  &::before {
+    content: '';
+    display: block;
+    background-image: url('../../../../public/icons/location.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 16px;
+    height: 20px;
+    margin-right: 14px;
+  }
+}

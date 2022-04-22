@@ -1,0 +1,14 @@
+.reviews {
+  padding: 120px 0;
+}
+.reviewsTitle {
+  margin-bottom: 50px;
+}
+.container {
+}
+.reviewsList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 108px;
+  row-gap: 80px;
+}

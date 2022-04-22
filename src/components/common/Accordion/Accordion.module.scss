@@ -1,0 +1,41 @@
+@import '../../../styles/var';
+
+.accordion {
+  & + & {
+    .accordionHead {
+      padding-top: 40px;
+    }
+    border-top: 1px solid #d9dbe9;
+  }
+}
+
+.accordionActive {
+  .accordionHead {
+    color: $primary;
+    padding-bottom: 14px;
+  }
+  .accordionContent {
+    transition: all 0.5s;
+    display: block;
+    overflow: visible;
+    opacity: 1;
+    overflow: hidden;
+  }
+}
+.accordionHead {
+  transition: all 0.5s;
+  user-select: none;
+  padding-bottom: 40px;
+  @include semibold-22;
+  &:after {
+    content: '';
+    display: block;
+  }
+}
+.accordionContent {
+  transition: all 0.5s;
+  @include regular-18;
+  overflow: hidden;
+  opacity: 0;
+  padding-bottom: 40px;
+}
