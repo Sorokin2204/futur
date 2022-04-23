@@ -5,8 +5,7 @@ const Input = (props) => {
   return (
     <>
       <label className={clsx(styles.inputLabel, props.className)}>
-        <span className={clsx(styles.inputTextLabel)}>{props.label}</span>
-        <input placeholder={props.placeholder} className={clsx(styles.input)} />
+        <input placeholder={props.placeholder} className={clsx(styles.input)} /> <span className={clsx(styles.inputTextLabel)}>{props.label}</span>
       </label>
     </>
   );

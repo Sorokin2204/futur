@@ -1,5 +1,6 @@
 @import '../../../styles/var';
 .footer {
+  flex: none;
   background: #063a42;
 }
 .container {
@@ -25,6 +26,7 @@
   }
 }
 .footerMenuLink {
+  white-space: nowrap;
   @include regular-18;
   text-decoration: none;
   color: $white;

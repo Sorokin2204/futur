@@ -1,0 +1,29 @@
+@import '../../../styles/var';
+
+.packageList {
+  padding: 120px 0 140px;
+}
+.packageTitle {
+  margin-bottom: 40px;
+}
+.container {
+}
+.packageListFilter {
+  margin-bottom: 43px;
+}
+.packageListGroup {
+}
+.packageListGroupTitle {
+  @include semibold-32;
+  margin-bottom: 28px;
+}
+.packageListGroupList {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-gap: 34px;
+}
+.packageListGroupItem {
+  & + & {
+    margin-top: 60px;
+  }
+}

@@ -1,0 +1,21 @@
+@import '../../../styles/var';
+
+.filterButton {
+  @include semibold-20;
+  font-family: inherit;
+  padding: 11px 44px 15px 44px;
+  border: 1px solid $light-grey;
+  border-radius: 32px;
+  color: $light-grey;
+}
+
+.filterItem {
+  & + & {
+    margin-left: 12px;
+  }
+}
+
+.filterActive {
+  color: $primary;
+  border-color: $primary;
+}

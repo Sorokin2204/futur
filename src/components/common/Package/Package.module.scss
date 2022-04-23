@@ -1,0 +1,54 @@
+@import '../../../styles/var';
+
+.package {
+  overflow: hidden;
+  max-width: 400px;
+  box-shadow: 0px 4px 14px rgba(221, 221, 221, 0.42);
+  border-radius: 8px;
+}
+.packageImg {
+  width: 100%;
+  height: auto;
+  max-height: 262px;
+}
+.packageContent {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  padding: 12px 14px 17px 14px;
+}
+.packageName {
+  white-space: nowrap;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  @include semibold-22;
+}
+.packagePrice {
+  display: flex;
+  align-items: center;
+  justify-self: flex-end;
+  grid-column: 2/3;
+  grid-row: 1/2;
+  @include semibold-20;
+  color: $primary;
+  span {
+    color: $mid-grey;
+    @include regular-20;
+    margin-left: 4px;
+  }
+}
+.packageList {
+  margin-top: 14px;
+  grid-column: 1/3;
+  grid-row: 2/3;
+}
+.packageItem {
+  & + & {
+    margin-top: 18px;
+  }
+}
+.packageLabel {
+  color: $mid-grey;
+  margin-bottom: 3px;
+}
+.packageValue {
+}

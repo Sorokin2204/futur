@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
   return (
     <>
-      <section className={clsx(styles.footer)}>
+      <footer className={clsx(styles.footer)}>
         <div className={clsx(styles.container, 'container')}>
           <div className={clsx(styles.footerInner)}>
             <img src={common.logoFoooter} alt="" className={clsx(styles.footerLogo)} />
@@ -38,7 +38,7 @@ const Footer = () => {
             </a>
           </div>
         </div>
-      </section>
+      </footer>
     </>
   );
 };

@@ -7,6 +7,7 @@
     content: attr(data-title);
     white-space: nowrap;
     position: absolute;
+    pointer-events: none;
     top: -154%;
     left: 0;
     display: block;

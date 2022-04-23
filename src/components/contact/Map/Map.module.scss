@@ -1,0 +1,39 @@
+@import '../../../styles/var';
+.map {
+  padding-top: 120px;
+}
+.container {
+}
+.mapInner {
+}
+.mapTitle {
+  margin-bottom: 50px;
+}
+.mapContent {
+  padding: 184px 0 88px;
+}
+
+.mapBox {
+  background-image: url('../../../../public/img/map.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+.mapContact {
+  max-width: 506px;
+  background-color: $white;
+  padding: 40px 44px 40px 40px;
+}
+.mapAddress {
+}
+.mapList {
+}
+.mapItem {
+  margin-top: 20px;
+}
+.mapItemTitle {
+}
+.mapEmail {
+}
+.mapPhone {
+}

@@ -1,6 +1,7 @@
 @import '../../../styles/var';
 
 .btn {
+  transition: background-color 0.3s;
   background-color: $primary;
   color: $white;
   @include regular-18;
@@ -9,12 +10,19 @@
   max-width: 323px;
   width: 100%;
   padding: 14px 15px 16px 15px;
+  &:hover {
+    background: #00a0b7;
+  }
+  &:active {
+    background: #0f8091;
+  }
 }
 
 .btnArrow {
   display: flex;
   align-items: center;
   justify-content: center;
+
   &::after {
     content: '';
     display: block;
@@ -36,6 +44,15 @@
   background-color: transparent;
   color: $primary;
   width: auto;
+  &:hover {
+    background: transparent;
+    &::before {
+      width: 13px;
+    }
+  }
+  &:active {
+    background: transparent;
+  }
   &::before {
     content: '';
     display: block;
@@ -44,5 +61,6 @@
     background-color: $primary;
     margin-top: 3px;
     margin-right: 13px;
+    transition: width 0.3s;
   }
 }

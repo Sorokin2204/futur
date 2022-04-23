@@ -1,5 +1,7 @@
 @import '../../../styles/var';
-
+.feedbackLight {
+  background-color: $white !important;
+}
 .feedback {
   overflow: hidden;
   background-color: $bg-light;

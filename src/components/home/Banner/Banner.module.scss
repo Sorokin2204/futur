@@ -3,7 +3,7 @@
 .banner {
   overflow: hidden;
   position: relative;
-  padding: 138px 0 196px;
+  padding: 40px 0 52px;
 }
 
 .plan {
@@ -20,6 +20,7 @@
 .inner {
   position: relative;
   display: grid;
+  grid-gap: 57px;
   grid-template-columns: 490px auto;
 }
 .bannerCol {
@@ -37,10 +38,14 @@
 .bannerBtn {
 }
 .bannerImgBox {
-  position: absolute;
-  top: 40px;
-  right: 0;
+  // height: 100%;
 }
 .bannerImg {
-  width: 56vw;
+  // position: absolute;
+  // top: -70px;
+  // transform: translateX(11%);
+  // right: 0;
+  // width: 63vw;
+  // width: 56vw;
+  // height: auto;
 }

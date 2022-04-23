@@ -2,17 +2,22 @@
 
 .constructor {
   position: relative;
-  padding: 124px 0 185px;
 }
 .container {
 }
 .constructorInner {
   display: grid;
-  grid-template-columns: 485px 1fr;
+  grid-template-columns: 485px minmax(auto, 857px);
+  grid-gap: 42px;
 }
 .constructorContent {
+  // padding: 124px 0 185px;
 }
 .constructorTitle {
+  &:after {
+    z-index: -1;
+  }
+  margin-top: 124px;
   margin-bottom: 40px;
 }
 .contsturctorText {
@@ -21,13 +26,16 @@
 .consturctorBtn {
 }
 .constructorImgBox {
-  width: 57.43vw;
-  position: absolute;
-  top: 0;
-  right: 0;
+  // width: 57.43vw;
+  // position: absolute;
+  // top: 0;
+  // right: 0;
 }
 .constructorImg {
-  width: 100%;
   height: auto;
-  max-height: 660px;
+  width: 100%;
+  transform: translateX(20px);
+  // width: 100%;
+  // height: auto;
+  // max-height: 660px;
 }

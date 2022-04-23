@@ -15,11 +15,11 @@ const HomeBanner = () => {
             <Button className={clsx(styles.bannerBtn)} arrow>
               {banner.btnText}
             </Button>
+          </div>{' '}
+          <div className={clsx(styles.bannerImgBox)}>
+            <img src={banner.img} alt="" className={clsx(styles.bannerImg)} />
           </div>
         </div>{' '}
-        <div className={clsx(styles.bannerImgBox)}>
-          <img src={banner.img} alt="" className={clsx(styles.bannerImg)} />
-        </div>
       </div>
     </div>
   );

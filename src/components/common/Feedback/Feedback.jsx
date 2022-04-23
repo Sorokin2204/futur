@@ -7,10 +7,10 @@ import Button from '../Button/Button';
 import Input from '../Input/Input';
 import Checkbox from '../Checkbox/Checkbox';
 import { common } from '../../../data/common';
-const Feedback = () => {
+const Feedback = ({ light }) => {
   return (
     <>
-      <section className={clsx(styles.feedback)}>
+      <section className={clsx(styles.feedback, light && styles.feedbackLight)}>
         <div className={clsx(styles.container, 'container')}>
           <div className={clsx(styles.feedbackInner)}>
             <div className={clsx(styles.feedbackPlan)} style={{ backgroundImage: `url(${common.planImgTwo})` }}></div>

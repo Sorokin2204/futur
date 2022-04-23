@@ -28,9 +28,9 @@ const HomeReviews = () => {
               <Swiper
                 className="swiper-home-reviews"
                 ref={swiperRef}
-                modules={[Navigation, Pagination]}
                 spaceBetween={108}
                 slidesPerView={2}
+                modules={[Navigation, Pagination]}
                 navigation={{
                   nextEl: '.swiper-home-reviews-button-next',
                   prevEl: '.swiper-home-reviews-button-prev',

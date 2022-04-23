@@ -15,6 +15,10 @@ $screen-max: 1268;
   @include fluid-type(400, 14, 17, $screen-max, $screen-max);
 }
 
+@mixin regular-20 {
+  @include fluid-type(400, 20, 24, $screen-max, $screen-max);
+}
+
 @mixin regular-16 {
   @include fluid-type(400, 16, 22, $screen-max, $screen-max);
 }
@@ -35,6 +39,14 @@ $screen-max: 1268;
   @include fluid-type(600, 26, 35, $screen-max, $screen-max);
 }
 
+@mixin semibold-32 {
+  @include fluid-type(600, 32, 39, $screen-max, $screen-max);
+}
+
+@mixin semibold-20 {
+  @include fluid-type(600, 20, 24, $screen-max, $screen-max);
+}
+
 @mixin regular-18 {
   @include fluid-type(400, 18, 22, $screen-max, $screen-max);
 }
@@ -53,6 +65,14 @@ $screen-max: 1268;
 
 @mixin bold-54 {
   @include fluid-type(700, 54, 67, $screen-max, $screen-max);
+}
+
+@mixin bold-16 {
+  @include fluid-type(700, 16, 19, $screen-max, $screen-max);
+}
+
+@mixin bold-32 {
+  @include fluid-type(700, 32, 43, $screen-max, $screen-max);
 }
 
 @mixin bold-26 {

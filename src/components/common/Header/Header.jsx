@@ -3,7 +3,7 @@ import React from 'react';
 import { common } from '../../../data/common';
 import '../../../styles/index.scss';
 import styles from './Header.module.scss';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -18,9 +18,9 @@ const Header = () => {
             <ul className={clsx(styles.menu)}>
               {common.menu.map((menuItem) => (
                 <li className={clsx(styles.menuItem)}>
-                  <Link to={menuItem.path} className={clsx(styles.menuLink)}>
+                  <NavLink to={menuItem.path} className={({ isActive }) => (isActive ? clsx(styles.menuLink, styles.menuLinkActive) : clsx(styles.menuLink))}>
                     {menuItem.page}
-                  </Link>
+                  </NavLink>
                 </li>
               ))}
             </ul>

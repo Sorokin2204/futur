@@ -1,0 +1,23 @@
+@import '../../styles/var';
+
+.workSingle {
+  padding: 28px 0 140px;
+}
+.container {
+}
+.workSingleTitle {
+  @include bold-32;
+  margin-bottom: 22px;
+}
+.workSingleText {
+  max-width: 610px;
+  margin-bottom: 40px;
+}
+.workSingleSwiper {
+  position: relative;
+  width: 100%;
+}
+.workSingleImg {
+  // width: 100%;
+  // height: auto;
+}

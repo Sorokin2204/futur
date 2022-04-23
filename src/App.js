@@ -4,6 +4,9 @@ import AboutPage from './pages/About';
 import HowItWorkPage from './pages/HowItWork';
 import FaqPage from './pages/Faq';
 import ReviewsPage from './pages/Reviews';
+import ContactPage from './pages/Contact';
+import PackagesPage from './pages/Packages';
+import WorkSinglePage from './pages/WorkSingle';
 function App() {
   let routes = useRoutes([
     { path: '/', element: <HomePage /> },
@@ -11,6 +14,9 @@ function App() {
     { path: '/how-it-work', element: <HowItWorkPage /> },
     { path: '/faq', element: <FaqPage /> },
     { path: '/reviews', element: <ReviewsPage /> },
+    { path: '/contacts', element: <ContactPage /> },
+    { path: '/packages', element: <PackagesPage /> },
+    { path: '/works/:id', element: <WorkSinglePage /> },
   ]);
   return routes;
 }
