@@ -1,0 +1,23 @@
+@import '../../../styles/var';
+.select {
+  @include regular-16;
+  padding: 18px;
+  border: 1px solid $light-grey;
+  color: $light-grey;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &::after {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 14px;
+    mask-image: url(../../../../public/icons/chevron.svg);
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    background-color: $grey;
+    transform: rotate(90deg);
+    margin-top: 2px;
+  }
+}

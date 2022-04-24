@@ -11,6 +11,9 @@
       background-color: $primary;
       border-color: $primary;
     }
+    &::after {
+      display: block;
+    }
   }
 }
 
@@ -34,7 +37,7 @@
   }
   &::after {
     content: '';
-    display: block;
+    display: none;
     width: 14px;
     height: 12px;
     position: absolute;
@@ -45,4 +48,35 @@
     left: 6px;
     transform: translateY(-50%);
   }
+}
+.checkboxIcon {
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  border: 1px solid $light-grey;
+  padding: 13px 12px;
+  background-color: $white;
+  .checkboxTextLabel {
+    @include semibold-18;
+    width: 100%;
+    justify-content: space-between;
+    order: 1;
+    &::before {
+      order: 2;
+    }
+    &::after {
+      right: 14px;
+      left: auto;
+    }
+  }
+}
+
+.checkboxIconImg {
+  width: 28px;
+  height: 28px;
+  background-color: $black;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: 50% 75%;
+  margin-right: 8px;
 }

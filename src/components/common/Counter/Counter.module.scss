@@ -1,0 +1,39 @@
+@import '../../../styles/var';
+.counterContent {
+  overflow: hidden;
+  width: min-content;
+  border: 1px solid $light-grey;
+  display: grid;
+  grid-template-columns: 60px min-content 60px;
+  border-radius: 4px;
+  height: 60px;
+}
+.counterMinus {
+  background-color: $white;
+  color: $dark-grey;
+  @include semibold-16;
+  width: 60px;
+}
+.counterText {
+  background-color: $white;
+  white-space: nowrap;
+  border-left: 1px solid $light-grey;
+  border-right: 1px solid $light-grey;
+  @include semibold-16;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 17px;
+  min-width: 60px;
+}
+
+.counterPlus {
+  background-color: $white;
+  color: $dark-grey;
+  @include semibold-16;
+  width: 60px;
+}
+.counterLabel {
+  @include semibold-18;
+  margin-bottom: 12px;
+}

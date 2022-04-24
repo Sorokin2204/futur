@@ -1,0 +1,41 @@
+@import '../../../styles/var';
+.packages {
+  margin-bottom: 84px;
+}
+.container {
+}
+.packagesInner {
+  padding: 30px 26px 14px 26px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+.packagesTitle {
+  @include semibold-22;
+  margin-bottom: 20px;
+}
+.packagesListFilter {
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+.packageText {
+  margin-bottom: 20px;
+}
+.packagesSwiperBox {
+  position: relative;
+}
+
+.packageSwiperSlide {
+  padding-top: 10px;
+  // padding-left: 10px;
+  width: 336px;
+  height: 506px;
+}
+.packagesWrapPackage {
+  // border-radius: 10px;
+  // border: 2px solid transparent;
+}
+
+.packageSwiperSlideWrap {
+  max-width: 326px;
+  margin-left: 10px;
+}

@@ -1,0 +1,28 @@
+@import '../../../styles/var';
+.addRoom {
+}
+.addRoomTitle {
+  @include semibold-18;
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+.addRoomSelect {
+  margin-bottom: 32px;
+}
+.addRoomBtnBox {
+  display: flex;
+  justify-content: end;
+}
+.addRoomBtnCancel {
+  color: $mid-grey !important;
+  border-color: $mid-grey !important;
+  max-width: 122px !important;
+  margin-right: 12px;
+}
+.addRoomBtnAdd {
+  max-width: 146px !important;
+}
+.addRoomModal {
+  width: 100%;
+  max-width: 462px;
+}

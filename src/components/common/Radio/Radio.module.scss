@@ -1,0 +1,79 @@
+@import '../../../styles/var';
+
+.radioLabelBlock {
+}
+.radioInput {
+  display: none;
+
+  &:checked + .radioLabelTextBlock {
+    background: rgba(25, 148, 166, 0.04);
+    border-color: $primary;
+    color: $primary;
+  }
+  &:checked + .radioLabelText .circle {
+    background-color: $primary;
+    &::before {
+    }
+    &::after {
+      display: block;
+    }
+  }
+}
+.radioLabelTextBlock {
+  @include semibold-16;
+  padding: 20px 62px;
+  border: 1px solid $light-grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+.radioLabelText {
+  @include regular-18;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+.circle {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-right: 12px;
+  position: relative;
+  border-radius: 50%;
+  background-color: $grey-500;
+  position: relative;
+  //   border: 2px solid $grey-500;
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: $white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+  &::after {
+    content: '';
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../../../public/icons/circle.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 11px 11px;
+    width: 24px;
+    height: 24px;
+    z-index: 3;
+  }
+}

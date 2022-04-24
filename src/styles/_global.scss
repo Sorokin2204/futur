@@ -74,7 +74,7 @@ h6 {
     flex: 0 0;
   }
 }
-
+// SWIPER-HOME-REVIEWS
 .swiper-home-reviews-button-prev,
 .swiper-home-reviews-button-next {
   background-color: $primary;
@@ -115,7 +115,7 @@ h6 {
     transform: translate(-50%, -50%) rotate(180deg);
   }
 }
-
+// SWIPER-WORK-SINGLE
 .swiper-work-single {
   .swiper-wrapper {
     align-items: center;
@@ -141,7 +141,9 @@ h6 {
   }
 }
 .swiper-work-single-button-prev,
-.swiper-work-single-button-next {
+.swiper-work-single-button-next,
+.swiper-constructor-packages-button-prev,
+.swiper-constructor-packages-button-next {
   position: absolute !important;
   top: 50%;
   left: 18%;
@@ -189,4 +191,30 @@ h6 {
   align-items: center;
   justify-content: center;
   margin-top: 30px;
+}
+// SWIPER-CONSTRUCTOR-PACKAGES
+.swiper-constructor-packages {
+  .swiper-scrollbar {
+    background-color: transparent;
+  }
+  .swiper-scrollbar-drag {
+    background-color: #d8dddf;
+  }
+}
+
+.swiper-constructor-packages-button-next {
+  top: 84px;
+  left: auto;
+  right: 6px;
+
+  transform: none;
+}
+
+.swiper-constructor-packages-button-prev {
+  top: 84px;
+  left: 6px;
+  &::after {
+    transform: translate(-72%, -47%) rotate(180deg);
+  }
+  transform: none;
 }

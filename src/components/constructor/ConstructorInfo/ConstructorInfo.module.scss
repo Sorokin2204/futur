@@ -1,0 +1,49 @@
+@import '../../../styles/var';
+.info {
+  margin-bottom: 40px;
+}
+.container {
+}
+.infoInner {
+  background-color: #f9f9f9;
+  padding: 30px 26px;
+  border-radius: 8px;
+  //   display: grid;
+  //   grid-template-columns: 554px 1fr;
+}
+.infoTitle {
+  @include semibold-22;
+  margin-bottom: 34px;
+}
+.infoCommon {
+  display: grid;
+  grid-gap: 24px;
+  grid-template-columns: 150px min-content min-content;
+  margin-bottom: 34px;
+}
+.infoInputArea {
+}
+.infoCounterDoors {
+}
+.infoCounterBathRooms {
+}
+.infoRoomList {
+  //   grid-row: 3/4;
+  //   grid-column: 1/3;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 224px);
+  grid-gap: 24px;
+  margin-bottom: 24px;
+}
+.infoRoomItem {
+}
+.infoRoomCheckbox {
+}
+.infoBtnAddRoom {
+  margin-bottom: 32px;
+}
+.infoCheckboxWall {
+  margin-bottom: 24px;
+}
+.infoCheckboxSecondaryHome {
+}

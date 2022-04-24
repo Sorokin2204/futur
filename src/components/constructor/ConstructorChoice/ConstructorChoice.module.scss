@@ -1,0 +1,23 @@
+@import '../../../styles/var';
+.choice {
+  padding: 13px 0;
+}
+.container {
+}
+.choiceInner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.choiceTitle {
+  @include semibold-18;
+  margin-bottom: 6px;
+}
+.choiceText {
+  @include regular-16;
+  color: $grey;
+}
+.choiceBtn {
+  @include regular-16;
+  max-width: 138px !important;
+}

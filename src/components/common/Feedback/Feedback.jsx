@@ -18,8 +18,8 @@ const Feedback = ({ light }) => {
               <Title className={clsx(styles.feedbackTitle)}>{feedback.title}</Title>
               <p className={clsx(styles.feedbackText)}>{feedback.text}</p>
               <form className={clsx(styles.feedbackForm)}>
-                <Input className={clsx(styles.feedbackInput)} label={feedback.name.label} placeholder={feedback.name.placeholder} />
-                <Input label={feedback.phone.label} placeholder={feedback.phone.placeholder} className={clsx(styles.feedbackInput)} />
+                <Input className={clsx(styles.feedbackInput)} label={feedback.name.label} placeholder={feedback.name.placeholder} smallLabel />
+                <Input label={feedback.phone.label} placeholder={feedback.phone.placeholder} className={clsx(styles.feedbackInput)} smallLabel />
                 <Checkbox className={clsx(styles.feedbackCheckbox)} label={feedback.accept.label} />
                 <Button className={clsx(styles.feedbackSubmit)}>{feedback.btnText}</Button>
               </form>

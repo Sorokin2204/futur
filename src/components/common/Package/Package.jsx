@@ -2,10 +2,11 @@ import React from 'react';
 import clsx from 'clsx';
 import styles from './Package.module.scss';
 import { currencyFormat } from '../../../utils/currencyFormat';
-const Package = ({ img, name, price, furniture }) => {
+const Package = ({ img, name, price, furniture, small, active }) => {
   return (
     <>
-      <li className={clsx(styles.package)}>
+      <li className={clsx(styles.package, small && styles.packageSmall, active && styles.packageActive)}>
+        {active && <div className={clsx(styles.packageActiveIcon)}></div>}
         <img src={img} alt="" className={clsx(styles.packageImg)} />
         <div className={clsx(styles.packageContent)}>
           <span className={clsx(styles.packageName)}>{name}</span>

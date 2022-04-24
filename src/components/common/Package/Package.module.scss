@@ -1,12 +1,36 @@
 @import '../../../styles/var';
 
+.packageSmall {
+  box-shadow: none !important;
+  & .packageName {
+    @include semibold-20;
+  }
+  & .packagePrice {
+    @include semibold-18;
+  }
+  & .packageLabel {
+    @include regular-16;
+  }
+  & .packageValue {
+    @include regular-16;
+  }
+  & .packageItem {
+    &:first-child {
+      margin-top: 0px !important;
+    }
+    margin-top: 14px !important;
+  }
+}
+
 .package {
-  overflow: hidden;
+  background-color: $white;
+  // overflow: hidden;
   max-width: 400px;
   box-shadow: 0px 4px 14px rgba(221, 221, 221, 0.42);
   border-radius: 8px;
 }
 .packageImg {
+  border-radius: 8px 8px 0 0;
   width: 100%;
   height: auto;
   max-height: 262px;
@@ -51,4 +75,49 @@
   margin-bottom: 3px;
 }
 .packageValue {
+}
+
+.packageActive {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-color: $primary;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: -1;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(69, 177, 192, 0.22);
+  }
+}
+
+.packageActiveIcon {
+  position: relative;
+
+  content: '';
+  display: block;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 36px;
+  height: 36px;
+  background-color: $primary;
+  border-radius: 50%;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 18px;
+    height: 14px;
+    background-image: url(../../../../public/icons/check-thin.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 2;
+  }
 }

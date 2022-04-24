@@ -1,0 +1,31 @@
+@import '../../../styles/var';
+.modal {
+  position: fixed;
+  padding: 20px;
+  border-radius: 12px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  background-color: #fff;
+  z-index: 1001;
+}
+
+.modalTitle {
+  @include semibold-18;
+  margin-right: 20px;
+}
+.modalHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modalClose {
+  width: 14px;
+  height: 14px;
+  background-image: url(../../../../public/icons/close.svg);
+  background-size: contain;
+
+  background-repeat: no-repeat;
+}

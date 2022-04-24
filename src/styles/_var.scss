@@ -5,6 +5,7 @@ $black: #272727;
 $white: #fff;
 $dark-grey: #585858;
 $grey: #838383;
+$grey-500: #b4b4b4;
 $mid-grey: #9d9d9d;
 $light-grey: #b9b9b9;
 $font-family: 'Gilroy', sans-serif;
@@ -38,7 +39,9 @@ $screen-max: 1268;
 @mixin semibold-26 {
   @include fluid-type(600, 26, 35, $screen-max, $screen-max);
 }
-
+@mixin semibold-18 {
+  @include fluid-type(600, 18, 22, $screen-max, $screen-max);
+}
 @mixin semibold-32 {
   @include fluid-type(600, 32, 39, $screen-max, $screen-max);
 }

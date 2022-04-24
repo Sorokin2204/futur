@@ -4,7 +4,7 @@
   order: 2;
   transition: all 0.3s;
   @include regular-16;
-  padding: 20px;
+  padding: 18px 20px;
   width: 100%;
   background-color: $white;
   border: 1px solid $light-grey;
@@ -36,6 +36,10 @@
 .inputTextLabel {
   transition: color 0.3s;
   order: 1;
+  @include semibold-18;
+  margin-bottom: 12px;
+}
+.inputTextLabelSmall {
   @include semibold-16;
   margin-bottom: 6px;
 }
