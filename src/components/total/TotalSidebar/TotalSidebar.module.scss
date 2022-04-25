@@ -1,0 +1,47 @@
+@import '../../../styles/var';
+
+.totalSidebar {
+  background: #f9f9f9;
+  border-radius: 12px;
+  align-self: start;
+  padding: 24px 16px 26px 16px;
+}
+.totalTitle {
+  @include semibold-22;
+  margin-bottom: 24px;
+}
+.totalPackageName {
+  color: $primary;
+  @include semibold-20;
+  margin-bottom: 14px;
+}
+.totalPackageList {
+}
+.totalPackageItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  & + & {
+    margin-top: 8px;
+  }
+}
+.totalPackageRoom {
+  color: $grey;
+}
+.totalPackagePrice {
+  color: $grey;
+}
+.totalPackageTotal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 22px;
+  border-top: 1px solid #dfdfdf;
+  margin-top: 22px;
+}
+.totalPackageTotalLabel {
+  @include semibold-18;
+}
+.totalPackageTotalPrice {
+  @include semibold-18;
+}

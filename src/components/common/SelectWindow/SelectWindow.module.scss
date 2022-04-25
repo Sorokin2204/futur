@@ -1,0 +1,31 @@
+@import '../../../styles/var';
+
+.select {
+  padding: 6px 12px 7px 12px;
+  //   height: 52px;
+  background-color: $white-transparent;
+  border-radius: 8px;
+  position: relative;
+  &::after {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%) rotate(90deg);
+    mask-image: url('../../../../public/icons/chevron.svg');
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    background-color: $black;
+    width: 8px;
+    height: 14px;
+  }
+}
+.selectName {
+  @include semibold-16;
+  margin-bottom: 2px;
+}
+.selectPrice {
+  color: $dark-grey;
+  @include regular-14;
+}

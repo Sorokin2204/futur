@@ -1,0 +1,58 @@
+@import '../../../styles/var';
+.rooms {
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+  position: relative;
+  // &::after {
+  //   content: '';
+  //   display: block;
+  //   position: absolute;
+  //   top: 0;
+  //   right: 0;
+  //   height: 100%;
+  //   width: 20px;
+  //   background-color: $white;
+  // }
+}
+.roomsList {
+  display: inline-flex;
+  grid-gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fill, minmax(120px, max-content));
+}
+.roomsItem {
+  width: calc(100% + 10px);
+}
+.roomsButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 15px;
+  border: 1px solid $light-grey;
+  border-radius: 24px;
+  color: $light-grey;
+  @include regular-16;
+}
+.roomsButtonImg {
+  margin-right: 8px;
+  width: 26px;
+  height: 26px;
+  min-width: 26px;
+  min-height: 26px;
+  background-color: $light-grey;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: 0 70%;
+}
+.roomsButtonActive {
+  background-color: $primary;
+  color: $white;
+  text-shadow: 0.25px 0px 0.1px, -0.25px 0px 0.1px;
+  border-color: $primary;
+  .roomsButtonImg {
+    background-color: $white;
+  }
+}

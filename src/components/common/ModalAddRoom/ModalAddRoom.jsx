@@ -7,7 +7,7 @@ import Select from '../Select/Select';
 const ModalAddRoom = ({ onClose }) => {
   return (
     <>
-      <Modal title="Добавить еще одну комнату" onClose={onClose} className={clsx(styles.addRoomModal)}>
+      <Modal title="Добавить еще одну комнату" withCloseBtn onClose={onClose} className={clsx(styles.addRoomModal)}>
         <div className={clsx(styles.addRoom)}>
           <span className={clsx(styles.addRoomTitle)}>Добавить комнату</span>
           <Select className={clsx(styles.addRoomSelect)} />

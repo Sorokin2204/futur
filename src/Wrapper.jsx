@@ -5,8 +5,9 @@ import Header from './components/common/Header/Header';
 import { CSSTransition, SwitchTransition, Transition, TransitionGroup } from 'react-transition-group';
 import { useState } from 'react';
 import { useEffect } from 'react';
-
+import { useLocation, matchPath } from 'react-router-dom';
 /** Used for Using Transitions Section */
+const routes = ['constructor/:id'];
 const transitions = {
   entering: { transform: 'translateY(-20%)', visibility: 'visible' },
   entered: { transform: 'translateY(0%)', opacity: 1, visibility: 'visible' },
@@ -15,6 +16,16 @@ const transitions = {
 };
 
 const Wrapper = ({ children }) => {
+  const { pathname } = useLocation();
+  const checkConstructorPage = (path) => {
+    if (path.includes('/constructor')) {
+      const replacePath = path.replace('/constructor', '');
+      if (replacePath == '/') return false;
+      if (replacePath) return true;
+    }
+    return false;
+  };
+  const isConstructorPage = checkConstructorPage(pathname);
   return (
     <>
       {/* <div
@@ -23,11 +34,9 @@ const Wrapper = ({ children }) => {
           height: '100%',
           gridTemplateRows: 'auto 1fr auto',
         }}> */}
-      <Header />
-
+      {!isConstructorPage && <Header />}
       <main>{children}</main>
-
-      <Footer />
+      {!isConstructorPage && <Footer />}
       {/* </div> */}
     </>
   );

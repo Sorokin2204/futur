@@ -1,0 +1,74 @@
+@import '../../../styles/var';
+
+.window {
+  padding: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  // width: 100vw;
+  height: 100vh;
+  position: relative;
+  // max-width: 827px;
+}
+.windowBtnBack {
+  position: absolute !important;
+  top: 20px;
+  left: 20px;
+  width: 52px !important;
+  height: 52px !important;
+  &::after {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url('../../../../public/icons/arrow-2.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 16px;
+    height: 14px;
+  }
+}
+.windowSelectPackages {
+  position: absolute !important;
+  top: 20px;
+  left: 92px;
+  max-width: 212px;
+  width: 100%;
+}
+.windowSwithFurniture {
+  max-width: 164px;
+  position: absolute !important;
+  bottom: 20px;
+  left: 20px;
+}
+.windowAngle {
+  position: absolute !important;
+  bottom: 20px;
+  right: 100px;
+  max-width: 164px;
+}
+.windowFullScreen {
+  position: absolute !important;
+  bottom: 20px;
+  right: 20px;
+  &::after {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url('../../../../public/icons/full-screen.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 29px;
+    height: 29px;
+  }
+}
+.windowRoomPointList {
+}
+.windowRoomPointItem {
+}
+.windowRoomPointRadio {
+}

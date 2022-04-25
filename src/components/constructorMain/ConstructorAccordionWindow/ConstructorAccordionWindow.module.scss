@@ -1,0 +1,17 @@
+@import '../../../styles/var';
+
+.accordionsItemCategory {
+  @include regular-14;
+  color: $grey;
+  margin-bottom: 12px;
+}
+.accordionsItemGroup {
+  & + & {
+    margin-top: 10px;
+  }
+}
+.accordionsItemOptionList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 16px;
+}

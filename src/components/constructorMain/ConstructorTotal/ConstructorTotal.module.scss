@@ -1,0 +1,31 @@
+@import '../../../styles/var';
+
+.total {
+  padding: 27px 20px 30px 20px;
+  box-shadow: 0px 11px 23px rgba(44, 44, 44, 0.1);
+}
+.totalList {
+  margin-bottom: 30px;
+}
+.totalItem {
+  @include regular-16;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  & + & {
+    margin-top: 14px;
+  }
+  &:last-child {
+    @include semibold-18;
+  }
+}
+.totalItemRoom {
+}
+.totalItemPrice {
+}
+.totalBtnContinue {
+  width: 100%;
+  padding: 13px;
+  margin: 0;
+  max-width: none;
+}

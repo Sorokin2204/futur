@@ -1,0 +1,34 @@
+@import '../../../styles/var';
+.goBack {
+}
+.goBackTitle {
+  @include semibold-18;
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+.goBackSelect {
+  margin-bottom: 32px;
+}
+.goBackBtnBox {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 12px;
+}
+.goBackBtnCancel {
+  color: $mid-grey !important;
+  border-color: $mid-grey !important;
+  max-width: none !important;
+}
+.goBackText {
+  margin-top: 12px;
+  @include regular-14;
+  color: $grey;
+  margin-bottom: 18px;
+}
+.goBackBtnAdd {
+  max-width: 172px !important;
+}
+.goBackModal {
+  width: 100%;
+  max-width: 400px;
+}

@@ -1,0 +1,28 @@
+@import '../../../styles/var';
+
+.roomPointLabel {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  &::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-image: url(../../../../public/icons/radio.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 10px;
+  }
+}
+.roomPointInput {
+  display: none;
+}
+.roomPointTextLabel {
+  width: min-content;
+  @include regular-16;
+  padding: 4px 14px;
+  background-color: $white-transparent;
+  border-radius: 32px;
+  position: relative;
+}

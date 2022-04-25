@@ -1,0 +1,80 @@
+@import '../../../styles/var';
+
+.accordionItem {
+  background-color: $white;
+  border-radius: 4px;
+}
+.accordionItemContent {
+  padding: 10px 10px 12px 10px;
+  background-color: $white;
+  border-radius: 0px 0px 4px 4px;
+}
+
+.accordionItemImg {
+  width: 100%;
+  height: auto;
+  border-radius: 4px 4px 0px 0px;
+}
+.accordionItemName {
+  @include semibold-14;
+  margin-bottom: 8px;
+}
+.accordionItemDesc {
+  @include regular-12;
+  margin-bottom: 14px;
+  color: $dark-grey;
+}
+.accordionItemPrice {
+  color: $primary;
+  @include semibold-14;
+}
+.accordionItemActive {
+  position: relative;
+  z-index: 1;
+  &::after {
+    content: '';
+    position: absolute;
+    top: -1.5px;
+    left: -1.5px;
+    background-color: $primary;
+    width: calc(100% + 3px);
+    height: calc(100% + 3px);
+    z-index: -1;
+    border-radius: 6px;
+    box-shadow: 0px 4px 8px rgba(69, 177, 192, 0.22);
+  }
+  .accordionItemPrice {
+    visibility: hidden;
+  }
+}
+
+.accordionItemActiveIcon {
+  position: relative;
+
+  content: '';
+  display: block;
+  position: absolute;
+  top: -9px;
+  left: -9px;
+  width: 30px;
+  height: 30px;
+  background-color: $primary;
+  border-radius: 50%;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 9px;
+    left: 8px;
+    // top: 50%;
+    // left: 54%;
+    // transform: translate(-50%, -50%);
+    width: 14px;
+    height: 12px;
+    background-image: url(../../../../public/icons/check-thin.svg);
+    background-repeat: no-repeat;
+    background-size: 14px 12px;
+    z-index: 2;
+  }
+}

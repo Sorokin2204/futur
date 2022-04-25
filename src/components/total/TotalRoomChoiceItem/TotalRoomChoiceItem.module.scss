@@ -1,0 +1,42 @@
+@import '../../../styles/var';
+
+.roomChoice {
+  background: #f9f9f9;
+  padding: 24px 16px;
+  & + & {
+    margin-top: 24px;
+  }
+
+  border-radius: 12px;
+}
+.roomChoiceTitle {
+  @include semibold-22;
+}
+.roomChoiceList {
+}
+.roomChoiceItem {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr;
+  margin-top: 24px;
+}
+.roomChoiceItemImg {
+  grid-column: 1/2;
+  grid-row: 1/3;
+  width: 70px;
+  height: 70px;
+  margin-right: 12px;
+}
+.roomChoiceItemName {
+  @include semibold-18;
+  grid-column: 2/3;
+  grid-row: 1/2;
+  align-self: end;
+  margin-bottom: 10px;
+}
+.roomChoiceItemDesc {
+  color: $grey;
+  @include regular-14;
+  grid-column: 2/3;
+  grid-row: 2/3;
+}

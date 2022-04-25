@@ -3,6 +3,7 @@ $light: #6ea4ac;
 $bg-light: #f7f9fc;
 $black: #272727;
 $white: #fff;
+$white-transparent: rgba(255, 255, 255, 0.74);
 $dark-grey: #585858;
 $grey: #838383;
 $grey-500: #b4b4b4;
@@ -11,6 +12,10 @@ $light-grey: #b9b9b9;
 $font-family: 'Gilroy', sans-serif;
 $screen-min: 1268;
 $screen-max: 1268;
+
+@mixin regular-12 {
+  @include fluid-type(400, 12, 16, $screen-max, $screen-max);
+}
 
 @mixin regular-14 {
   @include fluid-type(400, 14, 17, $screen-max, $screen-max);
@@ -22,6 +27,10 @@ $screen-max: 1268;
 
 @mixin regular-16 {
   @include fluid-type(400, 16, 22, $screen-max, $screen-max);
+}
+
+@mixin semibold-14 {
+  @include fluid-type(600, 14, 17, $screen-max, $screen-max);
 }
 
 @mixin semibold-38 {

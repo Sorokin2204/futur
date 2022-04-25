@@ -1,0 +1,46 @@
+@import '../../../styles/var';
+.switchLabel {
+  background-color: $white-transparent;
+  border-radius: 8px;
+  padding: 9px 12px;
+}
+.switchInput {
+  display: none;
+
+  &:checked + .switchText {
+    &::after {
+      transform: translateY(-50%) translateX(18px);
+    }
+  }
+}
+.switchText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  user-select: none;
+  &::before {
+    content: '';
+    display: block;
+    width: 36px;
+    min-width: 36px;
+    height: 20px;
+    border: 1px solid $grey;
+    border-radius: 100px;
+    margin-right: 8px;
+  }
+  &::after {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-color: $grey;
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+  }
+  @include regular-16;
+  line-height: 19px;
+}

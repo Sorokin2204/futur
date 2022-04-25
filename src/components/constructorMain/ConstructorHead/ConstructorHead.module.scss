@@ -1,0 +1,28 @@
+@import '../../../styles/var';
+
+.head {
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  row-gap: 13px;
+  align-items: start;
+  justify-content: start;
+  padding: 20px 22px 14px 24px;
+  justify-self: start;
+  align-self: start;
+}
+.headTitle {
+  @include semibold-18;
+}
+.headBtnEdit {
+  grid-column: 2/3;
+  grid-row: 1 / 2;
+  width: 19px;
+  height: 19px;
+  background-image: url(../../../../public/icons/edit.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.headConfig {
+  @include regular-14;
+  color: $grey;
+}
