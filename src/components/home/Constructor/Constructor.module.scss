@@ -7,35 +7,97 @@
 }
 .constructorInner {
   display: grid;
-  grid-template-columns: 485px minmax(auto, 857px);
-  grid-gap: 42px;
+  grid-template-columns: minmax(auto, 485px) minmax(595px, 1fr);
+  grid-template-rows: auto auto 1fr;
+  column-gap: 42px;
 }
-.constructorContent {
-  // padding: 124px 0 185px;
-}
+// .constructorContent {
+//   display: flex;
+//   flex-direction: column;
+
+//   max-height: 350px;
+//   margin-bottom: 60px;
+//   max-width: 485px;
+// }
 .constructorTitle {
+  margin-top: 124px;
+  grid-column: 1/2;
+  grid-row: 1/2;
   &:after {
     z-index: -1;
   }
-  margin-top: 124px;
+
   margin-bottom: 40px;
 }
 .contsturctorText {
+  grid-column: 1/2;
+  grid-row: 2/3;
   margin-bottom: 102px;
+  // margin-bottom: 60px;
 }
 .consturctorBtn {
+  align-self: start;
+  justify-self: flex-start;
+  grid-column: 1/2;
+  grid-row: 3/4;
+  margin-bottom: 60px;
 }
 .constructorImgBox {
-  // width: 57.43vw;
-  // position: absolute;
-  // top: 0;
-  // right: 0;
+  grid-column: 2/3;
+  grid-row: 1/4;
 }
 .constructorImg {
   height: auto;
-  width: 100%;
-  transform: translateX(20px);
-  // width: 100%;
-  // height: auto;
-  // max-height: 660px;
+  width: 111.7%;
+}
+@media (max-width: $xl) {
+  .constructorImg {
+    width: 100%;
+    transform: translateX(20px);
+  }
+}
+
+@media (max-width: $md) {
+  .contsturctorText {
+    margin-bottom: 56px;
+  }
+  .constructorTitle {
+    margin-top: 104px;
+  }
+}
+
+@media (max-width: $sm) {
+  .constructor {
+    overflow: hidden;
+  }
+  .constructorInner {
+    grid-template-columns: 1fr;
+  }
+  .constructorTitle {
+    margin-top: 110px;
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+  .constructorImg {
+    max-height: 375px;
+    width: calc(100% + 32px);
+    transform: translateX(-16px);
+    object-fit: cover;
+  }
+  .constructorImgBox {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    margin-bottom: 20px;
+  }
+
+  .contsturctorText {
+    grid-column: 1/3;
+    grid-row: 3/4;
+    margin-bottom: 40px;
+  }
+  .consturctorBtn {
+    grid-column: 1/3;
+    grid-row: 4/5;
+    margin-bottom: 80px;
+  }
 }

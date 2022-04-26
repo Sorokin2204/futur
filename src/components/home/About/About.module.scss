@@ -15,8 +15,9 @@
 .aboutInner {
   position: relative;
   display: grid;
-  grid-template-columns: 554px 486px;
+  grid-template-columns: minmax(544px, 554px) minmax(auto, 486px);
   justify-content: space-between;
+  column-gap: 30px;
 }
 .aboutContent {
 }
@@ -46,6 +47,7 @@
 .aboutText {
   @include regular-18;
   span {
+    display: inline;
     font-weight: 600;
   }
 }
@@ -58,6 +60,7 @@
   grid-template-columns: auto auto;
   justify-content: space-between;
   align-self: flex-end;
+  column-gap: 20px;
 }
 .aboutItem {
 }
@@ -67,6 +70,41 @@
   margin-bottom: 12px;
 }
 .aboutNumberText {
+  white-space: nowrap;
   display: block;
   @include regular-18;
+}
+@media (max-width: $sm) {
+  .about {
+    padding: 91px 0 64px;
+  }
+  .aboutInner {
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+  }
+  .aboutList {
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+  }
+  .aboutText {
+    max-width: 600px;
+  }
+  .aboutBtn {
+    margin: 0;
+  }
+  .aboutPlan {
+    top: 141px;
+  }
+  .aboutPlanThree {
+    top: 141px;
+  }
+}
+@media (max-width: $xs) {
+  .aboutPlan,
+  .aboutPlanThree {
+    top: 200px;
+    right: -200px;
+    width: 394px;
+    height: 413px;
+  }
 }

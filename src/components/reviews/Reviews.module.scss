@@ -1,3 +1,5 @@
+@import '../../styles/var';
+
 .reviews {
   padding: 120px 0;
 }
@@ -11,4 +13,18 @@
   grid-template-columns: 1fr 1fr;
   column-gap: 108px;
   row-gap: 80px;
+}
+
+@media (max-width: 800px) {
+  .reviews {
+    padding: 63px 0 158px;
+  }
+  .reviewsList {
+    column-gap: 40px;
+  }
+}
+@media (max-width: $xs) {
+  .reviewsList {
+    grid-template-columns: 1fr;
+  }
 }

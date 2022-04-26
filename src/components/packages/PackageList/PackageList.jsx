@@ -52,11 +52,13 @@ const PackageList = () => {
               Object.keys(showPackages)?.map((typePackage, i) => (
                 <li className={clsx(styles.packageListGroupItem)}>
                   <h3 className={clsx(styles.packageListGroupTitle)}>{typePackageList.find((type) => type.slug === typePackage).name}</h3>
-                  <ul className={clsx(styles.packageListGroupList)}>
-                    {showPackages[typePackage]?.map((packageItem) => (
-                      <Package {...packageItem} />
-                    ))}
-                  </ul>
+                  <div className={clsx(styles.packageListGroupWrapper)}>
+                    <ul className={clsx(styles.packageListGroupList)}>
+                      {showPackages[typePackage]?.map((packageItem) => (
+                        <Package {...packageItem} className={clsx(styles.packageListGroupPackage)} />
+                      ))}
+                    </ul>
+                  </div>
                 </li>
               ))}
           </ul>

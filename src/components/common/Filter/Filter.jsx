@@ -5,7 +5,9 @@ import _ from 'lodash';
 const Filter = ({ children, className }) => {
   return (
     <>
-      <ul className={clsx(styles.filter, className)}>{children}</ul>
+      <div className={clsx(styles.filterWrapper)}>
+        <ul className={clsx(styles.filter, className)}>{children}</ul>
+      </div>
     </>
   );
 };

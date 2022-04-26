@@ -30,6 +30,30 @@
   display: flex;
   align-items: center;
 }
-.reviewsSlide {
-  height: 400px;
+
+.reviewsSwiperNavigationMobile {
+  display: none;
+}
+@media (max-width: $md) {
+  .reviewsSwiperBox {
+    height: 640px;
+  }
+}
+
+@media (max-width: 500px) {
+  .reviewsSwiperNavigation {
+    display: none;
+  }
+  .reviewsSwiperNavigationMobile {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-top: 56px;
+  }
+  .reviewsSwiperBox {
+    height: auto;
+  }
+  .reviews {
+    padding: 125px 0 100px;
+  }
 }

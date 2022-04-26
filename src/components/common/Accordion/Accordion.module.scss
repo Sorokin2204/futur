@@ -46,6 +46,7 @@
   padding-bottom: 40px;
   @include semibold-22;
   position: relative;
+  padding-right: 40px;
   &::after,
   &::before {
     transition: all 0.35s ease-in-out;
@@ -76,4 +77,43 @@
   overflow: hidden;
   opacity: 0;
   padding-bottom: 40px;
+}
+@media (max-width: $sm) {
+  .accordionHead {
+    padding-bottom: 24px;
+    padding-left: 16px;
+    padding-right: 54px;
+
+    &::after,
+    &::before {
+      right: 20px;
+    }
+    &::before {
+      top: 34px;
+    }
+    &::after {
+      top: 28px;
+    }
+  }
+
+  .accordionContent {
+    padding: 0 16px 24px 16px;
+  }
+
+  .accordion {
+    &:first-child {
+      & .accordionHead::after {
+        top: 3px;
+      }
+      & .accordionHead::before {
+        top: 9px;
+      }
+    }
+
+    & + & {
+      .accordionHead {
+        padding-top: 24px;
+      }
+    }
+  }
 }

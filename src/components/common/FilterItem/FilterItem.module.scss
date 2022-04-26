@@ -1,6 +1,7 @@
 @import '../../../styles/var';
 
 .filterButton {
+  user-select: none;
   @include semibold-20;
   font-family: inherit;
   padding: 11px 44px 15px 44px;
@@ -18,4 +19,9 @@
 .filterActive {
   color: $primary;
   border-color: $primary;
+}
+@media (max-width: $sm) {
+  .filterButton {
+    padding: 9px 30px 11px 30px;
+  }
 }

@@ -14,10 +14,11 @@
 }
 
 .mapBox {
-  background-image: url('../../../../public/img/map.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
+  position: relative;
+  // background-image: url('../../../../public/img/map.png');
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // background-position: 50% 50%;
 }
 .mapContact {
   max-width: 506px;
@@ -32,8 +33,46 @@
   margin-top: 20px;
 }
 .mapItemTitle {
+  @include semibold-18;
 }
 .mapEmail {
 }
 .mapPhone {
+}
+.mapImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+}
+@media (max-width: 800px) {
+  .map {
+    overflow: hidden;
+    padding: 63px 0 60px;
+  }
+  .mapImage {
+    position: static;
+    margin-top: 30px;
+    width: calc(100% + 32px);
+    transform: translateX(-16px);
+    height: 330px;
+    object-position: 100% 0;
+  }
+  .mapTitle {
+    margin-bottom: 32px;
+  }
+  .mapContact {
+    padding: 0;
+  }
+  .mapContent {
+    padding: 0;
+  }
+  .mapItem {
+    margin-top: 16px;
+  }
 }

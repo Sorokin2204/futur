@@ -10,104 +10,126 @@ $grey-500: #b4b4b4;
 $mid-grey: #9d9d9d;
 $light-grey: #b9b9b9;
 $font-family: 'Gilroy', sans-serif;
-$screen-min: 1268;
-$screen-max: 1268;
-
+$screen-min: 320;
+$screen-max: 1440;
+$xl: 1440px;
+$md: 1240px;
+$sm: 1024px;
+$xs: 640px;
+// REGULAR
 @mixin regular-12 {
-  @include fluid-type(400, 12, 16, $screen-max, $screen-max);
+  @include fluid-type(400, 12, 16, $screen-min, $screen-max);
 }
 
 @mixin regular-14 {
-  @include fluid-type(400, 14, 17, $screen-max, $screen-max);
+  @include fluid-type(400, 14, 17, $screen-min, $screen-max);
 }
 
 @mixin regular-20 {
-  @include fluid-type(400, 20, 24, $screen-max, $screen-max);
+  @include fluid-type(400, 20, 24, $screen-min, $screen-max);
 }
 
 @mixin regular-16 {
-  @include fluid-type(400, 16, 22, $screen-max, $screen-max);
-}
-
-@mixin semibold-14 {
-  @include fluid-type(600, 14, 17, $screen-max, $screen-max);
-}
-
-@mixin semibold-38 {
-  @include fluid-type(600, 38, 47, $screen-max, $screen-max);
-}
-
-@mixin semibold-200 {
-  @include fluid-type(600, 200, 245, $screen-max, $screen-max);
-}
-
-@mixin semibold-22 {
-  @include fluid-type(600, 22, 29, $screen-max, $screen-max);
-}
-
-@mixin semibold-26 {
-  @include fluid-type(600, 26, 35, $screen-max, $screen-max);
-}
-@mixin semibold-18 {
-  @include fluid-type(600, 18, 22, $screen-max, $screen-max);
-}
-@mixin semibold-32 {
-  @include fluid-type(600, 32, 39, $screen-max, $screen-max);
-}
-
-@mixin semibold-20 {
-  @include fluid-type(600, 20, 24, $screen-max, $screen-max);
+  @include fluid-type(400, 16, 22, $screen-min, $screen-max);
 }
 
 @mixin regular-18 {
-  @include fluid-type(400, 18, 22, $screen-max, $screen-max);
+  @include fluid-type(400, 18, 22, $screen-min, $screen-max, 16, 22);
 }
 
 @mixin regular-74 {
-  @include fluid-type(400, 74, 95, $screen-max, $screen-max);
+  @include fluid-type(400, 74, 95, $screen-min, $screen-max, 42, 54);
+}
+// SEMIBOLD
+@mixin semibold-14 {
+  @include fluid-type(600, 14, 17, $screen-min, $screen-max);
+}
+
+@mixin semibold-38 {
+  @include fluid-type(600, 38, 47, $screen-min, $screen-max);
+}
+
+@mixin semibold-180 {
+  @include fluid-type(600, 180, 221, $screen-min, $screen-max);
+}
+
+@mixin semibold-200 {
+  @include fluid-type(600, 200, 245, $screen-min, $screen-max);
+}
+
+@mixin semibold-22 {
+  @include fluid-type(600, 22, 29, $screen-min, $screen-max, 18, 22);
+}
+
+@mixin semibold-26 {
+  @include fluid-type(600, 26, 35, $screen-min, $screen-max, 24, 32);
+}
+@mixin semibold-18 {
+  @include fluid-type(600, 18, 22, $screen-min, $screen-max);
+}
+@mixin semibold-32 {
+  @include fluid-type(600, 32, 39, $screen-min, $screen-max, 20, 25);
+}
+
+@mixin semibold-20 {
+  @include fluid-type(600, 20, 24, $screen-min, $screen-max, 16, 20);
 }
 
 @mixin semibold-16 {
-  @include fluid-type(600, 16, 20, $screen-max, $screen-max);
+  @include fluid-type(600, 16, 20, $screen-min, $screen-max);
 }
 
 @mixin semibold-48 {
-  @include fluid-type(600, 48, 59, $screen-max, $screen-max);
+  @include fluid-type(600, 48, 59, $screen-min, $screen-max, 36, 43);
 }
-
+// BOLD
 @mixin bold-54 {
-  @include fluid-type(700, 54, 67, $screen-max, $screen-max);
+  @include fluid-type(700, 54, 67, $screen-min, $screen-max, 32, 38);
 }
 
 @mixin bold-16 {
-  @include fluid-type(700, 16, 19, $screen-max, $screen-max);
+  @include fluid-type(700, 16, 19, $screen-min, $screen-max);
 }
 
 @mixin bold-32 {
-  @include fluid-type(700, 32, 43, $screen-max, $screen-max);
+  @include fluid-type(700, 32, 43, $screen-min, $screen-max);
 }
 
 @mixin bold-26 {
-  @include fluid-type(700, 26, 35, $screen-max, $screen-max);
+  @include fluid-type(700, 26, 35, $screen-min, $screen-max, 22, 30);
 }
 
 @mixin bold-120 {
-  @include fluid-type(700, 120, 149, $screen-max, $screen-max);
+  @include fluid-type(700, 120, 149, $screen-min, $screen-max, 76, 90);
 }
 
 @mixin fluid-type($font-weight, $font-max, $line-height-max, $screen-min, $screen-max, $font-min: '', $line-height-min: '') {
   font-family: $font-family;
   font-weight: #{$font-weight};
 
-  @media (max-width: #{$screen-min}px) {
+  @if $font-min != '' {
+    font-size: #{$font-min}px;
+  } @else {
+    font-size: #{$font-max}px;
+  }
+
+  @if $line-height-min != '' {
+    line-height: #{$line-height-min}px;
+  } @else {
+    line-height: #{$line-height-max}px;
+  }
+
+  @media (min-width: #{$screen-min}px) {
     @if $font-min != '' {
-      font-size: #{$font-min}px;
+      font-size: calc(#{$font-min}px + #{($font-max - $font-min)} * (100vw - #{$screen-min}px) / (#{$screen-max} - #{$screen-min}));
     }
     @if $line-height-min != '' {
-      line-height: #{$line-height-min}px;
+      line-height: calc(#{$line-height-min}px + #{($line-height-max - $line-height-min)} * (100vw - #{$screen-min}px) / (#{$screen-max} - #{$screen-min}));
     }
   }
 
-  font-size: #{$font-max}px;
-  line-height: #{$line-height-max}px;
+  @media (min-width: #{$screen-max}px) {
+    font-size: #{$font-max}px;
+    line-height: #{$line-height-max}px;
+  }
 }

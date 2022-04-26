@@ -16,11 +16,30 @@
 .ourWorksList {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 76px;
+  column-gap: 73px;
   row-gap: 80px;
 }
 .ourWorksItem {
   display: flex;
   flex-direction: column;
   align-items: start;
+}
+@media (max-width: $xl) {
+  .ourWorksList {
+    column-gap: 5.3vw;
+    row-gap: 5.6vw;
+  }
+}
+@media (max-width: $sm) {
+  .ourWorks {
+    overflow: hidden;
+    padding: 95px 0 100px;
+  }
+  .ourWorksTitle {
+    margin-bottom: 40px;
+  }
+  .ourWorksList {
+    grid-template-columns: 1fr;
+    row-gap: 80px;
+  }
 }

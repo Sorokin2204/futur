@@ -37,3 +37,56 @@
 .stepsText {
   @include regular-18;
 }
+@media (max-width: $sm) {
+  .steps {
+    overflow: hidden;
+  }
+  .stepsList {
+    column-gap: 47px;
+    row-gap: 113px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .stepsItem {
+    &::after {
+      width: 250px;
+    }
+  }
+}
+@media (max-width: 800px) {
+  .steps {
+    padding: 63px 0 90px;
+  }
+  .stepsList {
+    row-gap: 73px;
+    grid-template-columns: repeat(1, 400px);
+  }
+  .stepsItem {
+    &:first-child {
+      &::after {
+        right: -150px;
+      }
+    }
+    &::after {
+      right: -122px;
+      top: -40px;
+      @include semibold-180;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .stepsList {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .stepsItem {
+    padding-right: 50px;
+    &:first-child {
+      &::after {
+        right: -75px;
+      }
+    }
+    &::after {
+      right: -50px;
+    }
+  }
+}

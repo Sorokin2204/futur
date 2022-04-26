@@ -34,3 +34,27 @@
 .whyItemText {
   @include regular-18;
 }
+@media (max-width: $md) {
+  .why {
+    padding: 90px 0 60px;
+    overflow: hidden;
+  }
+  .whyItem {
+    padding: 18px 12px 24px;
+  }
+  .whyList {
+    grid-template-columns: 1fr;
+    grid-gap: 12px;
+  }
+  .whyItemIcon {
+    width: 38px;
+    height: 38px;
+    margin-bottom: 16px;
+  }
+  .whyItemTitle {
+    margin-bottom: 12px;
+  }
+  .whyTitle {
+    margin-bottom: 40px;
+  }
+}

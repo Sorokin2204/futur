@@ -24,6 +24,11 @@ const Header = () => {
                 </li>
               ))}
             </ul>
+            <button className={clsx(styles.menuBtnBurger)}>
+              <div className=""></div>
+              <div className=""></div>
+              <div className=""></div>
+            </button>
           </div>
         </div>
       </header>

@@ -24,6 +24,7 @@
   margin-bottom: 28px;
 }
 .feedbackInput {
+  z-index: 1;
   &:first-child {
     margin-right: 20px;
     grid-row: 1/2;
@@ -62,4 +63,65 @@
 .feedbackForm {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+@media (max-width: $md) {
+  .feedbackPlan {
+    right: -416px;
+  }
+}
+@media (max-width: $sm) {
+  .feedbackPlan {
+    right: -416px;
+    bottom: -248px;
+  }
+  .feedbackSubmit {
+    max-width: none !important;
+    margin-bottom: 20px !important;
+  }
+  .feedbackTitle {
+    margin-bottom: 30px;
+  }
+  .feedback {
+    padding: 91px 0 140px;
+  }
+  .feedbackForm {
+    grid-template-columns: 1fr;
+  }
+  .feedbackContent {
+    max-width: 360px;
+  }
+
+  .feedbackCheckbox {
+    grid-row: 4/5;
+    grid-column: 1/2;
+    margin-bottom: 32px;
+    margin-top: 22px;
+  }
+  .feedbackSubmit {
+    grid-row: 5/6;
+    grid-column: 1/2;
+    margin-bottom: 12px;
+  }
+  .feedbackInput {
+    &:first-child {
+      grid-row: 1/2;
+      grid-column: 1/2;
+      margin-right: 0;
+      margin-bottom: 28px;
+    }
+    &:last-child {
+      grid-row: 2/3;
+      grid-column: 1/2;
+    }
+  }
+}
+@media (max-width: 800px) {
+  .feedbackPlan {
+    right: -515px;
+  }
+}
+@media (max-width: $xs) {
+  .feedbackPlan {
+    display: none;
+  }
 }

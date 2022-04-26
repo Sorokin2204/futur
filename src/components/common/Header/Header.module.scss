@@ -69,3 +69,26 @@
     transition: all 0.6s;
   }
 }
+.menuBtnBurger {
+  display: none;
+  width: 16px;
+  height: 12px;
+  background-image: url(../../../../public/icons/burger.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media (max-width: $sm) {
+  .menuBtnBurger {
+    display: block;
+  }
+  .menu {
+    display: none;
+  }
+  .inner {
+    justify-content: space-between;
+  }
+  .header {
+    padding: 12px 0;
+  }
+}

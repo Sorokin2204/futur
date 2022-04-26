@@ -27,3 +27,37 @@
     margin-top: 60px;
   }
 }
+@media (max-width: $sm) {
+  .packageList {
+    padding: 63px 0 120px;
+  }
+  .packageTitle {
+    margin-bottom: 20px;
+  }
+  .packageListFilter {
+    margin-bottom: 28px;
+  }
+  .packageListGroupTitle {
+    margin-bottom: 12px;
+  }
+  .packageListGroupItem {
+    & + & {
+      margin-top: 0px;
+    }
+  }
+  .packageListGroupList {
+    display: flex;
+    grid-gap: 0;
+    padding-bottom: 20px;
+  }
+  .packageListGroupWrapper {
+    width: max-content;
+    max-width: calc(100vw - 32px);
+    overflow: scroll;
+  }
+}
+.packageListGroupPackage {
+  & + & {
+    margin-left: 12px;
+  }
+}

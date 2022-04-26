@@ -71,3 +71,25 @@
 .footerPolicy {
   text-decoration: none;
 }
+@media (max-width: $md) {
+  .footerMenu {
+    display: none;
+  }
+}
+@media (max-width: $sm) {
+  .footerInner {
+    padding: 43px 0 45px;
+  }
+  .footerBottom {
+    padding-bottom: 32px;
+  }
+}
+@media (max-width: $xs) {
+  .footerBottom {
+    flex-direction: column;
+    align-items: start;
+  }
+  .footerRights {
+    margin-bottom: 12px;
+  }
+}

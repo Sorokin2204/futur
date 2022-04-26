@@ -16,3 +16,10 @@
     opacity: 0.04;
   }
 }
+@media (max-width: $sm) {
+  .title {
+    &::after {
+      top: -135%;
+    }
+  }
+}

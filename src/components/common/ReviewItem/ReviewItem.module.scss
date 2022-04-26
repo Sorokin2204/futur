@@ -59,3 +59,26 @@
     margin-right: 14px;
   }
 }
+@media (max-width: $md) {
+  .reviewItem {
+    max-width: 343px;
+    grid-template-columns: 1fr;
+  }
+  .reviewImgBox {
+    margin-bottom: 16px;
+  }
+  .reviewRoom {
+    margin-bottom: 10px;
+  }
+  .reviewImg {
+    max-height: 383px;
+    object-fit: cover;
+    object-position: 0 30%;
+  }
+  .reviewText {
+    margin-bottom: 22px;
+  }
+  .reviewName {
+    margin-bottom: 10px;
+  }
+}

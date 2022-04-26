@@ -10,13 +10,12 @@ const HomeConstructor = () => {
       <div className={clsx(styles.constructor)}>
         <div className={clsx(styles.container, 'container')}>
           <div className={clsx(styles.constructorInner)}>
-            <div className={clsx(styles.constructorContent)}>
-              <Title className={clsx(styles.constructorTitle)}>{constructor.title}</Title>
-              <p className={clsx(styles.contsturctorText)}>{constructor.text}</p>
-              <Button className={clsx(styles.consturctorBtn)} arrow>
-                {constructor.btnText}
-              </Button>
-            </div>
+            <Title className={clsx(styles.constructorTitle)}>{constructor.title}</Title>
+            <p className={clsx(styles.contsturctorText)}>{constructor.text}</p>
+            <Button className={clsx(styles.consturctorBtn)} arrow>
+              {constructor.btnText}
+            </Button>
+
             <div className={clsx(styles.constructorImgBox)}>
               <img src={constructor.img} alt="" className={clsx(styles.constructorImg)} />
             </div>

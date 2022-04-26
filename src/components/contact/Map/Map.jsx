@@ -26,6 +26,7 @@ const Map = () => {
                     ))}
                   </ul>
                 </div>
+                <img src="/img/map.png" alt="" className={clsx(styles.mapImage)} />
               </div>
             </div>
           </div>

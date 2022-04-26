@@ -41,7 +41,6 @@
   padding: 12px 14px 17px 14px;
 }
 .packageName {
-  white-space: nowrap;
   grid-column: 1/2;
   grid-row: 1/2;
   @include semibold-22;
@@ -119,5 +118,31 @@
     background-repeat: no-repeat;
     background-size: contain;
     z-index: 2;
+  }
+}
+
+@media (max-width: $sm) {
+  .package {
+    max-width: 220px;
+    min-width: 220px;
+  }
+  .packageContent {
+    padding: 14px 8px 20px;
+  }
+  .packageName {
+    @include semibold-16;
+  }
+  .packagePrice {
+    @include semibold-16;
+    span {
+      color: $mid-grey;
+      @include regular-16;
+      margin-left: 4px;
+    }
+  }
+  .packageImg {
+    height: 182px;
+    object-fit: cover;
+    object-position: 0 0;
   }
 }
