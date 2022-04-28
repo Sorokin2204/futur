@@ -10,18 +10,24 @@ const TotalFooter = ({ className }) => {
   return (
     <>
       <div className={clsx(styles.totalFooter, className)}>
-        <div className={clsx(styles.totalFooterLabel)}>Итого: 1 278 900 ₸</div>
-        <Button small className={clsx(styles.totalFooterBtnCheckout)} onClick={() => setActiveModal(true)}>
-          Оформить
-        </Button>
-        {activeModal && <ModalFeedback onOpenThankModal={() => setActiveModalThank(true)} onClose={() => setActiveModal(false)} />}
-        {activeModalThank && (
-          <ModalThank
-            onClose={() => {
-              setActiveModalThank(false);
-            }}
-          />
-        )}
+        <div className="container">
+          <div className={clsx(styles.totalFooterInner, className)}>
+            <div className={clsx(styles.totalFooterLabel)}>
+              <span>Итого:&nbsp;</span> <span>1 278 900 ₸</span>
+            </div>
+            <Button small className={clsx(styles.totalFooterBtnCheckout)} onClick={() => setActiveModal(true)}>
+              Оформить
+            </Button>
+            {activeModal && <ModalFeedback onOpenThankModal={() => setActiveModalThank(true)} onClose={() => setActiveModal(false)} />}
+            {activeModalThank && (
+              <ModalThank
+                onClose={() => {
+                  setActiveModalThank(false);
+                }}
+              />
+            )}
+          </div>
+        </div>
       </div>
     </>
   );

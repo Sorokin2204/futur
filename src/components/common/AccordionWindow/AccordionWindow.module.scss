@@ -32,3 +32,11 @@
 .accordionContent {
   padding: 10px 20px 20px 20px;
 }
+@media (max-width: $md) {
+  .accordionHead {
+    padding: 19px 20px 18px 16px;
+  }
+  .accordionContent {
+    padding: 10px 16px 20px 16px;
+  }
+}

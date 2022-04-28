@@ -1,23 +1,87 @@
 @import '../../../styles/var';
+
 .select {
-  @include regular-16;
-  padding: 18px;
-  border: 1px solid $light-grey;
-  color: $light-grey;
-  border-radius: 4px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  &::after {
-    content: '';
+  .selectCustom {
+    user-select: none;
+    @include regular-16;
+    padding: 18px;
+    border: 1px solid $light-grey;
+    color: $light-grey;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &::after {
+      content: '';
+      display: block;
+      width: 8px;
+      height: 14px;
+      mask-image: url(../../../../public/icons/chevron.svg);
+      mask-size: contain;
+      mask-repeat: no-repeat;
+      background-color: $grey;
+      transform: rotate(90deg);
+      margin-top: 2px;
+    }
+  }
+
+  .selectCustomSelected {
+    color: $black;
+  }
+  .selectNative {
+    display: none;
+  }
+  .selectCustomActive {
+    border-color: $primary;
+    &::after {
+      transform: rotate(-90deg);
+    }
+  }
+
+  .selectOptionList {
+    overflow: scroll;
+    display: none;
+    width: 100%;
+    background-color: $white;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    filter: drop-shadow(0px 4px 16px rgba(16, 8, 63, 0.12));
+    max-height: calc(44vh - 40px);
+  }
+  .selectOptionListOpen {
     display: block;
-    width: 8px;
-    height: 14px;
-    mask-image: url(../../../../public/icons/chevron.svg);
-    mask-size: contain;
-    mask-repeat: no-repeat;
-    background-color: $grey;
-    transform: rotate(90deg);
-    margin-top: 2px;
+  }
+  .selectOptionItem {
+    @include regular-16;
+    padding: 15px 20px;
+  }
+  .selectOptionItemActive {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $primary;
+    &::after {
+      content: '';
+      display: block;
+      width: 18px;
+      height: 14px;
+      display: block;
+      mask-image: url(../../../../public/icons/check-thin.svg);
+      mask-repeat: no-repeat;
+      mask-size: contain;
+      background-color: $primary;
+    }
+  }
+  .selectBox {
+    position: relative;
+  }
+}
+@media (max-width: 500px) {
+  .selectCustom {
+    padding: 18px 12px !important;
+  }
+  .selectOptionItem {
+    padding: 20px 12px !important;
   }
 }

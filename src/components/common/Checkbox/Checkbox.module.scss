@@ -80,3 +80,18 @@
   mask-position: 50% 75%;
   margin-right: 8px;
 }
+
+@media (max-width: 800px) {
+  .checkboxTextLabel {
+    &::before {
+      width: 20px;
+      height: 20px;
+    }
+    &::after {
+      width: 12px;
+      height: 10px;
+      left: 5px;
+      top: 48%;
+    }
+  }
+}

@@ -40,3 +40,20 @@
   grid-column: 2/3;
   grid-row: 2/3;
 }
+@media (max-width: $sm) {
+  .roomChoice {
+    padding: 20px 12px !important;
+  }
+  .roomChoiceItem {
+    &:first-child {
+      margin-top: 16px;
+    }
+    margin-top: 14px;
+  }
+  .roomChoiceItemName {
+    margin-bottom: 8px;
+  }
+  .roomChoiceItemImg {
+    margin-right: 8px;
+  }
+}

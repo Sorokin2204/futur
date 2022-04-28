@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import clsx from 'clsx';
 import styles from './ConstructorWindow.module.scss';
 import ButtonWindow from '../../common/ButtonWindow/ButtonWindow';
@@ -8,8 +8,36 @@ import AngleWindow from '../../common/AngleWindow/AngleWindow';
 import { constructorMain } from '../../../data/page/constructor';
 import ModalGoBack from '../../common/ModalGoBack/ModalGoBack';
 import RoomPoint from '../../common/RoomPoint/RoomPoint';
+import { roomList } from '../../../data/list/rooms';
+import { packageList } from '../../../data/list/packages';
 const ConstructorWindow = ({ className }) => {
   const [activeModal, setActiveModal] = useState(false);
+  const [windowRooms, setWindowRooms] = useState([]);
+  const [windowPackages, setWindowPackages] = useState([]);
+  useEffect(() => {
+    let newWindowRooms = [];
+    let newWindowPackages = [];
+    roomList.map((room) => {
+      newWindowRooms.push({
+        label: room.name,
+        value: room.slug,
+        icon: room.icon,
+      });
+    });
+
+    packageList.map((packagee) => {
+      newWindowPackages.push({
+        label: packagee.name,
+        value: packagee.name,
+        price: packagee.price,
+      });
+    });
+
+    setWindowRooms(newWindowRooms);
+    setWindowPackages(newWindowPackages);
+    console.log(newWindowRooms);
+    console.log(newWindowPackages);
+  }, []);
   return (
     <>
       <div
@@ -30,7 +58,10 @@ const ConstructorWindow = ({ className }) => {
             setActiveModal(true);
           }}
         />
-        <SelectWindow className={clsx(styles.windowSelectPackages)} />
+        {windowPackages.length !== 0 && <SelectWindow package options={windowPackages} className={clsx(styles.windowSelectPackages)} />}
+
+        {windowRooms.length !== 0 && <SelectWindow options={windowRooms} name={'window-rooms'} className={clsx(styles.windowSelectRooms)} room />}
+
         <SwitchWindow className={clsx(styles.windowSwithFurniture)} />
         <AngleWindow className={clsx(styles.windowAngle)} />
         <ButtonWindow className={clsx(styles.windowFullScreen)} />

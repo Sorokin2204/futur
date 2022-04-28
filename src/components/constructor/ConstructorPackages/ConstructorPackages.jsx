@@ -61,6 +61,7 @@ const ConstructorPackages = () => {
                 className={'swiper-constructor-packages'}
                 spaceBetween={14}
                 slidesPerView={'auto'}
+                slidesOffsetAfter={0}
                 modules={[Navigation, Scrollbar]}
                 scrollbar
                 navigation={{

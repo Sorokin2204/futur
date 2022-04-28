@@ -26,3 +26,25 @@
   grid-column: 1/3;
   grid-row: 3/4;
 }
+@media (max-width: $sm) {
+  .totalWrapper {
+    grid-template-columns: 1fr;
+  }
+  .totalBtnBack {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin: 12px 0 13px;
+  }
+  .totalRoomChoiceList {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  .totalSidebar {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .totalFooter {
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+}

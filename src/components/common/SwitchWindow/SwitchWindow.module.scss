@@ -44,3 +44,8 @@
   @include regular-16;
   line-height: 19px;
 }
+@media (max-width: $sm) {
+  .switchLabel {
+    background: #f7f7f7;
+  }
+}

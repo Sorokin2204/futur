@@ -1,5 +1,6 @@
 @import '../../../styles/var';
 .choice {
+  box-shadow: 0px -2px 9px rgba(217, 217, 217, 0.28);
   padding: 13px 0;
 }
 .container {
@@ -16,8 +17,27 @@
 .choiceText {
   @include regular-16;
   color: $grey;
+  margin-right: 30px;
 }
 .choiceBtn {
   @include regular-16;
   max-width: 138px !important;
+}
+@media (max-width: 800px) {
+  .choice {
+    padding: 18px 0 20px;
+  }
+  .choiceInner {
+    flex-direction: column;
+  }
+  .choiceBtn {
+    max-width: none !important;
+  }
+  .choiceTitle {
+    margin-bottom: 8px;
+  }
+  .choiceBox {
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
 }

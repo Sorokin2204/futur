@@ -9,7 +9,7 @@ const ModalThank = ({ onClose }) => {
   const navigate = useNavigate();
   return (
     <>
-      <Modal title="Заявка отправлена" onClose={onClose} className={clsx(styles.thankModal)}>
+      <Modal title="Заявка отправлена" bigTitle onClose={onClose} className={clsx(styles.thankModal)}>
         <div className={clsx(styles.thank)}>
           <p className={clsx(styles.thankText)}>Наш сотрудник позвонит вам вам в самое ближайшее время. </p>
 

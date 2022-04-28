@@ -1,6 +1,9 @@
 @import '../../../styles/var';
 .feedbackModal {
+  max-height: calc(100vh - 40px);
   max-width: 590px;
+  min-width: 590px;
+  overflow: auto;
 }
 
 .feedbackContent {
@@ -46,4 +49,59 @@
   grid-column: 1/2;
   grid-row: 6/7;
   margin-bottom: 10px;
+}
+
+@media (max-width: 800px) {
+  .feedbackModal {
+    padding: 22px 12px 20px 12px;
+  }
+  .feedbackContent {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 0;
+    row-gap: 0;
+  }
+  .feedbackModal {
+    max-width: none;
+    max-height: calc(100vh - 32px);
+    width: calc(100vw - 32px);
+    min-width: 0;
+  }
+  .feedbackPhone {
+    margin-bottom: 22px;
+  }
+  .feedbackName {
+    margin-top: 17px;
+    margin-bottom: 22px;
+  }
+  .feedbackEmail {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    margin-bottom: 22px;
+  }
+  .feedbackMessage {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    margin-bottom: 20px;
+    height: 168px;
+  }
+  .feedbackCheckbox {
+    grid-column: 1/2;
+    grid-row: 5/6;
+    margin-bottom: 24px;
+  }
+  .feedbackText {
+    grid-column: 1/2;
+    grid-row: 6/7;
+  }
+  .feedbackText {
+    margin-bottom: 14px;
+  }
+  .feedbackBtnSubmit {
+    grid-row: 7/8;
+    max-width: none;
+  }
+  .feedbackBtnSubmit {
+    margin-bottom: 0;
+  }
 }

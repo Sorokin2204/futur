@@ -46,3 +46,19 @@
 .textarea {
   resize: none;
 }
+
+@media (max-width: 800px) {
+  .input {
+    padding: 18px 12px;
+  }
+  .inputLabelMobile {
+    & .inputTextLabel {
+      @include semibold-16;
+      margin-bottom: 8px;
+    }
+    & .input {
+      @include regular-14-no-resize;
+      padding: 14.5px 20px;
+    }
+  }
+}

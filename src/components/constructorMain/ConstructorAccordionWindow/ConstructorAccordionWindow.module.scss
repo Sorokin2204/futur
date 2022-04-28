@@ -12,6 +12,15 @@
 }
 .accordionsItemOptionList {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(166px, 1fr));
   grid-gap: 16px;
+}
+@media (max-width: $sm) {
+  .accordionsItemOptionList {
+    grid-template-columns: repeat(auto-fill, minmax(164px, 1fr));
+    grid-gap: 13px;
+  }
+  .accordionsItemCategory {
+    margin-bottom: 11px;
+  }
 }

@@ -17,7 +17,7 @@ const ConstructorInfo = () => {
           <div className={clsx(styles.infoInner)}>
             <h3 className={clsx(styles.infoTitle)}>Заполните информацию</h3>
             <div className={clsx(styles.infoCommon)}>
-              <Input className={clsx(styles.infoInputArea)} label="Площадь, м²" placeholder="м²" />
+              <Input responsive className={clsx(styles.infoInputArea)} label="Площадь, м²" placeholder="м²" />
               <Counter className={clsx(styles.infoCounterDoors)} label="Кол-во дверей" />
               <Counter className={clsx(styles.infoCounterBathRooms)} label="Кол-во санузлов" />
             </div>

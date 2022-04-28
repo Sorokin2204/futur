@@ -29,3 +29,13 @@
   margin: 0;
   max-width: none;
 }
+@media (max-width: $sm) {
+  .total {
+    margin-top: 38px;
+    padding: 18px 16px 20px 16px;
+    box-shadow: 0px 4px 23px rgba(44, 44, 44, 0.1);
+  }
+  .totalList {
+    margin-bottom: 20px;
+  }
+}

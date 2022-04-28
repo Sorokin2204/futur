@@ -32,3 +32,14 @@
   @include regular-16;
   color: #fc891f;
 }
+@media (max-width: $md) {
+  .breadcrumbsList {
+    padding-top: 14px;
+  }
+  .breadcrumbsLink {
+    @include regular-14;
+  }
+  .breadcrumbsLabel {
+    @include regular-14;
+  }
+}

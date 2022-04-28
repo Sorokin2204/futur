@@ -78,3 +78,19 @@
     z-index: 2;
   }
 }
+@media (max-width: $sm) {
+  .accordionItemActiveIcon {
+    width: 28px;
+    height: 28px;
+    &::before {
+      top: 8.5px;
+      left: 8px;
+
+      width: 13px;
+      height: 11px;
+      background-size: 13px 11px;
+      width: 28px;
+      height: 28px;
+    }
+  }
+}

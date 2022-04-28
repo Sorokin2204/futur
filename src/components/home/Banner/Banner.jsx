@@ -3,7 +3,9 @@ import Button from '../../common/Button/Button';
 import styles from './Banner.module.scss';
 import { common } from '../../../data/common';
 import { banner } from '../../../data/page/home';
+import { useNavigate } from 'react-router';
 const HomeBanner = () => {
+  const navigate = useNavigate();
   return (
     <div className={clsx(styles.banner)}>
       <div className={clsx(styles.container, 'container')}>
@@ -12,7 +14,7 @@ const HomeBanner = () => {
           <div className={clsx(styles.bannerCol)}>
             <h1 className={clsx(styles.bannerTitle)}>{banner.title}</h1>
             <p className={clsx(styles.bannerText)}>{banner.text}</p>
-            <Button className={clsx(styles.bannerBtn)} arrow>
+            <Button className={clsx(styles.bannerBtn)} arrow onClick={() => navigate('/constructor')}>
               {banner.btnText}
             </Button>
           </div>{' '}

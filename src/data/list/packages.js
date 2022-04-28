@@ -42,7 +42,7 @@ export const packageList = [
   {
     category: 'standart',
     img: '/img/work-3.png',
-    name: 'Отбасы',
+    name: 'Отбасыыы',
     price: 50900,
     furniture: [
       {
@@ -62,7 +62,7 @@ export const packageList = [
   {
     category: 'standart',
     img: '/img/work-3.png',
-    name: 'Отбасы',
+    name: 'Отбасыыыыы',
     price: 50900,
     furniture: [
       {
@@ -82,7 +82,7 @@ export const packageList = [
   {
     category: 'standart',
     img: '/img/work-3.png',
-    name: 'Отбасы',
+    name: 'Отбасыаыва',
     price: 50900,
     furniture: [
       {
@@ -102,7 +102,7 @@ export const packageList = [
   {
     category: 'standart',
     img: '/img/work-3.png',
-    name: 'Отбасы',
+    name: 'Отбасыпвпав',
     price: 50900,
     furniture: [
       {

@@ -17,9 +17,9 @@ const TotalContent = () => {
           </Button>
           <TotalRoomChoiceList className={clsx(styles.totalRoomChoiceList)} />
           <TotalSidebar className={clsx(styles.totalSidebar)} />
-          <TotalFooter className={clsx(styles.totalFooter)} />
         </div>
       </div>
+      <TotalFooter className={clsx(styles.totalFooter)} />
     </>
   );
 };

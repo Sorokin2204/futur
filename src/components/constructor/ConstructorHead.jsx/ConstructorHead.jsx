@@ -27,7 +27,7 @@ const ConstructorHead = () => {
                 <Radio label={'Частный дом'} value="fsd" name="typeHome" />
               </div>
 
-              <Input label="Жилой комплекс" placeholder="Название жилого комплекса" className={clsx(styles.headComplexInput)} />
+              <Input responsive label="Жилой комплекс" placeholder="Название жилого комплекса" className={clsx(styles.headComplexInput)} />
               <Counter label={'Количество комнат'} className={clsx(styles.headComplexCounter)} afterText="-комнатная" />
             </div>
           </div>

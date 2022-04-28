@@ -18,6 +18,33 @@
   width: 100%;
 }
 .workSingleImg {
-  // width: 100%;
-  // height: auto;
+  width: 100% !important;
+  height: auto !important;
+
+  padding: 0 5.5vw;
+}
+@media (max-width: $xs) {
+  .workSingle {
+    padding: 28px 0 60px;
+  }
+  .workSingleTitle {
+    margin-bottom: 20px;
+  }
+  .workSingleText {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: $xs) {
+  .workSingleImg {
+    padding: 0;
+    // height: 61.6vw !important;
+    // max-height: 400px;
+    // max-width: 600px;
+    width: calc(100vw - 32px) !important;
+    height: 60vw !important;
+  }
+  .workSingleSwiper {
+    padding: 0 16px;
+    height: 60vw !important;
+  }
 }

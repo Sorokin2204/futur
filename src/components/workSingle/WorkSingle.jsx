@@ -22,14 +22,21 @@ const WorkSingle = () => {
         </div>
         <div className={clsx(styles.workSingleSwiper)}>
           <Swiper
+            breakpoints={{
+              640: { slidesPerView: 2, spaceBetween: 0, centeredSlides: true, centerInsufficientSlides: true },
+            }}
             className="swiper-work-single"
-            centeredSlides={true}
-            slidesOffsetAfter={0}
-            slidesPerGroup={1}
-            spaceBetween={120}
-            centerInsufficientSlides={true}
-            slidesPerView={'auto'}
+            centeredSlides={false}
+            spaceBetween={16}
+            centerInsufficientSlides={false}
+            slidesPerView={1}
             modules={[Navigation, Pagination]}
+            // spaceBetween={1}
+            // slidesPerView={3}
+            // centeredSlides={true}
+            // roundLengths={true}
+            // loop={true}
+            // loopAdditionalSlides={30}
             navigation={{
               nextEl: '.swiper-work-single-button-next',
               prevEl: '.swiper-work-single-button-prev',
@@ -37,9 +44,9 @@ const WorkSingle = () => {
             pagination={{
               el: '.swiper-work-single-pagination',
               clickable: true,
-              //   renderFraction: function (currentClass, totalClass) {
-              //     return '<span class="' + currentClass + '"></span>' + '&nbspиз&nbsp' + '<span class="' + totalClass + '"></span>';
-              //   },
+              renderFraction: function (currentClass, totalClass) {
+                return '<span class="' + currentClass + '"></span>' + '&nbspиз&nbsp' + '<span class="' + totalClass + '"></span>';
+              },
 
               type: 'fraction',
             }}>

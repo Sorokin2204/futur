@@ -76,8 +76,11 @@
   background-image: url(../../../../public/icons/burger.svg);
   background-repeat: no-repeat;
   background-size: contain;
+  background-position: 50% 50%;
 }
-
+.menuBtnBurgerClose {
+  background-image: url(../../../../public/icons/close.svg);
+}
 @media (max-width: $sm) {
   .menuBtnBurger {
     display: block;
@@ -89,6 +92,12 @@
     justify-content: space-between;
   }
   .header {
-    padding: 12px 0;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: $white;
+    padding: 16px 0;
+    z-index: 100;
+    box-shadow: 0px 4px 10px rgba(138, 149, 158, 0.07);
   }
 }

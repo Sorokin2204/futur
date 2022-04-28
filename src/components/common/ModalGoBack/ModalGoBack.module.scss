@@ -1,4 +1,6 @@
 @import '../../../styles/var';
+.goBackModal {
+}
 .goBack {
 }
 .goBackTitle {
@@ -26,9 +28,18 @@
   margin-bottom: 18px;
 }
 .goBackBtnAdd {
-  max-width: 172px !important;
 }
 .goBackModal {
   width: 100%;
   max-width: 400px;
+}
+@media (max-width: 500px) {
+  .goBackBtnBox {
+    grid-gap: 11px;
+  }
+  .goBackModal {
+    width: 100%;
+    max-width: calc(100vw - 32px);
+    padding: 19px 12px 17px 12px;
+  }
 }

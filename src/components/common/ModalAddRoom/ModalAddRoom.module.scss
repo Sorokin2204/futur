@@ -26,3 +26,22 @@
   width: 100%;
   max-width: 462px;
 }
+@media (max-width: 500px) {
+  .addRoomBtnCancel {
+    margin-right: 8px;
+  }
+  .addRoomModal {
+    width: 100%;
+    max-width: calc(100vw - 32px);
+    padding: 14px 12px 20px;
+  }
+  .addRoomBtnAdd {
+    max-width: 190px !important;
+  }
+  .addRoomTitle {
+    margin-bottom: 8px;
+  }
+  .addRoomSelect {
+    margin-bottom: 20px;
+  }
+}

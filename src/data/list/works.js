@@ -1,7 +1,7 @@
 export const worksList = [
   {
     img: '/img/work-1.png',
-    images: ['/img/work-single-1.png', '/img/work-single-2.png', '/img/work-single-3.png'],
+    images: ['https://picsum.photos/seed/1/1080/700', 'https://picsum.photos/seed/2/1080/700', 'https://picsum.photos/seed/3/1080/700'],
     title: 'Комфорт Лофт',
     text: 'Расчёт ремонта квартиры онлайн. Укажите параметры вашей квартиры, затем в конструкторе выберите планируемый дизайн.',
     fullText:

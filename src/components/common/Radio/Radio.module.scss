@@ -77,3 +77,13 @@
     z-index: 3;
   }
 }
+
+@media (max-width: 800px) {
+  .radioLabelTextBlock {
+    @include semibold-14;
+    padding: 15px 36px;
+  }
+  .radioLabelText {
+    @include regular-16;
+  }
+}

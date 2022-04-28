@@ -16,4 +16,8 @@ export const totalList = [
     room: 'Ванная',
     price: 150300,
   },
+  {
+    room: 'Балкон',
+    price: 15300,
+  },
 ];

@@ -22,6 +22,10 @@ $xs: 640px;
 }
 
 @mixin regular-14 {
+  @include fluid-type(400, 14, 17, $screen-min, $screen-max, 12, 15);
+}
+
+@mixin regular-14-no-resize {
   @include fluid-type(400, 14, 17, $screen-min, $screen-max);
 }
 
@@ -61,10 +65,17 @@ $xs: 640px;
   @include fluid-type(600, 22, 29, $screen-min, $screen-max, 18, 22);
 }
 
+@mixin semibold-20-no-resize {
+  @include fluid-type(600, 20, 24, $screen-min, $screen-max);
+}
+
 @mixin semibold-26 {
   @include fluid-type(600, 26, 35, $screen-min, $screen-max, 24, 32);
 }
 @mixin semibold-18 {
+  @include fluid-type(600, 18, 22, $screen-min, $screen-max, 16, 20);
+}
+@mixin semibold-18-no-resize {
   @include fluid-type(600, 18, 22, $screen-min, $screen-max);
 }
 @mixin semibold-32 {
@@ -92,7 +103,7 @@ $xs: 640px;
 }
 
 @mixin bold-32 {
-  @include fluid-type(700, 32, 43, $screen-min, $screen-max);
+  @include fluid-type(700, 32, 43, $screen-min, $screen-max, 24, 32);
 }
 
 @mixin bold-26 {

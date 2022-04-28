@@ -7,36 +7,36 @@ export const roomList = [
   {
     icon: '/icons/room-2.svg',
     name: 'Спальня',
-    slug: 'gostinaya',
+    slug: 'spalng',
   },
   {
     icon: '/icons/room-3.svg',
     name: 'Кухня',
-    slug: 'gostinaya',
+    slug: 'kugna',
   },
   {
     icon: '/icons/room-4.svg',
     name: 'Ванная',
-    slug: 'gostinaya',
+    slug: 'vanna',
   },
   {
     icon: '/icons/room-5.svg',
     name: 'Санузел',
-    slug: 'gostinaya',
+    slug: 'sanusel',
   },
   {
     icon: '/icons/room-6.svg',
     name: 'Прихожая',
-    slug: 'gostinaya',
+    slug: 'prihocha',
   },
   {
     icon: '/icons/room-7.svg',
     name: 'Балкон',
-    slug: 'gostinaya',
+    slug: 'balkon',
   },
   {
     icon: '/icons/room-8.svg',
     name: 'Гардеробная',
-    slug: 'gostinaya',
+    slug: 'garderob',
   },
 ];

@@ -45,3 +45,23 @@
 .totalPackageTotalPrice {
   @include semibold-18;
 }
+@media (max-width: $sm) {
+  .totalSidebar {
+    padding: 20px 12px 18px 12px;
+    margin-bottom: 20px;
+  }
+  .totalTitle {
+    margin-bottom: 14px;
+  }
+  .totalPackageItem {
+    & + & {
+      margin-top: 10px;
+    }
+  }
+  .totalPackageTotal {
+    margin-top: 18px;
+  }
+  .totalPackageTotal {
+    padding-top: 18px;
+  }
+}

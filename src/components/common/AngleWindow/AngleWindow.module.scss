@@ -38,3 +38,11 @@
     transform: translate(-50%, -50%) rotate(180deg);
   }
 }
+@media (max-width: $sm) {
+  .angle {
+    background: #f7f7f7;
+  }
+  .angleBtn {
+    background: #f1f1f1;
+  }
+}

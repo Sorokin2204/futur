@@ -1,11 +1,22 @@
 import clsx from 'clsx';
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { common } from '../../../data/common';
 import '../../../styles/index.scss';
 import styles from './Header.module.scss';
 import { Link, NavLink } from 'react-router-dom';
+import Menu from '../Menu/Menu';
 
 const Header = () => {
+  const [openMenu, setOpenMenu] = useState(false);
+  const onClose = () => {
+    setOpenMenu(false);
+  };
+  useEffect(() => {
+    if (openMenu) document.body.style.overflow = 'hidden';
+    else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [openMenu]);
   return (
     <>
       <header className={clsx(styles.header)}>
@@ -24,13 +35,14 @@ const Header = () => {
                 </li>
               ))}
             </ul>
-            <button className={clsx(styles.menuBtnBurger)}>
+            <button className={clsx(styles.menuBtnBurger, openMenu && styles.menuBtnBurgerClose)} onClick={() => setOpenMenu(!openMenu)}>
               <div className=""></div>
               <div className=""></div>
               <div className=""></div>
             </button>
           </div>
         </div>
+        <Menu open={openMenu} onClose={onClose} />
       </header>
     </>
   );

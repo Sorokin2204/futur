@@ -16,12 +16,14 @@
   margin-bottom: 34px;
 }
 .infoCommon {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   grid-gap: 24px;
-  grid-template-columns: 150px min-content min-content;
+  // grid-template-columns: repeat(auto-fill, minmax(auto, 1fr));
   margin-bottom: 34px;
 }
 .infoInputArea {
+  max-width: 150px;
 }
 .infoCounterDoors {
 }
@@ -46,4 +48,29 @@
   margin-bottom: 24px;
 }
 .infoCheckboxSecondaryHome {
+}
+
+@media (max-width: 800px) {
+  .infoCommon {
+    column-gap: 12px;
+    row-gap: 22px;
+  }
+  .infoTitle {
+    @include semibold-20-no-resize;
+    margin-bottom: 30px;
+  }
+  .infoInner {
+    padding: 16px 12px 40px 12px;
+  }
+  .infoRoomList {
+    grid-gap: 20px;
+    grid-template-columns: 1fr;
+    margin-bottom: 20px;
+  }
+  .infoBtnAddRoom {
+    margin-bottom: 30px;
+  }
+  .infoCheckboxWall {
+    margin-bottom: 20px;
+  }
 }

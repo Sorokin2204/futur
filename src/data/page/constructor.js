@@ -19,7 +19,31 @@ export const constructorMain = {
                   price: 123454,
                 },
                 {
-                  name: 'Шоколад светлый',
+                  name: 'Шоколад светлыйqqqw',
+                  img: '/img/potolok-2.png',
+                  desc: 'Quick-Step Classic CLM1655. Дуб кубинский. Размеры: 120х19х0,8см. Класс 32. Микрофаски.',
+                  price: 90334,
+                },
+                {
+                  name: 'Шоколад 423',
+                  img: '/img/potolok-1.png',
+                  desc: 'Quick-Step Classic CLM1655. Дуб кубинский. Размеры: 120х19х0,8см. Класс 32. Микрофаски.',
+                  price: 123454,
+                },
+                {
+                  name: 'Шоколад светлыйrwer',
+                  img: '/img/potolok-2.png',
+                  desc: 'Quick-Step Classic CLM1655. Дуб кубинский. Размеры: 120х19х0,8см. Класс 32. Микрофаски.',
+                  price: 90334,
+                },
+                {
+                  name: 'Шоколад темныййgf',
+                  img: '/img/potolok-1.png',
+                  desc: 'Quick-Step Classic CLM1655. Дуб кубинский. Размеры: 120х19х0,8см. Класс 32. Микрофаски.',
+                  price: 123454,
+                },
+                {
+                  name: 'Шоколад светлыйgdfg',
                   img: '/img/potolok-2.png',
                   desc: 'Quick-Step Classic CLM1655. Дуб кубинский. Размеры: 120х19х0,8см. Класс 32. Микрофаски.',
                   price: 90334,
@@ -30,13 +54,13 @@ export const constructorMain = {
               category: 'Ламинат',
               list: [
                 {
-                  name: 'Шоколад темныййй',
+                  name: 'Шоколад темныйййbcv',
                   img: '/img/potolok-1.png',
                   desc: 'Quick-Step Classic CLM1655. Дуб кубинский. Размеры: 120х19х0,8см. Класс 32. Микрофаски.',
                   price: 123454,
                 },
                 {
-                  name: 'Шоколад светлыййй',
+                  name: 'Шоколад светлыййй34f',
                   img: '/img/potolok-2.png',
                   desc: 'Quick-Step Classic CLM1655. Дуб кубинский. Размеры: 120х19х0,8см. Класс 32. Микрофаски.',
                   price: 90334,
@@ -54,13 +78,13 @@ export const constructorMain = {
               category: 'Ламинат',
               list: [
                 {
-                  name: 'Шоколад темныйй',
+                  name: 'Шоколад темныййfsdf',
                   img: '/img/potolok-1.png',
                   desc: 'Quick-Step Classic CLM1655. Дуб кубинский. Размеры: 120х19х0,8см. Класс 32. Микрофаски.',
                   price: 123454,
                 },
                 {
-                  name: 'Шоколад светлыйй',
+                  name: 'Шоколад светлыййgs',
                   img: '/img/potolok-2.png',
                   desc: 'Quick-Step Classic CLM1655. Дуб кубинский. Размеры: 120х19х0,8см. Класс 32. Микрофаски.',
                   price: 90334,
@@ -71,13 +95,13 @@ export const constructorMain = {
               category: 'Ламинат',
               list: [
                 {
-                  name: 'Шоколад темный',
+                  name: 'Шоколад темныйbdfb',
                   img: '/img/potolok-1.png',
                   desc: 'Quick-Step Classic CLM1655. Дуб кубинский. Размеры: 120х19х0,8см. Класс 32. Микрофаски.',
                   price: 123454,
                 },
                 {
-                  name: 'Шоколад светлый',
+                  name: 'Шоколад светлыйbdfb',
                   img: '/img/potolok-2.png',
                   desc: 'Quick-Step Classic CLM1655. Дуб кубинский. Размеры: 120х19х0,8см. Класс 32. Микрофаски.',
                   price: 90334,
@@ -95,13 +119,13 @@ export const constructorMain = {
               category: 'Ламинат',
               list: [
                 {
-                  name: 'Шоколад темныйй',
+                  name: 'Шоколад темныйbbй',
                   img: '/img/potolok-1.png',
                   desc: 'Quick-Step Classic CLM1655. Дуб кубинский. Размеры: 120х19х0,8см. Класс 32. Микрофаски.',
                   price: 123454,
                 },
                 {
-                  name: 'Шоколад светлыйй',
+                  name: 'Шоколад светлыйdfй',
                   img: '/img/potolok-2.png',
                   desc: 'Quick-Step Classic CLM1655. Дуб кубинский. Размеры: 120х19х0,8см. Класс 32. Микрофаски.',
                   price: 90334,
@@ -112,13 +136,13 @@ export const constructorMain = {
               category: 'Ламинат',
               list: [
                 {
-                  name: 'Шоколад темный',
+                  name: 'Шоколад темныйxccx',
                   img: '/img/potolok-1.png',
                   desc: 'Quick-Step Classic CLM1655. Дуб кубинский. Размеры: 120х19х0,8см. Класс 32. Микрофаски.',
                   price: 123454,
                 },
                 {
-                  name: 'Шоколад светлый',
+                  name: 'Шоколад светлыйevdsf',
                   img: '/img/potolok-2.png',
                   desc: 'Quick-Step Classic CLM1655. Дуб кубинский. Размеры: 120х19х0,8см. Класс 32. Микрофаски.',
                   price: 90334,

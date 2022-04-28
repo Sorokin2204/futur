@@ -4,13 +4,11 @@ import ConstructorHead from '../components/constructor/ConstructorHead.jsx/Const
 import ConstructorInfo from '../components/constructor/ConstructorInfo/ConstructorInfo';
 import ConstructorPackages from '../components/constructor/ConstructorPackages/ConstructorPackages';
 import ConstructorChoice from '../components/constructor/ConstructorChoice/ConstructorChoice';
+import ConstructorContent from '../components/constructor/ConstructorContent/ConstructorContent';
 const ConstructorPage = () => {
   return (
     <>
-      <ConstructorHead />
-      <ConstructorInfo />
-      <ConstructorPackages />
-      <ConstructorChoice />
+      <ConstructorContent />
     </>
   );
 };

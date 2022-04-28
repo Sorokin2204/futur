@@ -1,5 +1,6 @@
 @import '../../../styles/var';
 .thankModal {
+  width: 360px;
   max-width: 360px;
 }
 .thankText {
@@ -10,4 +11,17 @@
 }
 
 .thankBtnGreat {
+  width: 100%;
+  max-width: none;
+}
+
+@media (max-width: 500px) {
+  .thankModal {
+    width: 100%;
+    max-width: calc(100vw - 32px);
+    padding: 14px 12px 20px;
+  }
+  .thankText {
+    margin-bottom: 28px;
+  }
 }

@@ -5,7 +5,9 @@ import { about } from '../../../data/page/home';
 import Title from '../../common/Title/Title';
 import Button from '../../common/Button/Button';
 import { common } from '../../../data/common';
+import { useNavigate } from 'react-router';
 const HomeAbout = ({ aboutPage }) => {
+  const navigate = useNavigate();
   return (
     <>
       <section className={clsx(styles.about, aboutPage && styles.aboutPage)}>

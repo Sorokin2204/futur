@@ -1,0 +1,69 @@
+[
+  {
+    "id": "6269427c8ddae9e2e9922b4b",
+    "name": "Отбасы",
+    "slug": "otobasi",
+    "price": 50990
+  },
+  {
+    "id": "6269427c8ddae9e2e9922b4b",
+    "name": "Гостинная",
+    "slug": "gostinaya",
+    "imgWithFurnitureOnAngles": [
+      {
+        "img": "https://picsum.photos/200/300",
+        "orderAngle": 1
+      },
+      {
+        "img": "https://picsum.photos/400/500",
+        "orderAngle": 2
+      }
+    ],
+    "details": [
+      {
+        "id": "6269427c8ddae9e2e9922b4b",
+        "name": "Пол",
+        "slug": "pol",
+        "positionOnAngles": [
+          {
+            "x": 4,
+            "y": 7,
+            "orderAngle": 1
+          },
+          {
+            "x": 44,
+            "y": 75,
+            "orderAngle": 2
+          }
+        ],
+        "options": [
+          {
+            "id": "6269427c8ddae9e2e9922b4b",
+            "name": "Шоколад темный",
+            "slug": "chocholate-dark",
+            "previewImg": "https://picsum.photos/200/300",
+            "desc": "Quick-Step Classic CLM1655. Дуб кубинский. Размеры: 120х19х0,8см. Класс 32. Микрофаски.",
+            "price": 123434,
+            "order": 1,
+            "group": {
+              "id": "6269427c8ddae9e2e9922b4b",
+              "name": "Ламинат",
+              "slug": "laminat",
+              "order": 1
+            },
+            "fullImgOnAngels": [
+              {
+                "img": "https://picsum.photos/200/300",
+                "orderAngle": 1
+              },
+              {
+                "img": "https://picsum.photos/300/400",
+                "orderAngle": 2
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -9,3 +9,8 @@
   background: rgba(39, 39, 39, 0.42);
   z-index: 1000;
 }
+@media (max-width: 500px) {
+  .overlay {
+    background: rgba(39, 39, 39, 0.22);
+  }
+}

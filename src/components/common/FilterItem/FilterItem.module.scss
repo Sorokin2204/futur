@@ -4,7 +4,7 @@
   user-select: none;
   @include semibold-20;
   font-family: inherit;
-  padding: 11px 44px 15px 44px;
+  padding: 12px 44px 14px 44px;
   border: 1px solid $light-grey;
   border-radius: 32px;
   color: $light-grey;
@@ -14,6 +14,11 @@
   & + & {
     margin-left: 12px;
   }
+  &:last-of-type {
+    .filterButton {
+      margin-right: 20px;
+    }
+  }
 }
 
 .filterActive {
@@ -22,6 +27,6 @@
 }
 @media (max-width: $sm) {
   .filterButton {
-    padding: 9px 30px 11px 30px;
+    padding: 10px 30px 10px 30px;
   }
 }

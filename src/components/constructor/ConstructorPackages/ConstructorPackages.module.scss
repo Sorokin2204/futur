@@ -8,6 +8,7 @@
   padding: 30px 26px 14px 26px;
   background-color: #f9f9f9;
   border-radius: 8px;
+  overflow: hidden;
 }
 .packagesTitle {
   @include semibold-22;
@@ -15,7 +16,7 @@
 }
 .packagesListFilter {
   justify-content: flex-start;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
 .packageText {
   margin-bottom: 20px;
@@ -30,12 +31,34 @@
   width: 336px;
   height: 506px;
 }
-.packagesWrapPackage {
-  // border-radius: 10px;
-  // border: 2px solid transparent;
-}
 
 .packageSwiperSlideWrap {
   max-width: 326px;
   margin-left: 10px;
+}
+
+@media (max-width: $sm) {
+  .packageSwiperSlide {
+    width: 220px;
+    height: 490px;
+    &:last-of-type {
+      width: 235px;
+      padding-right: 25px;
+    }
+  }
+}
+@media (max-width: 800px) {
+  .packages {
+    margin-bottom: 40px;
+  }
+  .packagesInner {
+    padding: 16px 0px 20px 12px;
+  }
+  .packagesTitle {
+    @include semibold-20-no-resize;
+    margin-bottom: 22px;
+  }
+  .packagesListFilter {
+    margin-bottom: 20px;
+  }
 }
