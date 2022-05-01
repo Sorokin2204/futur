@@ -5,6 +5,7 @@ import '../../../styles/index.scss';
 import styles from './Header.module.scss';
 import { Link, NavLink } from 'react-router-dom';
 import Menu from '../Menu/Menu';
+import env from 'react-dotenv';
 
 const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);

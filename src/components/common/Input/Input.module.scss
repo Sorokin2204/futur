@@ -1,7 +1,6 @@
 @import '../../../styles/var';
 
 .input {
-  order: 2;
   transition: all 0.3s;
   @include regular-16;
   padding: 18px 20px;
@@ -28,6 +27,43 @@
     }
   }
 }
+.inputBox {
+  order: 2;
+}
+.inputLabelError {
+  .inputBox {
+    position: relative;
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-image: url(../../../../public/icons/error.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 16px;
+      height: 16px;
+    }
+  }
+  .input {
+    border-color: $error;
+    &:hover {
+      outline-color: $error;
+    }
+
+    &:active,
+    &:focus {
+      border-color: $error;
+      outline-color: $error;
+      & + .inputTextLabel {
+        color: $error;
+      }
+    }
+  }
+}
+
 .inputLabel {
   display: flex;
   flex-direction: column;

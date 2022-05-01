@@ -37,6 +37,9 @@
   @include semibold-18;
   margin-bottom: 12px;
 }
+.counterInput {
+  display: none;
+}
 @media (max-width: 800px) {
   .counterContent {
     grid-template-columns: 48px min-content 48px;

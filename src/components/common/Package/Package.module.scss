@@ -30,10 +30,16 @@
   border-radius: 8px;
 }
 .packageImg {
-  border-radius: 8px 8px 0 0;
   width: 100%;
-  height: auto;
-  max-height: 262px;
+  height: 222px;
+  max-height: 222px;
+  & img {
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+    width: 100%;
+    height: 222px;
+    max-height: 222px;
+  }
 }
 .packageContent {
   display: grid;
@@ -94,7 +100,7 @@
 
 .packageActiveIcon {
   position: relative;
-
+  z-index: 1;
   content: '';
   display: block;
   position: absolute;
@@ -141,8 +147,14 @@
     }
   }
   .packageImg {
-    height: 182px;
-    object-fit: cover;
-    object-position: 0 0;
+    width: 100% !important;
+    height: 182px !important;
+    height: 182px !important;
+    & img {
+      height: 182px !important;
+      max-height: 182px !important;
+      object-fit: cover;
+      object-position: 0 0;
+    }
   }
 }

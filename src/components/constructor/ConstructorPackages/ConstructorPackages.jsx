@@ -13,33 +13,32 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/scrollbar';
+import { useDispatch, useSelector } from 'react-redux';
+import { getPackages, setActivePackage } from '../../../redux/slices/packageSlice';
+import { getPackageTypes } from '../../../redux/slices/packageTypeSlice';
 
 const ConstructorPackages = () => {
-  const [groupByTypePackage, setGroupByTypePackage] = useState([]);
-  const [showPackages, setShowPackages] = useState([]);
-  const [activeType, setActiveType] = useState(null);
-  const [activePackage, setActivePackage] = useState(null);
+  const [activeType, setActiveType] = useState('');
+  const { data: packages, loading: loadingPackages, error: errorPackages, selectedPackage } = useSelector((state) => state.package);
+  const { data: packageTypes, loading: loadingPackageTypes, error: errorPackageTypes } = useSelector((state) => state.packageType);
+  const dispatch = useDispatch();
   useEffect(() => {
-    setGroupByTypePackage(_.groupBy(packageList, (packageItem) => packageItem.category));
+    dispatch(getPackages());
+    dispatch(getPackageTypes());
   }, []);
 
   useEffect(() => {
-    if (groupByTypePackage.length !== 0) {
-      setActiveType('all');
-    }
-  }, [groupByTypePackage]);
-
-  useEffect(() => {
-    if (activeType === 'all') {
-      setShowPackages(groupByTypePackage);
-    } else {
-      if (groupByTypePackage[activeType]) {
-        setShowPackages({ [`${activeType}`]: groupByTypePackage[activeType] });
-      }
-    }
+    dispatch(setActivePackage(null));
   }, [activeType]);
 
-  useEffect(() => {}, [showPackages]);
+  useEffect(() => {
+    if (packages) {
+      if (localStorage['package']) dispatch(setActivePackage({ slug: localStorage['package'] }));
+      else {
+        dispatch(setActivePackage(null));
+      }
+    }
+  }, [packages]);
 
   return (
     <>
@@ -48,11 +47,16 @@ const ConstructorPackages = () => {
           <div className={clsx(styles.packagesInner)}>
             <h3 className={clsx(styles.packagesTitle)}>Выбрите пакет</h3>
             <Filter className={clsx(styles.packagesListFilter)}>
-              {typePackageList.map((type, index) => (
-                <FilterItem active={type.slug === activeType} onClick={() => setActiveType(type.slug)}>
-                  {type.name}
-                </FilterItem>
-              ))}
+              <FilterItem active={activeType === ''} onClick={() => setActiveType('')}>
+                Все
+              </FilterItem>
+              {!loadingPackageTypes &&
+                packageTypes &&
+                packageTypes.map((type, index) => (
+                  <FilterItem active={type.slug === activeType} onClick={() => setActiveType(type.slug)}>
+                    {type.name}
+                  </FilterItem>
+                ))}
             </Filter>
             <p className={clsx(styles.packageText)}>Пакеты включают в себя черновые и чистовые материалы, а также профессиональный ремонт и гарантию от SmartRemont</p>
 
@@ -68,16 +72,17 @@ const ConstructorPackages = () => {
                   nextEl: '.swiper-constructor-packages-button-next',
                   prevEl: '.swiper-constructor-packages-button-prev',
                 }}>
-                {Object.keys(showPackages).length !== 0 &&
-                  Object.keys(showPackages)?.map((typePackage, i) => {
-                    return showPackages[typePackage]?.map((packageItem) => (
-                      <SwiperSlide className={clsx(styles.packageSwiperSlide)} onClick={() => setActivePackage(packageItem.name)}>
-                        <div className={clsx(styles.packageSwiperSlideWrap)}>
-                          {' '}
-                          <Package {...packageItem} active={activePackage === packageItem.name} small />
-                        </div>
-                      </SwiperSlide>
-                    ));
+                {!loadingPackages &&
+                  packages &&
+                  packages.map((packageItem) => {
+                    if (packageItem.category === activeType || activeType === '')
+                      return (
+                        <SwiperSlide className={clsx(styles.packageSwiperSlide)} onClick={() => dispatch(setActivePackage(packageItem))}>
+                          <div className={clsx(styles.packageSwiperSlideWrap)}>
+                            <Package {...packageItem} active={selectedPackage?.slug === packageItem?.slug} small />
+                          </div>
+                        </SwiperSlide>
+                      );
                   })}
               </Swiper>
               <div className="swiper-constructor-packages-button-prev" />

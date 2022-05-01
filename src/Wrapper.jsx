@@ -6,6 +6,10 @@ import { CSSTransition, SwitchTransition, Transition, TransitionGroup } from 're
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { useLocation, matchPath } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import ModalThank from './components/common/ModalThank/ModalThank';
+import ModalAddRoom from './components/common/ModalAddRoom/ModalAddRoom';
+import Alert from './components/common/Alert/Alert';
 /** Used for Using Transitions Section */
 const routes = ['constructor/:id'];
 const transitions = {
@@ -26,6 +30,7 @@ const Wrapper = ({ children }) => {
     return false;
   };
   const isConstructorPage = checkConstructorPage(pathname);
+  const { modalThank, modalAddRoom } = useSelector((state) => state.modals);
   return (
     <>
       {/* <div
@@ -38,6 +43,9 @@ const Wrapper = ({ children }) => {
       <main>{children}</main>
       {!isConstructorPage && <Footer />}
       {/* </div> */}
+      {modalThank && <ModalThank onClose={() => {}} />}
+      {modalAddRoom && <ModalAddRoom onClose={() => {}} />}
+      <Alert />
     </>
   );
 };

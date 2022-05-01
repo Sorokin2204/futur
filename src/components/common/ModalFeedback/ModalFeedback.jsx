@@ -17,7 +17,7 @@ const ModalFeedback = ({ onClose, onOpenThankModal }) => {
           <Input smallLabel className={clsx(styles.feedbackName)} label="Имя" placeholder="Ваше имя" />
           <Input smallLabel className={clsx(styles.feedbackPhone)} label="Телефон" placeholder="+7" />
           <Input smallLabel className={clsx(styles.feedbackEmail)} label="Почта" placeholder="Введите e-mail" />
-          <Input textarea rows={4} smallLabel className={clsx(styles.feedbackMessage)} label="Сообщение" placeholder="Введите сообщение" />
+          <Input type="textarea" rows={4} smallLabel className={clsx(styles.feedbackMessage)} label="Сообщение" placeholder="Введите сообщение" />
           <Checkbox className={clsx(styles.feedbackCheckbox)} label="Написать в Whats’App/Telegram" />
           <p className={clsx(styles.feedbackText)}>Нажимая на кнопку «Отправить» вы даете согласие на обработку персональных данных</p>
           <Button

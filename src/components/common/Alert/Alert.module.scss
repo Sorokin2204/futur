@@ -1,0 +1,38 @@
+@import '../../../styles/var';
+
+.alert {
+  display: flex;
+  align-items: center;
+
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  color: $white;
+  padding: 18px 15px;
+  border-radius: 8px;
+  @include semibold-16;
+  transform: translateX(calc(100% + 20px));
+  transition: transform 0.3s;
+  z-index: 1000;
+}
+.alertError {
+  background-color: $error;
+}
+
+.alertSuccess {
+  background-color: $primary;
+}
+
+.alertShow {
+  transform: translateX(0%);
+}
+.alertImg {
+  width: 20px;
+  height: 20px;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  background-color: $white;
+  margin-right: 8px;
+}
+.alertText {
+}

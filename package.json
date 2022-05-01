@@ -7,12 +7,18 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^0.27.2",
     "clsx": "^1.1.1",
+    "dotenv": "^16.0.0",
     "lodash": "^4.17.21",
     "node-sass": "^7.0.1",
     "react": "^18.0.0",
     "react-animate-height": "^2.1.2",
     "react-dom": "^18.0.0",
+    "react-dotenv": "^0.1.3",
+    "react-hook-form": "^7.30.0",
+    "react-lazy-load-image-component": "^1.5.4",
+    "react-number-format": "^4.9.3",
     "react-redux": "^8.0.1",
     "react-responsive": "^9.0.0-beta.6",
     "react-router": "^6.3.0",
@@ -26,10 +32,17 @@
     "webpack-cli": "^4.9.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "react-dotenv && react-scripts start",
+    "build": "react-dotenv && react-scripts build",
+    "test": "react-dotenv && react-scripts test",
+    "eject": "react-dotenv && react-scripts eject",
+    "fake-server": "json-server --watch --host 192.168.0.103 db.json --port 3001"
+  },
+  "react-dotenv": {
+    "whitelist": [
+      "BASE_URL",
+      "SERVER_URL"
+    ]
   },
   "eslintConfig": {
     "extends": [

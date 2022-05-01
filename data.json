@@ -1,6 +1,29 @@
 [
   {
     "id": "6269427c8ddae9e2e9922b4b",
+    "category": "standart",
+    "name": "Отбасы",
+    "slug": "otobasi",
+    "price": 50990,
+    "previewImage": "https://picsum.photos/200/300",
+    "defaultDetails": [
+      {
+        "label": "Ламинат",
+        "value": "Серия Kastamono, 31 класс, 7мм"
+      },
+      {
+        "label": "Двери",
+        "value": "EcoTech, Тренд"
+      },
+      {
+        "label": "Сместители",
+        "value": "Росинка, Россия"
+      }
+    ]
+  },
+
+  {
+    "id": "6269427c8ddae9e2e9922b4b",
     "name": "Отбасы",
     "slug": "otobasi",
     "price": 50990

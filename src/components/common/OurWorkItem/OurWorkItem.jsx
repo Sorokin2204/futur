@@ -13,7 +13,6 @@ const OurWorkItem = ({ img, title, text, path }) => {
       <p className={clsx(styles.ourWorkItemText)}>{text}</p>
       <Button
         onClick={() => {
-          console.log('wpr');
           navigate('/works/new-work');
         }}
         className={clsx(styles.ourWorkItemBtn)}
