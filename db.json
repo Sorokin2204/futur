@@ -84,6 +84,29 @@
       "order": 3
     }
   ],
+  "package-list": [
+    {
+      "id": "6269427c8ddae9e2e9922b4b",
+      "category": "comfort",
+      "name": "Отбасы",
+      "slug": "otobasi",
+      "price": 50990
+    },
+    {
+      "id": "6269427c8ddae9e2e9922b4b",
+      "category": "standart",
+      "name": "Стандарт базовый",
+      "slug": "standart-basic",
+      "price": 50990
+    },
+    {
+      "id": "6269427c8ddae9e2e9922b4b",
+      "category": "busines",
+      "name": "Стандарт бизнес",
+      "slug": "standart-busines",
+      "price": 50990
+    }
+  ],
   "package": [
     {
       "id": "6269427c8ddae9e2e9922b4b",
@@ -201,5 +224,1231 @@
       "slug": "garderob",
       "order": 8
     }
-  ]
+  ],
+  "room-single": [
+    {
+      "id": "6269427c8ddae9e2e9922b4b",
+      "name": "Гостинная",
+      "tariff": "standart-basic",
+      "slug": "gostinaya",
+      "imgWithFurnitureOnAngles": [
+        {
+          "img": "http://localhost:3000/img/constructor/mebel-1.png",
+          "priority": 4,
+          "orderAngle": 1
+        },
+        {
+          "img": "http://localhost:3000/img/constructor/mebel-2.png",
+          "priority": 4,
+          "orderAngle": 2
+        }
+      ],
+      "details": [
+        {
+          "id": "6269427c8ddae9e2e9922b4b",
+          "name": "Пол",
+          "slug": "pol",
+          "positionOnAngles": [
+            {
+              "x": 39,
+              "y": 85,
+              "orderAngle": 1
+            },
+            {
+              "x": 44,
+              "y": 75,
+              "orderAngle": 2
+            }
+          ],
+          "options": [
+            {
+              "id": "6269427c8ddae9e2e9922b4b",
+              "name": "Розетки",
+              "slug": "rosetki",
+              "previewImg": "http://localhost:3000/img/constructor/rosetka-1-prev.jpeg",
+              "desc": "Розетки Boshe",
+              "price": 2000,
+              "order": 1,
+              "optional": true,
+              "group": {
+                "id": "6269427c8ddae9e2e9922b4b",
+                "name": "Дополнительные опции",
+                "slug": "roset",
+                "order": 1
+              },
+              "fullImgOnAngels": [
+                {
+                  "img": "http://localhost:3000/img/constructor/rosetki-1-r1.png",
+                  "priority": 4,
+                  "orderAngle": 1
+                },
+                {
+                  "img": "http://localhost:3000/img/constructor/rosetki-1-r2.png",
+                  "priority": 4,
+                  "orderAngle": 2
+                }
+              ]
+            },
+            {
+              "id": "6269427c8ddae9e2e9922b4b",
+              "name": "Ламинат Tarkett, Цвет Дуб шервуд белый 4V",
+              "slug": "laminat-tarkett-kollekciya-woodstock-cvet-dub-shervud-belyj-4v-33-klass-8-mm-s-faskojrrr",
+              "previewImg": "http://localhost:3000/img/constructor/pol-1-prev.png",
+              "desc": "Ламинат Tarkett, Коллекция WoodStock, Цвет Дуб шервуд белый 4V, 33 класс 8 мм, с фаской",
+              "price": 10000,
+              "order": 1,
+              "group": {
+                "id": "6269427c8ddae9e2e9922b4b",
+                "name": "Ламинат",
+                "slug": "laminat",
+                "order": 1
+              },
+              "fullImgOnAngels": [
+                {
+                  "img": "http://localhost:3000/img/constructor/pol-1-r1.png",
+                  "priority": 2,
+                  "orderAngle": 1
+                },
+                {
+                  "img": "http://localhost:3000/img/constructor/pol-1-r2.png",
+                  "priority": 2,
+                  "orderAngle": 2
+                }
+              ]
+            },
+            {
+              "id": "6269427c8ddae9e2e9922b4b",
+              "name": "Ламинат Tarkett, Цвет Эсмеральда",
+              "slug": "laminat-tarkett-kollekciya-woodstock-cvet-dub-shervud-belyj-4v-33-klass-8-mm-s-faskoj",
+              "previewImg": "http://localhost:3000/img/constructor/pol-2-prev.jpg",
+              "desc": "Ламинат Tarkett, Коллекция Ballet, Цвет Эсмеральда, 33 класс 8 мм, с фаской",
+              "price": 10000,
+              "order": 1,
+              "group": {
+                "id": "6269427c8ddae9e2e9922b4b",
+                "name": "Ламинат",
+                "slug": "laminat",
+                "order": 1
+              },
+              "fullImgOnAngels": [
+                {
+                  "img": "http://localhost:3000/img/constructor/pol-2-r1.png",
+                  "priority": 2,
+                  "orderAngle": 1
+                },
+                {
+                  "img": "http://localhost:3000/img/constructor/pol-2-r2.png",
+                  "priority": 2,
+                  "orderAngle": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "6269427c8ddae9e2e9922b4b",
+          "name": "Потолок",
+          "slug": "potolok",
+          "positionOnAngles": [
+            {
+              "x": 56,
+              "y": 3,
+              "orderAngle": 1
+            },
+            {
+              "x": 54,
+              "y": 1,
+              "orderAngle": 2
+            }
+          ],
+          "options": [
+            {
+              "id": "6269427c8ddae9e2e9922b4b",
+              "name": "Двухуровневый потолок из ГКЛ с черной нишей",
+              "slug": "dvuhurovnevyj-potolok-iz-gkl-s-chernoj-nishej",
+              "previewImg": "http://localhost:3000/img/constructor/potolok-1-prev.png",
+              "desc": "Двухуровневый потолок из ГКЛ с черной нишей для спот - Гостиная",
+              "price": 12000,
+              "order": 1,
+              "group": {
+                "id": "6269427c8ddae9e2e9922b4b",
+                "name": "Двухуровневый потолок",
+                "slug": "dvuhurovnevyj-potolok",
+                "order": 1
+              },
+              "fullImgOnAngels": [
+                {
+                  "img": "http://localhost:3000/img/constructor/potolok-1-r1.png",
+                  "priority": 1,
+                  "orderAngle": 1
+                },
+                {
+                  "img": "http://localhost:3000/img/constructor/potolok-1-r2.png",
+                  "priority": 1,
+                  "orderAngle": 2
+                }
+              ]
+            },
+            {
+              "id": "6269427c8ddae9e2e9922b4b",
+              "name": "Двухуровневый потолок из ГКЛ с белой нишей",
+              "slug": "dvuhurovnevyj-potolok-iz-gkl-s-beloj-nishej",
+              "previewImg": "http://localhost:3000/img/constructor/potolok-2-prev.png",
+              "desc": "Двухуровневый потолок из ГКЛ с белой нишей для спот - Гостиная",
+              "price": 12000,
+              "order": 1,
+              "group": {
+                "id": "6269427c8ddae9e2e9922b4b",
+                "name": "Двухуровневый потолок",
+                "slug": "dvuhurovnevyj-potolok",
+                "order": 1
+              },
+              "fullImgOnAngels": [
+                {
+                  "img": "http://localhost:3000/img/constructor/potolok-2-r1.png",
+                  "priority": 1,
+                  "orderAngle": 1
+                },
+                {
+                  "img": "http://localhost:3000/img/constructor/potolok-2-r2.png",
+                  "priority": 1,
+                  "orderAngle": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "6269427c8ddae9e2e9922b4b",
+          "name": "Стена",
+          "slug": "stena",
+          "positionOnAngles": [
+            {
+              "x": 34,
+              "y": 37,
+              "orderAngle": 1
+            },
+            {
+              "x": 73,
+              "y": 33,
+              "orderAngle": 2
+            }
+          ],
+          "options": [
+            {
+              "id": "6269427c8ddae9e2e9922b4b",
+              "name": "Краска Ceresit, Columbia",
+              "slug": "kraska-ceresit-columbia",
+              "previewImg": "http://localhost:3000/img/constructor/stena-1-prev.jpg",
+              "desc": "Краска Ceresit, Columbia, код CL2, флизелиновые обои",
+              "price": 12000,
+              "order": 1,
+              "group": {
+                "id": "6269427c8ddae9e2e9922b4b",
+                "name": "Поклейка обоев с покраской",
+                "slug": "poklejka-oboev-s-pokraskoj",
+                "order": 1
+              },
+              "fullImgOnAngels": [
+                {
+                  "img": "http://localhost:3000/img/constructor/stena-1-r1.png",
+                  "imgWithFurniture": "/img/stena/stena-1-r1-m.png",
+                  "priority": 2,
+                  "orderAngle": 1
+                },
+                {
+                  "img": "http://localhost:3000/img/constructor/stena-1-r2.png",
+                  "priority": 2,
+                  "imgWithFurniture": "http://localhost:3000/img/constructor/stena-1-r2-m.png",
+                  "orderAngle": 2
+                }
+              ]
+            },
+            {
+              "id": "6269427c8ddae9e2e9922b4b",
+              "name": "Краска Ceresit, Derufa",
+              "slug": "kraska-ceresit-derufa",
+              "previewImg": "http://localhost:3000/img/constructor/stena-2-prev.jpg",
+              "desc": "Краска Ceresit, Derufa, код CL2, флизелиновые обои",
+              "price": 12000,
+              "order": 1,
+              "group": {
+                "id": "6269427c8ddae9e2e9922b4b",
+                "name": "Поклейка обоев с покраской",
+                "slug": "poklejka-oboev-s-pokraskoj",
+                "order": 1
+              },
+              "fullImgOnAngels": [
+                {
+                  "img": "http://localhost:3000/img/constructor/stena-2-r1.png",
+                  "priority": 2,
+                  "imgWithFurniture": "/img/stena/stena-2-r1-m.png",
+                  "orderAngle": 1
+                },
+                {
+                  "img": "http://localhost:3000/img/constructor/stena-2-r2.png",
+                  "priority": 2,
+                  "imgWithFurniture": "http://localhost:3000/img/constructor/stena-2-r2-m.png",
+                  "orderAngle": 2
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6269427c8ddae9e2e9922b4b",
+      "name": "Кухня",
+      "tariff": "standart-basic",
+      "slug": "kugna",
+      "imgWithFurnitureOnAngles": [
+        {
+          "img": "http://localhost:3000/img/constructor-kitchen/mebel-1.png",
+          "priority": 4,
+          "orderAngle": 1
+        }
+      ],
+      "details": [
+        {
+          "id": "6269427c8ddae9e2e9922b4b",
+          "name": "Пол",
+          "slug": "pol",
+          "positionOnAngles": [
+            {
+              "x": 39,
+              "y": 85,
+              "orderAngle": 1
+            },
+            {
+              "x": 44,
+              "y": 75,
+              "orderAngle": 2
+            }
+          ],
+          "options": [
+            {
+              "id": "6269427c8ddae9e2e9922b4b",
+              "name": "Розетки",
+              "slug": "rosetki",
+              "previewImg": "http://localhost:3000/img/constructor-kitchen/rosetka-1-prev.jpeg",
+              "desc": "Розетки Boshe",
+              "price": 2000,
+              "order": 1,
+              "optional": true,
+              "group": {
+                "id": "6269427c8ddae9e2e9922b4b",
+                "name": "Дополнительные опции",
+                "slug": "roset",
+                "order": 1
+              },
+              "fullImgOnAngels": [
+                {
+                  "img": "http://localhost:3000/img/constructor-kitchen/rosetki-1-r1.png",
+                  "priority": 4,
+                  "orderAngle": 1
+                }
+              ]
+            },
+            {
+              "id": "6269427c8ddae9e2e9922b4b",
+              "name": "Ламинат Tarkett, Цвет Дуб шервуд белый 4V",
+              "slug": "laminat-tarkett-kollekciya-woodstock-cvet-dub-shervud-belyj-4v-33-klass-8-mm-s-faskojrrr",
+              "previewImg": "http://localhost:3000/img/constructor-kitchen/pol-1-prev.png",
+              "desc": "Ламинат Tarkett, Коллекция WoodStock, Цвет Дуб шервуд белый 4V, 33 класс 8 мм, с фаской",
+              "price": 10000,
+              "order": 1,
+              "group": {
+                "id": "6269427c8ddae9e2e9922b4b",
+                "name": "Ламинат",
+                "slug": "laminat",
+                "order": 1
+              },
+              "fullImgOnAngels": [
+                {
+                  "img": "http://localhost:3000/img/constructor-kitchen/pol-1-r1.png",
+                  "priority": 2,
+                  "orderAngle": 1
+                },
+                {
+                  "img": "http://localhost:3000/img/constructor-kitchen/pol-1-r2.png",
+                  "priority": 2,
+                  "orderAngle": 2
+                }
+              ]
+            },
+            {
+              "id": "6269427c8ddae9e2e9922b4b",
+              "name": "Ламинат Tarkett, Цвет Эсмеральда",
+              "slug": "laminat-tarkett-kollekciya-woodstock-cvet-dub-shervud-belyj-4v-33-klass-8-mm-s-faskoj",
+              "previewImg": "http://localhost:3000/img/constructor-kitchen/pol-2-prev.jpg",
+              "desc": "Ламинат Tarkett, Коллекция Ballet, Цвет Эсмеральда, 33 класс 8 мм, с фаской",
+              "price": 10000,
+              "order": 1,
+              "group": {
+                "id": "6269427c8ddae9e2e9922b4b",
+                "name": "Ламинат",
+                "slug": "laminat",
+                "order": 1
+              },
+              "fullImgOnAngels": [
+                {
+                  "img": "http://localhost:3000/img/constructor-kitchen/pol-2-r1.png",
+                  "priority": 2,
+                  "orderAngle": 1
+                },
+                {
+                  "img": "http://localhost:3000/img/constructor-kitchen/pol-2-r2.png",
+                  "priority": 2,
+                  "orderAngle": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "6269427c8ddae9e2e9922b4b",
+          "name": "Потолок",
+          "slug": "potolok",
+          "positionOnAngles": [
+            {
+              "x": 56,
+              "y": 3,
+              "orderAngle": 1
+            },
+            {
+              "x": 54,
+              "y": 1,
+              "orderAngle": 2
+            }
+          ],
+          "options": [
+            {
+              "id": "6269427c8ddae9e2e9922b4b",
+              "name": "Двухуровневый потолок из ГКЛ с черной нишей",
+              "slug": "dvuhurovnevyj-potolok-iz-gkl-s-chernoj-nishej",
+              "previewImg": "http://localhost:3000/img/constructor-kitchen/potolok-1-prev.png",
+              "desc": "Двухуровневый потолок из ГКЛ с черной нишей для спот - Гостиная",
+              "price": 12000,
+              "order": 1,
+              "group": {
+                "id": "6269427c8ddae9e2e9922b4b",
+                "name": "Двухуровневый потолок",
+                "slug": "dvuhurovnevyj-potolok",
+                "order": 1
+              },
+              "fullImgOnAngels": [
+                {
+                  "img": "http://localhost:3000/img/constructor-kitchen/potolok-1-r1.png",
+                  "priority": 1,
+                  "orderAngle": 1
+                },
+                {
+                  "img": "http://localhost:3000/img/constructor-kitchen/potolok-1-r2.png",
+                  "priority": 1,
+                  "orderAngle": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "6269427c8ddae9e2e9922b4b",
+          "name": "Стена",
+          "slug": "stena",
+          "positionOnAngles": [
+            {
+              "x": 34,
+              "y": 37,
+              "orderAngle": 1
+            },
+            {
+              "x": 73,
+              "y": 33,
+              "orderAngle": 2
+            }
+          ],
+          "options": [
+            {
+              "id": "6269427c8ddae9e2e9922b4b",
+              "name": "Краска Ceresit, Columbia",
+              "slug": "kraska-ceresit-columbia",
+              "previewImg": "http://localhost:3000/img/constructor-kitchen/stena-1-prev.jpg",
+              "desc": "Краска Ceresit, Columbia, код CL2, флизелиновые обои",
+              "price": 12000,
+              "order": 1,
+              "group": {
+                "id": "6269427c8ddae9e2e9922b4b",
+                "name": "Поклейка обоев с покраской",
+                "slug": "poklejka-oboev-s-pokraskoj",
+                "order": 1
+              },
+              "fullImgOnAngels": [
+                {
+                  "img": "http://localhost:3000/img/constructor-kitchen/stena-1-r1.png",
+                  "imgWithFurniture": "/img/stena/stena-1-r1-m.png",
+                  "priority": 2,
+                  "orderAngle": 1
+                },
+                {
+                  "img": "http://localhost:3000/img/constructor-kitchen/stena-1-r2.png",
+                  "priority": 2,
+                  "imgWithFurniture": "http://localhost:3000/img/constructor-kitchen/stena-1-r2-m.png",
+                  "orderAngle": 2
+                }
+              ]
+            },
+            {
+              "id": "6269427c8ddae9e2e9922b4b",
+              "name": "Краска Ceresit, Derufa",
+              "slug": "kraska-ceresit-derufa",
+              "previewImg": "http://localhost:3000/img/constructor-kitchen/stena-2-prev.jpg",
+              "desc": "Краска Ceresit, Derufa, код CL2, флизелиновые обои",
+              "price": 12000,
+              "order": 1,
+              "group": {
+                "id": "6269427c8ddae9e2e9922b4b",
+                "name": "Поклейка обоев с покраской",
+                "slug": "poklejka-oboev-s-pokraskoj",
+                "order": 1
+              },
+              "fullImgOnAngels": [
+                {
+                  "img": "http://localhost:3000/img/constructor-kitchen/stena-2-r1.png",
+                  "priority": 2,
+                  "imgWithFurniture": "/img/stena/stena-2-r1-m.png",
+                  "orderAngle": 1
+                },
+                {
+                  "img": "http://localhost:3000/img/constructor-kitchen/stena-2-r2.png",
+                  "priority": 2,
+                  "imgWithFurniture": "http://localhost:3000/img/constructor-kitchen/stena-2-r2-m.png",
+                  "orderAngle": 2
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6269427c8ddae9e2e9922b4b",
+      "name": "Кухня",
+      "tariff": "otobasi",
+      "slug": "kugna",
+      "imgWithFurnitureOnAngles": [
+        {
+          "img": "http://localhost:3000/img/constructor-kitchen-prime/mebel-1.png",
+          "priority": 4,
+          "orderAngle": 1
+        }
+      ],
+      "details": [
+        {
+          "id": "6269427c8ddae9e2e9922b4b",
+          "name": "Пол",
+          "slug": "pol",
+          "positionOnAngles": [
+            {
+              "x": 39,
+              "y": 85,
+              "orderAngle": 1
+            },
+            {
+              "x": 44,
+              "y": 75,
+              "orderAngle": 2
+            }
+          ],
+          "options": [
+            {
+              "id": "6269427c8ddae9e2e9922b4b",
+              "name": "Розетки",
+              "slug": "rosetki",
+              "previewImg": "http://localhost:3000/img/constructor-kitchen-prime/rosetka-1-prev.jpeg",
+              "desc": "Розетки Boshe",
+              "price": 2000,
+              "order": 1,
+              "optional": true,
+              "group": {
+                "id": "6269427c8ddae9e2e9922b4b",
+                "name": "Дополнительные опции",
+                "slug": "roset",
+                "order": 1
+              },
+              "fullImgOnAngels": [
+                {
+                  "img": "http://localhost:3000/img/constructor-kitchen-prime/rosetki-1-r1.png",
+                  "priority": 4,
+                  "orderAngle": 1
+                }
+              ]
+            },
+            {
+              "id": "6269427c8ddae9e2e9922b4b",
+              "name": "Ламинат Tarkett, Цвет Дуб шервуд белый 4V",
+              "slug": "laminat-tarkett-kollekciya-woodstock-cvet-dub-shervud-belyj-4v-33-klass-8-mm-s-faskojrrr",
+              "previewImg": "http://localhost:3000/img/constructor-kitchen-prime/pol-1-prev.png",
+              "desc": "Ламинат Tarkett, Коллекция WoodStock, Цвет Дуб шервуд белый 4V, 33 класс 8 мм, с фаской",
+              "price": 10000,
+              "order": 1,
+              "group": {
+                "id": "6269427c8ddae9e2e9922b4b",
+                "name": "Ламинат",
+                "slug": "laminat",
+                "order": 1
+              },
+              "fullImgOnAngels": [
+                {
+                  "img": "http://localhost:3000/img/constructor-kitchen-prime/pol-1-r1.png",
+                  "priority": 2,
+                  "orderAngle": 1
+                },
+                {
+                  "img": "http://localhost:3000/img/constructor-kitchen-prime/pol-1-r2.png",
+                  "priority": 2,
+                  "orderAngle": 2
+                }
+              ]
+            },
+            {
+              "id": "6269427c8ddae9e2e9922b4b",
+              "name": "Ламинат Tarkett, Цвет Эсмеральда",
+              "slug": "laminat-tarkett-kollekciya-woodstock-cvet-dub-shervud-belyj-4v-33-klass-8-mm-s-faskoj",
+              "previewImg": "http://localhost:3000/img/constructor-kitchen-prime/pol-2-prev.jpg",
+              "desc": "Ламинат Tarkett, Коллекция Ballet, Цвет Эсмеральда, 33 класс 8 мм, с фаской",
+              "price": 10000,
+              "order": 1,
+              "group": {
+                "id": "6269427c8ddae9e2e9922b4b",
+                "name": "Ламинат",
+                "slug": "laminat",
+                "order": 1
+              },
+              "fullImgOnAngels": [
+                {
+                  "img": "http://localhost:3000/img/constructor-kitchen-prime/pol-2-r1.png",
+                  "priority": 2,
+                  "orderAngle": 1
+                },
+                {
+                  "img": "http://localhost:3000/img/constructor-kitchen-prime/pol-2-r2.png",
+                  "priority": 2,
+                  "orderAngle": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "6269427c8ddae9e2e9922b4b",
+          "name": "Потолок",
+          "slug": "potolok",
+          "positionOnAngles": [
+            {
+              "x": 56,
+              "y": 3,
+              "orderAngle": 1
+            },
+            {
+              "x": 54,
+              "y": 1,
+              "orderAngle": 2
+            }
+          ],
+          "options": [
+            {
+              "id": "6269427c8ddae9e2e9922b4b",
+              "name": "Двухуровневый потолок из ГКЛ с черной нишей",
+              "slug": "dvuhurovnevyj-potolok-iz-gkl-s-chernoj-nishej",
+              "previewImg": "http://localhost:3000/img/constructor-kitchen-prime/potolok-1-prev.png",
+              "desc": "Двухуровневый потолок из ГКЛ с черной нишей для спот - Гостиная",
+              "price": 12000,
+              "order": 1,
+              "group": {
+                "id": "6269427c8ddae9e2e9922b4b",
+                "name": "Двухуровневый потолок",
+                "slug": "dvuhurovnevyj-potolok",
+                "order": 1
+              },
+              "fullImgOnAngels": [
+                {
+                  "img": "http://localhost:3000/img/constructor-kitchen-prime/potolok-1-r1.png",
+                  "priority": 1,
+                  "orderAngle": 1
+                },
+                {
+                  "img": "http://localhost:3000/img/constructor-kitchen-prime/potolok-1-r2.png",
+                  "priority": 1,
+                  "orderAngle": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "6269427c8ddae9e2e9922b4b",
+          "name": "Стена",
+          "slug": "stena",
+          "positionOnAngles": [
+            {
+              "x": 34,
+              "y": 37,
+              "orderAngle": 1
+            },
+            {
+              "x": 73,
+              "y": 33,
+              "orderAngle": 2
+            }
+          ],
+          "options": [
+            {
+              "id": "6269427c8ddae9e2e9922b4b",
+              "name": "Краска Ceresit, Columbia",
+              "slug": "kraska-ceresit-columbia",
+              "previewImg": "http://localhost:3000/img/constructor-kitchen-prime/stena-1-prev.jpg",
+              "desc": "Краска Ceresit, Columbia, код CL2, флизелиновые обои",
+              "price": 12000,
+              "order": 1,
+              "group": {
+                "id": "6269427c8ddae9e2e9922b4b",
+                "name": "Поклейка обоев с покраской",
+                "slug": "poklejka-oboev-s-pokraskoj",
+                "order": 1
+              },
+              "fullImgOnAngels": [
+                {
+                  "img": "http://localhost:3000/img/constructor-kitchen-prime/stena-1-r1.png",
+                  "imgWithFurniture": "/img/stena/stena-1-r1-m.png",
+                  "priority": 2,
+                  "orderAngle": 1
+                },
+                {
+                  "img": "http://localhost:3000/img/constructor-kitchen-prime/stena-1-r2.png",
+                  "priority": 2,
+                  "imgWithFurniture": "http://localhost:3000/img/constructor-kitchen-prime/stena-1-r2-m.png",
+                  "orderAngle": 2
+                }
+              ]
+            },
+            {
+              "id": "6269427c8ddae9e2e9922b4b",
+              "name": "Краска Ceresit, Derufa",
+              "slug": "kraska-ceresit-derufa",
+              "previewImg": "http://localhost:3000/img/constructor-kitchen-prime/stena-2-prev.jpg",
+              "desc": "Краска Ceresit, Derufa, код CL2, флизелиновые обои",
+              "price": 12000,
+              "order": 1,
+              "group": {
+                "id": "6269427c8ddae9e2e9922b4b",
+                "name": "Поклейка обоев с покраской",
+                "slug": "poklejka-oboev-s-pokraskoj",
+                "order": 1
+              },
+              "fullImgOnAngels": [
+                {
+                  "img": "http://localhost:3000/img/constructor-kitchen-prime/stena-2-r1.png",
+                  "priority": 2,
+                  "imgWithFurniture": "/img/stena/stena-2-r1-m.png",
+                  "orderAngle": 1
+                },
+                {
+                  "img": "http://localhost:3000/img/constructor-kitchen-prime/stena-2-r2.png",
+                  "priority": 2,
+                  "imgWithFurniture": "http://localhost:3000/img/constructor-kitchen-prime/stena-2-r2-m.png",
+                  "orderAngle": 2
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6269427c8ddae9e2e9922b4b",
+      "name": "Гостинная",
+      "tariff": "otobasi",
+      "slug": "gostinaya",
+      "imgWithFurnitureOnAngles": [
+        {
+          "img": "http://localhost:3000/img/constructor-prime/mebel-1.png",
+          "priority": 4,
+          "orderAngle": 1
+        },
+        {
+          "img": "http://localhost:3000/img/constructor-prime/mebel-2.png",
+          "priority": 4,
+          "orderAngle": 2
+        }
+      ],
+      "details": [
+        {
+          "id": "6269427c8ddae9e2e9922b4b",
+          "name": "Пол",
+          "slug": "pol",
+          "positionOnAngles": [
+            {
+              "x": 39,
+              "y": 85,
+              "orderAngle": 1
+            },
+            {
+              "x": 44,
+              "y": 89,
+              "orderAngle": 2
+            }
+          ],
+          "options": [
+            {
+              "id": "6269427c8ddae9e2e9922b4b",
+              "name": "Ламинат Tarkett, Цвет Дуб шервуд белый 4V",
+              "slug": "laminat-tarkett-kollekciya-woodstock-cvet-dub-shervud-belyj-4v-33-klass-8-mm-s-faskojrrr",
+              "previewImg": "http://localhost:3000/img/constructor-prime/pol-1-prev.png",
+              "desc": "Ламинат Tarkett, Коллекция WoodStock, Цвет Дуб шервуд белый 4V, 33 класс 8 мм, с фаской",
+              "price": 10000,
+              "order": 1,
+              "group": {
+                "id": "6269427c8ddae9e2e9922b4b",
+                "name": "Ламинат",
+                "slug": "laminat",
+                "order": 1
+              },
+              "fullImgOnAngels": [
+                {
+                  "img": "http://localhost:3000/img/constructor-prime/pol-1-r1.png",
+                  "priority": 2,
+                  "orderAngle": 1
+                },
+                {
+                  "img": "http://localhost:3000/img/constructor-prime/pol-1-r2.png",
+                  "priority": 2,
+                  "orderAngle": 2
+                }
+              ]
+            },
+            {
+              "id": "6269427c8ddae9e2e9922b4b",
+              "name": "Ламинат Tarkett, Цвет Эсмеральда",
+              "slug": "laminat-tarkett-kollekciya-woodstock-cvet-dub-shervud-belyj-4v-33-klass-8-mm-s-faskoj",
+              "previewImg": "http://localhost:3000/img/constructor-prime/pol-2-prev.jpg",
+              "desc": "Ламинат Tarkett, Коллекция Ballet, Цвет Эсмеральда, 33 класс 8 мм, с фаской",
+              "price": 10000,
+              "order": 1,
+              "group": {
+                "id": "6269427c8ddae9e2e9922b4b",
+                "name": "Ламинат",
+                "slug": "laminat",
+                "order": 1
+              },
+              "fullImgOnAngels": [
+                {
+                  "img": "http://localhost:3000/img/constructor-prime/pol-2-r1.png",
+                  "priority": 2,
+                  "orderAngle": 1
+                },
+                {
+                  "img": "http://localhost:3000/img/constructor-prime/pol-2-r2.png",
+                  "priority": 2,
+                  "orderAngle": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "6269427c8ddae9e2e9922b4b",
+          "name": "Потолок",
+          "slug": "potolok",
+          "positionOnAngles": [
+            {
+              "x": 56,
+              "y": 4,
+              "orderAngle": 1
+            },
+            {
+              "x": 54,
+              "y": 4,
+              "orderAngle": 2
+            }
+          ],
+          "options": [
+            {
+              "id": "6269427c8ddae9e2e9922b4b",
+              "name": "Двухуровневый потолок из ГКЛ с белой нишей",
+              "slug": "dvuhurovnevyj-potolok-iz-gkl-s-beloj-nishej",
+              "previewImg": "http://localhost:3000/img/constructor-prime/potolok-2-prev.png",
+              "desc": "Двухуровневый потолок из ГКЛ с белой нишей для спот - Гостиная",
+              "price": 12000,
+              "order": 1,
+              "group": {
+                "id": "6269427c8ddae9e2e9922b4b",
+                "name": "Двухуровневый потолок",
+                "slug": "dvuhurovnevyj-potolok",
+                "order": 1
+              },
+              "fullImgOnAngels": [
+                {
+                  "img": "http://localhost:3000/img/constructor-prime/potolok-1-r1.jpg",
+                  "priority": 1,
+                  "orderAngle": 1
+                },
+                {
+                  "img": "http://localhost:3000/img/constructor-prime/potolok-1-r2.jpg",
+                  "priority": 1,
+                  "orderAngle": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "6269427c8ddae9e2e9922b4b",
+          "name": "Стена",
+          "slug": "stena",
+          "positionOnAngles": [
+            {
+              "x": 17,
+              "y": 37,
+              "orderAngle": 1
+            },
+            {
+              "x": 3,
+              "y": 43,
+              "orderAngle": 2
+            }
+          ],
+          "options": [
+            {
+              "id": "6269427c8ddae9e2e9922b4b",
+              "name": "Краска Ceresit, Columbia",
+              "slug": "kraska-ceresit-columbia",
+              "previewImg": "http://localhost:3000/img/constructor-prime/stena-1-prev.jpg",
+              "desc": "Краска Ceresit, Columbia, код CL2, флизелиновые обои",
+              "price": 12000,
+              "order": 1,
+              "group": {
+                "id": "6269427c8ddae9e2e9922b4b",
+                "name": "Поклейка обоев с покраской",
+                "slug": "poklejka-oboev-s-pokraskoj",
+                "order": 1
+              },
+              "fullImgOnAngels": [
+                {
+                  "img": "http://localhost:3000/img/constructor-prime/stena-1-r1.png",
+                  "imgWithFurniture": "/img/stena/stena-1-r1-m.png",
+                  "priority": 2,
+                  "orderAngle": 1
+                },
+                {
+                  "img": "http://localhost:3000/img/constructor-prime/stena-1-r2.png",
+                  "priority": 2,
+                  "imgWithFurniture": "http://localhost:3000/img/constructor-prime/stena-1-r2-m.png",
+                  "orderAngle": 2
+                }
+              ]
+            },
+            {
+              "id": "6269427c8ddae9e2e9922b4b",
+              "name": "Краска Ceresit, Derufa",
+              "slug": "kraska-ceresit-derufa",
+              "previewImg": "http://localhost:3000/img/constructor-prime/stena-2-prev.jpg",
+              "desc": "Краска Ceresit, Derufa, код CL2, флизелиновые обои",
+              "price": 12000,
+              "order": 1,
+              "group": {
+                "id": "6269427c8ddae9e2e9922b4b",
+                "name": "Поклейка обоев с покраской",
+                "slug": "poklejka-oboev-s-pokraskoj",
+                "order": 1
+              },
+              "fullImgOnAngels": [
+                {
+                  "img": "http://localhost:3000/img/constructor-prime/stena-2-r1.png",
+                  "priority": 2,
+                  "imgWithFurniture": "/img/stena/stena-2-r1-m.png",
+                  "orderAngle": 1
+                },
+                {
+                  "img": "http://localhost:3000/img/constructor-prime/stena-2-r2.png",
+                  "priority": 2,
+                  "imgWithFurniture": "http://localhost:3000/img/constructor-prime/stena-2-r2-m.png",
+                  "orderAngle": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "6269427c8ddae9e2e9922b4b",
+          "name": "Дверь",
+          "slug": "door",
+          "positionOnAngles": [
+            {
+              "x": 80,
+              "y": 40,
+              "orderAngle": 1
+            }
+          ],
+          "options": [
+            {
+              "id": "6269427c8ddae9e2e9922b4b",
+              "name": "Дверь белая",
+              "slug": "kraska-fdf-columbia",
+              "previewImg": "http://localhost:3000/img/constructor-prime/door-1-prev.jpg",
+              "desc": "Краска Ceresit, Columbia, код CL2, флизелиновые обои",
+              "price": 12000,
+              "order": 1,
+              "group": {
+                "id": "6269427c8ddae9e2e9922b4b",
+                "name": "Дверь",
+                "slug": "ава-oboev-s-pokraskoj",
+                "order": 1
+              },
+              "fullImgOnAngels": [
+                {
+                  "img": "http://localhost:3000/img/constructor-prime/door-1-r1.png",
+                  "priority": 2,
+                  "orderAngle": 1
+                }
+              ]
+            },
+            {
+              "id": "6269427c8ddae9e2e9922b4b",
+              "name": "Дверь с окном",
+              "slug": "kraska-авfdf-columbia",
+              "previewImg": "http://localhost:3000/img/constructor-prime/door-2-prev.jpg",
+              "desc": "Дверь в которую врезано окно",
+              "price": 12000,
+              "order": 1,
+              "group": {
+                "id": "6269427c8ddae9e2e9922b4b",
+                "name": "Дверь",
+                "slug": "ава-oboev-s-pokraskoj",
+                "order": 1
+              },
+              "fullImgOnAngels": [
+                {
+                  "img": "http://localhost:3000/img/constructor-prime/door-2-r1.png",
+                  "priority": 2,
+                  "orderAngle": 1
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "room-default-options": [
+    {
+      "tariff": "standart-basic",
+      "slug": "gostinaya",
+      "details": [
+        {
+          "slug": "pol",
+          "options": [
+            {
+              "slug": "rosetki",
+              "price": 2000,
+              "group": {
+                "slug": "roset"
+              }
+            },
+            {
+              "slug": "laminat-tarkett-kollekciya-woodstock-cvet-dub-shervud-belyj-4v-33-klass-8-mm-s-faskojrrr",
+              "price": 10000,
+              "group": {
+                "slug": "laminat"
+              }
+            }
+          ]
+        },
+        {
+          "slug": "potolok",
+          "options": [
+            {
+              "slug": "dvuhurovnevyj-potolok-iz-gkl-s-chernoj-nishej",
+              "price": 12000,
+              "group": {
+                "slug": "dvuhurovnevyj-potolok"
+              }
+            }
+          ]
+        },
+        {
+          "slug": "stena",
+          "options": [
+            {
+              "slug": "kraska-ceresit-columbia",
+              "price": 12000,
+              "group": {
+                "slug": "poklejka-oboev-s-pokraskoj"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "standart-basic",
+      "slug": "kugna",
+      "details": [
+        {
+          "slug": "pol",
+          "options": [
+            {
+              "slug": "rosetki",
+              "price": 2000,
+              "group": {
+                "slug": "roset"
+              }
+            },
+            {
+              "slug": "laminat-tarkett-kollekciya-woodstock-cvet-dub-shervud-belyj-4v-33-klass-8-mm-s-faskojrrr",
+              "price": 10000,
+              "group": {
+                "slug": "laminat"
+              }
+            }
+          ]
+        },
+        {
+          "slug": "potolok",
+          "options": [
+            {
+              "slug": "dvuhurovnevyj-potolok-iz-gkl-s-chernoj-nishej",
+              "price": 12000,
+              "group": {
+                "slug": "dvuhurovnevyj-potolok"
+              }
+            }
+          ]
+        },
+        {
+          "slug": "stena",
+          "options": [
+            {
+              "slug": "kraska-ceresit-columbia",
+              "price": 12000,
+              "group": {
+                "slug": "poklejka-oboev-s-pokraskoj"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "otobasi",
+      "slug": "kugna",
+      "details": [
+        {
+          "slug": "pol",
+          "options": [
+            {
+              "slug": "rosetki",
+              "price": 2000,
+              "group": {
+                "slug": "roset"
+              }
+            },
+            {
+              "slug": "laminat-tarkett-kollekciya-woodstock-cvet-dub-shervud-belyj-4v-33-klass-8-mm-s-faskojrrr",
+              "price": 10000,
+              "group": {
+                "slug": "laminat"
+              }
+            }
+          ]
+        },
+        {
+          "slug": "potolok",
+          "options": [
+            {
+              "slug": "dvuhurovnevyj-potolok-iz-gkl-s-chernoj-nishej",
+              "price": 12000,
+              "group": {
+                "slug": "dvuhurovnevyj-potolok"
+              }
+            }
+          ]
+        },
+        {
+          "slug": "stena",
+          "options": [
+            {
+              "slug": "kraska-ceresit-columbia",
+              "price": 12000,
+              "group": {
+                "slug": "poklejka-oboev-s-pokraskoj"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tariff": "otobasi",
+      "slug": "gostinaya",
+      "details": [
+        {
+          "slug": "pol",
+          "options": [
+            {
+              "slug": "laminat-tarkett-kollekciya-woodstock-cvet-dub-shervud-belyj-4v-33-klass-8-mm-s-faskojrrr",
+              "price": 10000,
+              "group": {
+                "slug": "laminat"
+              }
+            },
+            {
+              "slug": "laminat-tarkett-kollekciya-woodstock-cvet-dub-shervud-belyj-4v-33-klass-8-mm-s-faskoj",
+              "price": 10000,
+              "group": {
+                "slug": "laminat"
+              }
+            }
+          ]
+        },
+        {
+          "slug": "potolok",
+          "options": [
+            {
+              "slug": "dvuhurovnevyj-potolok-iz-gkl-s-beloj-nishej",
+              "price": 12000,
+              "group": {
+                "slug": "dvuhurovnevyj-potolok"
+              }
+            }
+          ]
+        },
+        {
+          "slug": "stena",
+          "options": [
+            {
+              "slug": "kraska-ceresit-columbia",
+              "price": 12000,
+              "group": {
+                "slug": "poklejka-oboev-s-pokraskoj"
+              }
+            }
+          ]
+        },
+        {
+          "slug": "door",
+          "options": [
+            {
+              "slug": "kraska-fdf-columbia",
+              "price": 12000,
+              "group": {
+                "slug": "ава-oboev-s-pokraskoj"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "total-feedback": []
 }

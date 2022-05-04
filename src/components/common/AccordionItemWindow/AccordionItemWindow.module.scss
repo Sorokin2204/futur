@@ -3,17 +3,24 @@
 .accordionItem {
   background-color: $white;
   border-radius: 4px;
+  grid-template-rows: auto 1fr;
+  display: grid;
 }
 .accordionItemContent {
   padding: 10px 10px 12px 10px;
   background-color: $white;
   border-radius: 0px 0px 4px 4px;
+  display: flex;
+  flex-direction: column;
 }
 
 .accordionItemImg {
-  width: 100%;
-  height: auto;
   border-radius: 4px 4px 0px 0px;
+  height: 143px;
+  width: 194px;
+  max-height: 143px;
+  max-width: 194px;
+  object-fit: cover;
 }
 .accordionItemName {
   @include semibold-14;
@@ -27,6 +34,7 @@
 .accordionItemPrice {
   color: $primary;
   @include semibold-14;
+  margin-top: auto;
 }
 .accordionItemActive {
   position: relative;
@@ -65,7 +73,7 @@
     content: '';
     display: block;
     position: absolute;
-    top: 9px;
+    top: 8px;
     left: 8px;
     // top: 50%;
     // left: 54%;
@@ -78,7 +86,18 @@
     z-index: 2;
   }
 }
+@media (max-width: $md) {
+  .accordionItemImg {
+    width: 166px;
+    max-width: 166px;
+  }
+}
+
 @media (max-width: $sm) {
+  .accordionItemImg {
+    width: 100%;
+    max-width: none;
+  }
   .accordionItemActiveIcon {
     width: 28px;
     height: 28px;

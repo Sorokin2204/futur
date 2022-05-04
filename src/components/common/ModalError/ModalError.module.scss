@@ -1,0 +1,40 @@
+@import '../../../styles/var';
+.errorModal {
+}
+.error {
+}
+.errorTitle {
+  @include semibold-18;
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+.errorSelect {
+  margin-bottom: 32px;
+}
+.errorBtnBox {
+}
+
+.errorText {
+  margin-top: 12px;
+  @include regular-14;
+  color: $grey;
+  margin-bottom: 18px;
+}
+.errorBtnAdd {
+  width: 100% !important;
+  max-width: none !important;
+}
+.errorModal {
+  width: 100%;
+  max-width: 400px;
+}
+@media (max-width: 500px) {
+  .errorBtnBox {
+    grid-gap: 11px;
+  }
+  .errorModal {
+    width: 100%;
+    max-width: calc(100vw - 32px);
+    padding: 19px 12px 17px 12px;
+  }
+}

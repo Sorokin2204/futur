@@ -7,14 +7,16 @@ import Select from '../Select/Select';
 import { useNavigate } from 'react-router';
 import { useDispatch } from 'react-redux';
 import { closeAllModal } from '../../../redux/slices/modalsSlice';
-const ModalThank = () => {
+const ModalThank = ({ onClose }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const onCloseModalThank = () => {
+    onClose();
     dispatch(closeAllModal());
     navigate('/');
   };
   const onAfterClose = () => {
+    onClose();
     navigate('/');
   };
   return (

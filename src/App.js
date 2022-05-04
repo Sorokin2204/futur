@@ -20,8 +20,8 @@ function App() {
     { path: '/contacts', element: <ContactPage /> },
     { path: '/packages', element: <PackagesPage /> },
     { path: '/works/:id', element: <WorkSinglePage /> },
-    { path: '/constructor', element: <ConstructorPage /> },
-    { path: '/constructor/:id', element: <ConstructorMainPage /> },
+    { path: '/constructor-start', element: <ConstructorPage /> },
+    { path: '/constructor', element: <ConstructorMainPage /> },
     { path: '/total', element: <TotalPage /> },
   ]);
   return routes;

@@ -6,10 +6,14 @@ import { CSSTransition, SwitchTransition, Transition, TransitionGroup } from 're
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { useLocation, matchPath } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import ModalThank from './components/common/ModalThank/ModalThank';
 import ModalAddRoom from './components/common/ModalAddRoom/ModalAddRoom';
 import Alert from './components/common/Alert/Alert';
+import ModalGoBack from './components/common/ModalGoBack/ModalGoBack';
+import ModalError from './components/common/ModalError/ModalError';
+import ModalFeedback from './components/common/ModalFeedback/ModalFeedback';
+import { resetRoomSingle } from './redux/slices/roomSingleSlice';
 /** Used for Using Transitions Section */
 const routes = ['constructor/:id'];
 const transitions = {
@@ -21,16 +25,8 @@ const transitions = {
 
 const Wrapper = ({ children }) => {
   const { pathname } = useLocation();
-  const checkConstructorPage = (path) => {
-    if (path.includes('/constructor')) {
-      const replacePath = path.replace('/constructor', '');
-      if (replacePath == '/') return false;
-      if (replacePath) return true;
-    }
-    return false;
-  };
-  const isConstructorPage = checkConstructorPage(pathname);
-  const { modalThank, modalAddRoom } = useSelector((state) => state.modals);
+  const { modalThank, modalAddRoom, modalGoBack, modalGoBackClearStorage, modalError, modalFeedback, modalThankFeedback } = useSelector((state) => state.modals);
+  const dispatch = useDispatch();
   return (
     <>
       {/* <div
@@ -39,12 +35,24 @@ const Wrapper = ({ children }) => {
           height: '100%',
           gridTemplateRows: 'auto 1fr auto',
         }}> */}
-      {!isConstructorPage && <Header />}
+      {pathname !== '/constructor' && <Header />}
       <main>{children}</main>
-      {!isConstructorPage && <Footer />}
+      {pathname !== '/constructor' && <Footer />}
       {/* </div> */}
       {modalThank && <ModalThank onClose={() => {}} />}
+      {modalThankFeedback && (
+        <ModalThank
+          onClose={() => {
+            dispatch(resetRoomSingle());
+            localStorage.clear();
+          }}
+        />
+      )}
       {modalAddRoom && <ModalAddRoom onClose={() => {}} />}
+      {modalGoBack && <ModalGoBack onClose={() => {}} />}
+      {modalGoBackClearStorage && <ModalGoBack clearStorage onClose={() => {}} />}
+      {modalError && <ModalError />}
+      {modalFeedback && <ModalFeedback />}
       <Alert />
     </>
   );

@@ -1,0 +1,31 @@
+@import '../../../styles/var';
+
+.accordionsItemCategory {
+  @include regular-14;
+  color: $grey;
+  margin-bottom: 12px;
+}
+.accordionsItemGroup {
+  & + & {
+    margin-top: 10px;
+  }
+}
+.accordionsItemOptionList {
+  display: grid;
+  grid-template-columns: 194px 194px;
+  grid-gap: 16px;
+}
+@media (max-width: $md) {
+  .accordionsItemOptionList {
+    grid-template-columns: 166px 166px;
+  }
+}
+@media (max-width: $sm) {
+  .accordionsItemOptionList {
+    grid-template-columns: repeat(auto-fill, minmax(164px, 1fr));
+    grid-gap: 13px;
+  }
+  .accordionsItemCategory {
+    margin-bottom: 11px;
+  }
+}

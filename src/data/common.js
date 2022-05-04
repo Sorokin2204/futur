@@ -11,7 +11,7 @@ export const common = {
     },
     {
       page: 'Конструктор',
-      path: '/constructor',
+      path: '/constructor-start',
     },
     {
       page: 'Пакеты',

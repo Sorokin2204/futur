@@ -12,15 +12,7 @@ import { postFeedback } from '../redux/slices/feedbackSlice';
 import Wrapper from '../Wrapper';
 const HomePage = () => {
   const dispatch = useDispatch();
-  useEffect(() => {
-    // dispatch(
-    //   postFeedback({
-    //     name: 'FirstName',
-    //     phone: 12345,
-    //     writeInSocial: true,
-    //   }),
-    // );
-  }, []);
+  useEffect(() => {}, []);
 
   return (
     <>

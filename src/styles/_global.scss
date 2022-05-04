@@ -11,6 +11,11 @@ html {
   height: 100%;
 }
 
+button,
+a {
+  user-select: none;
+}
+
 a {
   color: $primary;
   outline: 0 !important;

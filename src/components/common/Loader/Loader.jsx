@@ -1,7 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './Loader.module.scss';
-import Overlay from '../common/Overlay/Overlay';
+import Overlay from '../Overlay/Overlay';
 const Loader = () => {
   return (
     <>
@@ -19,7 +19,7 @@ const Loader = () => {
         <div></div>
         <div></div>
       </div>
-      <Overlay />
+      <Overlay style={{ position: 'absolute' }} />
     </>
   );
 };

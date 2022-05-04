@@ -1,5 +1,5 @@
 export const currencyFormat = (price) => {
-  return format(price, 0, 3, ' ', ' ');
+  return price ? format(price, 0, 3, ' ', ' ') : 0;
 };
 const format = function (price, n, x, s, c) {
   var re = '\\d(?=(\\d{' + (x || 3) + '})+' + (n > 0 ? '\\D' : '$') + ')',

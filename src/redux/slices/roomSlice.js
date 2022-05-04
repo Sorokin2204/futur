@@ -86,6 +86,7 @@ export const roomSlice = createSlice({
     },
     [getRooms.rejected]: (state) => {
       state.loading = false;
+      state.error = true;
       console.log('ERROR');
     },
   },

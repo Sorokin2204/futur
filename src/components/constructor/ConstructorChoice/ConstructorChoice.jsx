@@ -8,6 +8,39 @@ import { useDispatch, useSelector } from 'react-redux';
 import { closeAlert } from '../../../redux/slices/alertSlice';
 import logger from 'sass-resources-loader/lib/utils/logger';
 import _ from 'lodash';
+
+export const updateChoice = ({ area, city, address, ceilingHeight, houseType, bathroomsQuantity, doorsQuantity, isBuildWalls, isNeedDismantling, livingComplex, roomsQuantity }) => {
+  let choice = [];
+  if (city) {
+    choice.push(`${city}`);
+  }
+  if (houseType) {
+    choice.push(`${houseType?.toLowerCase()}`);
+  }
+  if (address) {
+    choice.push(`${address}`);
+  }
+  if (livingComplex) {
+    choice.push(`${livingComplex}`);
+  }
+  choice.push(`${roomsQuantity}-комнатная`);
+  if (area) {
+    choice.push(`площадь ${area} м²`);
+  }
+  if (!isNaN(parseInt(ceilingHeight))) {
+    choice.push(`высота потолков ${ceilingHeight} м`);
+  }
+  choice.push(`кол-во дверей: ${doorsQuantity}`);
+  choice.push(`кол-во санузлов: ${bathroomsQuantity}`);
+  if (JSON.parse(isBuildWalls)) {
+    choice.push(`нужно возвести стены`);
+  }
+  if (JSON.parse(isNeedDismantling)) {
+    choice.push(`нужен демонтаж`);
+  }
+  return choice;
+};
+
 const ConstructorChoice = ({ form }) => {
   const { handleSubmit, watch, trigger } = form;
   const navigate = useNavigate();
@@ -21,33 +54,6 @@ const ConstructorChoice = ({ form }) => {
   const { data: houseTypes } = useSelector((state) => state.houseType);
 
   const watchFields = watch();
-  const updateChoice = ({ area, city, address, ceilingHeight, houseType, bathroomsQuantity, doorsQuantity, isBuildWalls, isNeedDismantling, livingComplex, roomsQuantity }) => {
-    let choice = [];
-    choice.push(`${city}`);
-    choice.push(`${houseType?.toLowerCase()}`);
-    if (address) {
-      choice.push(`${address}`);
-    }
-    if (livingComplex) {
-      choice.push(`${livingComplex}`);
-    }
-    choice.push(`${roomsQuantity}-комнатная`);
-    if (area) {
-      choice.push(`площадь ${area} м²`);
-    }
-    if (ceilingHeight) {
-      choice.push(`высота потолков ${ceilingHeight} м`);
-    }
-    choice.push(`кол-во дверей: ${doorsQuantity}`);
-    choice.push(`кол-во санузлов: ${bathroomsQuantity}`);
-    if (isBuildWalls) {
-      choice.push(`нужно возвести стены`);
-    }
-    if (isNeedDismantling) {
-      choice.push(`нужен демонтаж`);
-    }
-    return choice;
-  };
 
   React.useEffect(() => {
     const subscription = watch((value, { name, type }) => {
@@ -83,7 +89,8 @@ const ConstructorChoice = ({ form }) => {
       localStorage.setItem('rooms', JSON.stringify(roomsInLocalStorage));
       localStorage.setItem('package', selectedPackage.slug);
       console.log(d);
-      showAlert('success', 'Данные успешно сохранены');
+
+      navigate('/constructor');
     }
   };
   return (

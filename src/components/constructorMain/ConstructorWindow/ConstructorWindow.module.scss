@@ -2,15 +2,34 @@
 
 .window {
   padding: 20px;
-  background-repeat: no-repeat;
-  background-size: cover;
+  // grid-template-rows: 1fr 1fr 1fr 1fr;
+  // background-repeat: no-repeat;
+  // background-size: cover;
   // width: 100vw;
-  height: 100vh;
+
   position: relative;
-  max-height: 669px;
+  // max-height: 669px;
   // max-width: 827px;
 }
+
+.windowRoomDetailImg {
+  // img {
+  //   width: 100%;
+  //   height: auto;
+  // }
+
+  aspect-ratio: 3/2;
+  position: absolute;
+  width: 100% !important;
+  height: auto !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 .windowBtnBack {
+  z-index: 12;
   position: absolute !important;
   top: 20px;
   left: 20px;
@@ -31,6 +50,7 @@
   }
 }
 .windowSelectPackages {
+  z-index: 12;
   position: absolute !important;
   top: 20px;
   left: 92px;
@@ -38,6 +58,7 @@
   width: 100%;
 }
 .windowSelectRooms {
+  z-index: 12;
   position: absolute;
   max-width: 212px;
   width: 100%;
@@ -47,18 +68,21 @@
   display: none;
 }
 .windowSwithFurniture {
+  z-index: 12;
   max-width: 164px;
   position: absolute !important;
   bottom: 20px;
   left: 20px;
 }
 .windowAngle {
+  z-index: 12;
   position: absolute !important;
   bottom: 20px;
   right: 100px;
   max-width: 164px;
 }
 .windowFullScreen {
+  z-index: 12;
   position: absolute !important;
   bottom: 20px;
   right: 20px;
@@ -81,17 +105,21 @@
 .windowRoomPointItem {
 }
 .windowRoomPointRadio {
+  z-index: 11;
 }
 
 @media (max-width: $sm) {
+  .windowFullScreen {
+  }
+
   .windowSelectRooms {
     display: flex;
   }
   .window {
     margin-top: 84px;
     margin-bottom: 86px;
-    max-height: 669px;
-    height: 100vw;
+    // max-height: 669px;
+    // height: 100vw;
   }
   .windowBtnBack {
     display: none;

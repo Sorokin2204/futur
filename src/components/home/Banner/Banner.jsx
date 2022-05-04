@@ -14,7 +14,7 @@ const HomeBanner = () => {
           <div className={clsx(styles.bannerCol)}>
             <h1 className={clsx(styles.bannerTitle)}>{banner.title}</h1>
             <p className={clsx(styles.bannerText)}>{banner.text}</p>
-            <Button className={clsx(styles.bannerBtn)} arrow onClick={() => navigate('/constructor')}>
+            <Button className={clsx(styles.bannerBtn)} arrow onClick={() => navigate('/constructor-start')}>
               {banner.btnText}
             </Button>
           </div>{' '}
