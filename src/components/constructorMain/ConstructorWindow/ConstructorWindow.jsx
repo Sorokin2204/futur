@@ -38,6 +38,7 @@ const ConstructorWindow = ({ className }) => {
   }, [isMobile]);
 
   const dispatch = useDispatch();
+
   useEffect(() => {
     const roomsLocalStorage = Object.values(JSON.parse(localStorage['rooms'])).map((room, index) => {
       return {
@@ -54,25 +55,62 @@ const ConstructorWindow = ({ className }) => {
   return (
     <>
       <div className={clsx(styles.window, className, fullScreen && styles.windowFullScreen)}>
-        {!loadingRoomSingle && !loadingRoomSingleDefault && roomSingleDefault && roomSingle && showFurniture && roomSingle.imgWithFurnitureOnAngles[angle] && (
-          <img style={{ zIndex: roomSingle.imgWithFurnitureOnAngles[angle]?.priority ?? 1 }} key={roomSingle.imgWithFurnitureOnAngles[angle].img} className={styles.windowRoomDetailImg} src={roomSingle.imgWithFurnitureOnAngles[angle].img} />
-        )}
         {!loadingRoomSingle &&
           !loadingRoomSingleDefault &&
           roomSingleDefault &&
           roomSingle &&
-          roomSingle.details.map((detail) => (
-            <>
-              {detail.positionOnAngles[angle] && <RoomPoint onClick={() => dispatch(changeDetailPoint(detail.slug))} className={clsx(styles.windowRoomPointRadio)} label={detail.name} value={detail.slug} x={detail.positionOnAngles[angle]?.x} y={detail.positionOnAngles[angle]?.y} />}
-              {Array.from(detail.options, ([key, value]) =>
-                value.map((option) => {
-                  if (choiceDetails[activeRoom.slug][key.slug]?.slug === option.slug && option.fullImgOnAngels[angle]) {
-                    return <img threshold={100} effect="blur" delayTime={50} width={1500} height={1000} style={{ zIndex: option.fullImgOnAngels[angle].priority }} key={option.fullImgOnAngels[angle]?.img} className={clsx(styles.windowRoomDetailImg)} src={option.fullImgOnAngels[angle]?.img} />;
-                  }
-                }),
-              )}
-            </>
-          ))}
+          showFurniture &&
+          new Array(roomSingle?.imgWithFurnitureOnAngles?.length)
+            .fill(undefined)
+            .map((i, angleIndex) => (
+              <img
+                style={{ zIndex: roomSingle.imgWithFurnitureOnAngles[angleIndex]?.priority ?? 1 }}
+                key={roomSingle.imgWithFurnitureOnAngles[angleIndex].img}
+                className={clsx(styles.windowRoomDetailImg, angle === angleIndex && styles.windowRoomDetailImgShow)}
+                src={roomSingle.imgWithFurnitureOnAngles[angleIndex].img}
+              />
+            ))}
+
+        {!loadingRoomSingle &&
+          !loadingRoomSingleDefault &&
+          roomSingleDefault &&
+          roomSingle &&
+          new Array(roomSingle?.imgWithFurnitureOnAngles?.length).fill(undefined).map((i, angleIndex) => {
+            return roomSingle.details.map((detail) => (
+              <>
+                {detail.positionOnAngles[angleIndex] && (
+                  <RoomPoint
+                    onClick={() => dispatch(changeDetailPoint(detail.slug))}
+                    className={clsx(styles.windowRoomPointRadio, angle === angleIndex && styles.windowRoomPointRadioShow)}
+                    label={detail.name}
+                    value={detail.slug}
+                    x={detail.positionOnAngles[angleIndex]?.x}
+                    y={detail.positionOnAngles[angleIndex]?.y}
+                  />
+                )}
+                {Array.from(detail.options, ([key, value]) =>
+                  value.map((option) => {
+                    if (choiceDetails[activeRoom.slug][key.slug]?.slug === option.slug && option.fullImgOnAngels[angleIndex]) {
+                      return (
+                        <img
+                          threshold={100}
+                          effect="blur"
+                          delayTime={50}
+                          width={1500}
+                          height={1000}
+                          style={{ zIndex: option.fullImgOnAngels[angleIndex].priority }}
+                          key={option.fullImgOnAngels[angleIndex]?.img}
+                          className={clsx(styles.windowRoomDetailImg, angle === angleIndex && styles.windowRoomDetailImgShow)}
+                          src={option.fullImgOnAngels[angleIndex]?.img}
+                        />
+                      );
+                    }
+                  }),
+                )}
+              </>
+            ));
+          })}
+
         <ButtonWindow
           className={clsx(styles.windowBtnBack)}
           onClick={() => {

@@ -65,6 +65,18 @@
       "phone": "+7 (234) 234-23-43",
       "writeInSocial": true,
       "id": 7
+    },
+    {
+      "name": "423423",
+      "phone": "+7 (234) 324-23-42",
+      "writeInSocial": true,
+      "id": 8
+    },
+    {
+      "name": "111111111",
+      "phone": "+7 (111) 111-11-11",
+      "writeInSocial": true,
+      "id": 9
     }
   ],
   "package-type": [

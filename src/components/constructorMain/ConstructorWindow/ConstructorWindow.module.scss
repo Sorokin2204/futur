@@ -11,13 +11,15 @@
   // max-height: 669px;
   // max-width: 827px;
 }
-
+.windowRoomDetailImgShow {
+  transform: translateX(0%) !important;
+}
 .windowRoomDetailImg {
   // img {
   //   width: 100%;
   //   height: auto;
   // }
-
+  transform: translateX(-100%);
   aspect-ratio: 3/2;
   position: absolute;
   width: 100% !important;
@@ -27,7 +29,9 @@
   right: 0;
   bottom: 0;
 }
-
+.windowRoomFurnitureImg {
+  transform: translateX(0%) !important;
+}
 .windowBtnBack {
   z-index: 12;
   position: absolute !important;
@@ -106,6 +110,11 @@
 }
 .windowRoomPointRadio {
   z-index: 11;
+  display: none !important;
+}
+
+.windowRoomPointRadioShow {
+  display: flex !important;
 }
 
 @media (max-width: $sm) {
