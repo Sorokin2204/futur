@@ -14,11 +14,14 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/scrollbar';
 import { useDispatch, useSelector } from 'react-redux';
-import { getPackages, setActivePackage } from '../../../redux/slices/packageSlice';
+import { getPackages, packagesDefaultOptionsSelector, setActivePackage } from '../../../redux/slices/packageSlice';
 import { getPackageTypes } from '../../../redux/slices/packageTypeSlice';
 
 const ConstructorPackages = () => {
   const [activeType, setActiveType] = useState('');
+
+  const packagesDefaultOptionsSelectorr = useSelector((state) => packagesDefaultOptionsSelector(state.package));
+
   const { data: packages, loading: loadingPackages, error: errorPackages, selectedPackage } = useSelector((state) => state.package);
   const { data: packageTypes, loading: loadingPackageTypes, error: errorPackageTypes } = useSelector((state) => state.packageType);
   const dispatch = useDispatch();
@@ -33,6 +36,7 @@ const ConstructorPackages = () => {
 
   useEffect(() => {
     if (packages) {
+      console.log(packagesDefaultOptionsSelectorr);
       if (localStorage['package']) dispatch(setActivePackage({ slug: localStorage['package'] }));
       else {
         dispatch(setActivePackage(null));
@@ -74,7 +78,8 @@ const ConstructorPackages = () => {
                 }}>
                 {!loadingPackages &&
                   packages &&
-                  packages.map((packageItem) => {
+                  packagesDefaultOptionsSelectorr &&
+                  packagesDefaultOptionsSelectorr.map((packageItem) => {
                     if (packageItem.category === activeType || activeType === '')
                       return (
                         <SwiperSlide className={clsx(styles.packageSwiperSlide)} onClick={() => dispatch(setActivePackage(packageItem))}>

@@ -101,7 +101,7 @@
       "id": "6269427c8ddae9e2e9922b4b",
       "category": "comfort",
       "name": "Отбасы",
-      "slug": "otobasi",
+      "slug": "otbasy",
       "price": 50990
     },
     {
@@ -124,7 +124,7 @@
       "id": "6269427c8ddae9e2e9922b4b",
       "category": "comfort",
       "name": "Отбасы",
-      "slug": "otobasi",
+      "slug": "otbasy",
       "price": 50990,
       "previewImage": "https://picsum.photos/seed/1/200/300",
       "defaultDetails": [
@@ -746,7 +746,7 @@
     {
       "id": "6269427c8ddae9e2e9922b4b",
       "name": "Кухня",
-      "tariff": "otobasi",
+      "tariff": "otbasy",
       "slug": "kugna",
       "imgWithFurnitureOnAngles": [
         {
@@ -980,7 +980,7 @@
     {
       "id": "6269427c8ddae9e2e9922b4b",
       "name": "Гостинная",
-      "tariff": "otobasi",
+      "tariff": "otbasy",
       "slug": "gostinaya",
       "imgWithFurnitureOnAngles": [
         {
@@ -1352,7 +1352,7 @@
       ]
     },
     {
-      "tariff": "otobasi",
+      "tariff": "otbasy",
       "slug": "kugna",
       "details": [
         {
@@ -1401,7 +1401,7 @@
       ]
     },
     {
-      "tariff": "otobasi",
+      "tariff": "otbasy",
       "slug": "gostinaya",
       "details": [
         {

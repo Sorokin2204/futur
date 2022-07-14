@@ -23,8 +23,9 @@ const Header = () => {
       <header className={clsx(styles.header)}>
         <div className={clsx(styles.container, 'container')}>
           <div className={clsx(styles.inner)}>
-            <Link to={'/'} className={clsx(styles.logo)}>
+            <Link to={'/'} className={clsx(styles.logoTitle)}>
               <img src={common.logoHeader} alt="" />
+              {/* ТОО SYY Commerce */}
             </Link>
 
             <ul className={clsx(styles.menu)}>

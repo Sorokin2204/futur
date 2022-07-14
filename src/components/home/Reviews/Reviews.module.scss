@@ -1,6 +1,6 @@
 @import '../../../styles/var';
 .reviews {
-  padding: 122px 0 203px;
+  padding: 111px 0 160px;
 }
 .container {
 }
@@ -10,6 +10,7 @@
 .reviewsHeader {
 }
 .reviewsTitle {
+  transform: translateY(-100%);
   margin-bottom: 60px;
 }
 .reviewsSwiperBox {
@@ -25,7 +26,8 @@
 
 .reviewsSwiperNavigation {
   position: absolute;
-  top: -6px;
+  top: 0;
+  // top: -6px;
   right: 0;
   display: flex;
   align-items: center;
@@ -44,6 +46,10 @@
   .reviewsSwiperNavigation {
     display: none;
   }
+  .reviewsTitle {
+    transform: translateY(0%);
+    margin-bottom: 42px;
+  }
   .reviewsSwiperNavigationMobile {
     display: flex;
     align-items: center;
@@ -54,6 +60,6 @@
     height: auto;
   }
   .reviews {
-    padding: 125px 0 100px;
+    padding: 68px 0 50px;
   }
 }

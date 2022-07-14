@@ -2,6 +2,7 @@ import { createSlice, createAsyncThunk, createSelector, current } from '@reduxjs
 import env from 'react-dotenv';
 import axios from 'axios';
 import _ from 'lodash';
+import { renameKeys } from '../../utils/renameKeys';
 export const initialStateRoomSingle = {
   angle: 0,
   showFurniture: false,
@@ -25,18 +26,20 @@ export const groupDetailOptionsSelector = createSelector(groupDetailOptions, (de
       let existKeyMap = undefined;
       if (mapGroup.size) {
         for (let key of mapGroup.keys()) {
-          if (_.isEqual(key, opt.group)) {
+          if (_.isEqual(key, renameKeys(opt.group, { title: 'name' }))) {
             existKeyMap = key;
           }
         }
       }
       if (existKeyMap) {
-        mapGroup.set(existKeyMap, [...mapGroup.get(existKeyMap), _.omit(opt, 'group')]);
+        console.log(opt);
+        mapGroup.set(existKeyMap, [...mapGroup.get(existKeyMap), _.omit(renameKeys(opt, { full_img_on_angels: 'fullImgOnAngels', preview_image: 'previewImg', title: 'name', preview_image: 'previewImg' }), 'group')]);
       } else {
-        mapGroup.set(opt.group, [_.omit(opt, 'group')]);
+        mapGroup.set(renameKeys(opt.group, { title: 'name' }), [_.omit(renameKeys(opt, { full_img_on_angels: 'fullImgOnAngels', preview_image: 'previewImg', title: 'name', preview_image: 'previewImg' }), 'group')]);
       }
     });
-    return { ...detail, options: mapGroup };
+    console.log(mapGroup);
+    return { ...renameKeys(detail, { position_on_angles: 'positionOnAngles', title: 'name' }), options: mapGroup };
   });
 });
 
@@ -47,7 +50,7 @@ export const setDefaultDetailOptions = (defaultRooms) => {
     const findDefaultRoom = defaultRooms.find((defaultRoom) => defaultRoom.slug === parentSlug);
     if (findDefaultRoom) {
       let detailsObject = {};
-      findDefaultRoom.details.map((detail) => {
+      findDefaultRoom?.details?.map((detail) => {
         detail.options.map((option) => {
           detailsObject[option.group.slug] = { slug: option.slug, price: option.price };
         });
@@ -69,12 +72,15 @@ export const defaultDetailOptionSlugsDetails = createSelector(defaultDetailOptio
 
   return firstValueMapSlug;
 });
-
+function fixedEncodeURI(str) {
+  return encodeURI(str).replace(/%5B/g, '[').replace(/%5D/g, ']');
+}
 export const setActivePackage = createAsyncThunk('roomSingle/setActivePackage', async (tariff) => {
   if (tariff) {
     const roomsFromStorage = [...new Set(Object.values(JSON.parse(localStorage['rooms'])).map((room) => room.parent ?? room.slug))];
-    const roomsParams = roomsFromStorage.map((room, index) => `${index !== 0 ? '&' : ''}` + 'slug[]=' + room.replace(/_/g, ',')).join('');
-    const request = await axios.get(`${env.SERVER_URL}/room-default-options?${roomsParams}&tariff=${tariff.value}`);
+    // const roomsParams = roomsFromStorage.map((room, index) => `${index !== 0 ? '&' : ''}` + 'room_slug[]=' + room).join('');
+    // console.log(roomsParams);
+    const request = await axios.get(`${env.SERVER_URL}/api/main/room-default-options/?room_slug=${roomsFromStorage}&tariff_slug=${tariff.value}`);
 
     if (request.data.length === 0) throw new Error('Дефолтные детали не найдены');
     return { data: request.data, tariff };
@@ -83,7 +89,7 @@ export const setActivePackage = createAsyncThunk('roomSingle/setActivePackage', 
 });
 
 export const getRoomSingle = createAsyncThunk('roomSingle/getRoomSingle', async (roomSlug) => {
-  const request = await axios.get(`${env.SERVER_URL}/room-single?slug=${roomSlug.room}&tariff=${roomSlug.package}`);
+  const request = await axios.get(`${env.SERVER_URL}/api/main/room-single?room_slug=${roomSlug.room}&tariff_slug=${roomSlug.package}`);
   if (request.data.length === 0) throw new Error('Комната не найдена');
   return request;
 });
@@ -129,8 +135,7 @@ export const roomSingleSlice = createSlice({
     },
     [getRoomSingle.fulfilled]: (state, { payload }) => {
       state.loading = false;
-      state.data = payload.data[0];
-
+      state.data = renameKeys(payload.data[0], { img_with_furniture_on_angles: 'imgWithFurnitureOnAngles' });
       state.data.details = groupDetailOptionsSelector(state);
       // console.log(defaultDetailOptionSlugsDetails(state));
       // state.choiceDetails = { ...state.choiceDetails, [state.data.slug]: defaultDetailOptionSlugsDetails(state) };
@@ -160,7 +165,7 @@ export const roomSingleSlice = createSlice({
     [setActivePackage.rejected]: (state) => {
       state.loadingNewPackage = false;
       state.error = true;
-      console.log('LOADING...');
+      console.log('ERROR...');
     },
   },
 });

@@ -62,7 +62,7 @@ const ConstructorHead = ({ form }) => {
                 </div>
               )}
 
-              {watchHouseType === 'chastnyj-dom' ? (
+              {watchHouseType === 'chastny_dom' ? (
                 <Input
                   rules={{
                     required: true,

@@ -10,7 +10,8 @@ export const initialStateFeedback = {
 };
 
 export const postFeedback = createAsyncThunk('feedback/postFeedback', async (feedbackData) => {
-  return axios.post(`${env.SERVER_URL}/feedback`, feedbackData);
+  console.log({ name: feedbackData.name, phone: feedbackData.phone, write_in_social: feedbackData.writeInSocial });
+  return axios.post(`${env.NEW_SERVER_URL}/api/main/feadback/`, { name: feedbackData.name, phone: feedbackData.phone, write_in_social: feedbackData.writeInSocial }).catch((err) => console.log(err.message));
 });
 
 export const feedbackSlice = createSlice({
@@ -24,7 +25,8 @@ export const feedbackSlice = createSlice({
     },
     [postFeedback.fulfilled]: (state, { payload }) => {
       state.loading = false;
-      state.data = payload;
+      state.data = payload?.data;
+      console.log(payload?.data);
       console.log('SUCCESS');
     },
     [postFeedback.rejected]: (state) => {

@@ -99,7 +99,9 @@ $xs: 640px;
 @mixin bold-54 {
   @include fluid-type(700, 54, 67, $screen-min, $screen-max, 32, 38);
 }
-
+@mixin bold-48 {
+  @include fluid-type(700, 48, 58, $screen-min, $screen-max, 32, 38);
+}
 @mixin bold-16 {
   @include fluid-type(700, 16, 19, $screen-min, $screen-max);
 }
@@ -109,11 +111,14 @@ $xs: 640px;
 }
 
 @mixin bold-26 {
-  @include fluid-type(700, 26, 35, $screen-min, $screen-max, 22, 30);
+  @include fluid-type(700, 26, 35, $screen-min, $screen-max, 20, 26);
 }
 
 @mixin bold-120 {
   @include fluid-type(700, 120, 149, $screen-min, $screen-max, 76, 90);
+}
+@mixin extrabold-204 {
+  @include fluid-type(900, 204, 204, $screen-min, $screen-max);
 }
 
 @mixin fluid-type($font-weight, $font-max, $line-height-max, $screen-min, $screen-max, $font-min: '', $line-height-min: '') {

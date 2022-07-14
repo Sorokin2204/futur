@@ -10,7 +10,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
-  top: -527px;
+  top: -352px;
   left: -316px;
   width: 696px;
   height: 731px;
@@ -18,16 +18,17 @@
 .container {
 }
 .inner {
-  @include bold-54;
+  @include bold-48;
   position: relative;
   display: grid;
   grid-gap: 57px;
-  grid-template-columns: 9em 1fr;
+  grid-template-columns: 11em 1fr;
 }
 .bannerCol {
 }
 .bannerTitle {
-  @include bold-54;
+  margin-top: 80px;
+  @include bold-48;
   margin-bottom: 22px;
 }
 .bannerText {
@@ -64,6 +65,9 @@
   .banner {
     padding: 0 0 70px;
   }
+  .bannerTitle {
+    margin-top: 0px;
+  }
   .inner {
     grid-gap: 20px;
     grid-template-columns: 1fr;
@@ -76,8 +80,8 @@
     object-fit: cover;
   }
   .bannerCol {
-    @include bold-54;
-    max-width: 9.6em;
+    @include bold-48;
+    max-width: 13em;
     order: 2;
   }
   .bannerText {

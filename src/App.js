@@ -10,7 +10,11 @@ import WorkSinglePage from './pages/WorkSingle';
 import ConstructorPage from './pages/Contstructor';
 import ConstructorMainPage from './pages/ConstructorMain';
 import TotalPage from './pages/Total';
+import axios from 'axios';
+import { useEffect } from 'react';
 function App() {
+  useEffect(() => {}, []);
+
   let routes = useRoutes([
     { path: '/', element: <HomePage /> },
     { path: '/about', element: <AboutPage /> },
@@ -20,6 +24,7 @@ function App() {
     { path: '/contacts', element: <ContactPage /> },
     { path: '/packages', element: <PackagesPage /> },
     { path: '/works/:id', element: <WorkSinglePage /> },
+    // { path: '/works', element: <WorksPage /> },
     { path: '/constructor-start', element: <ConstructorPage /> },
     { path: '/constructor', element: <ConstructorMainPage /> },
     { path: '/total', element: <TotalPage /> },

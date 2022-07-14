@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import styles from './WorkSingle.module.scss';
 import { worksList } from '../../data/list/works';
 import { Navigation, Pagination } from 'swiper';
-
+import { Interweave } from 'interweave';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
@@ -12,13 +12,15 @@ import 'swiper/css/pagination';
 import { useRef } from 'react';
 import { useState } from 'react';
 import AnimateHeight from 'react-animate-height';
+import { useSelector } from 'react-redux';
 const WorkSingle = () => {
+  const { singleData, singleLoading, singleError } = useSelector((state) => state.work);
   return (
     <>
       <div className={clsx(styles.workSingle)}>
         <div className={clsx(styles.container, 'container')}>
-          <h2 className={clsx(styles.workSingleTitle)}>{worksList[0].title}</h2>
-          <p className={clsx(styles.workSingleText)}> {worksList[0].fullText}</p>
+          <h2 className={clsx(styles.workSingleTitle)}>{singleData.title}</h2>
+          <Interweave content={singleData.desc} className={clsx(styles.workSingleText)} />
         </div>
         <div className={clsx(styles.workSingleSwiper)}>
           <Swiper
@@ -50,9 +52,9 @@ const WorkSingle = () => {
 
               type: 'fraction',
             }}>
-            {worksList[0].images.map((image, index) => (
-              <SwiperSlide key={image}>
-                <img src={image} alt="" className={clsx(styles.workSingleImg)} />
+            {singleData.images.map((image, index) => (
+              <SwiperSlide key={image.image}>
+                <img src={image.image} alt="" className={clsx(styles.workSingleImg)} />
               </SwiperSlide>
             ))}
           </Swiper>

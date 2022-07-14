@@ -8,6 +8,7 @@ import ConstructorAccordionWindow from '../ConstructorAccordionWindow/Constructo
 import { useSelector } from 'react-redux';
 const ConstructorAccordions = ({ className }) => {
   const { data: roomSingle, loading: loadingRoomSingle, dataDefault: roomSingleDefault, loadingDefault: loadingRoomSingleDefault, error: errorRoomSingle } = useSelector((state) => state.roomSingle);
+  console.log(roomSingle?.details);
   return (
     <div className={clsx(styles.accordions, className)}>
       <ul className={clsx(styles.accordionsList)}>
@@ -15,7 +16,7 @@ const ConstructorAccordions = ({ className }) => {
           !loadingRoomSingleDefault &&
           roomSingleDefault &&
           roomSingle &&
-          roomSingle.details.map((detail) => {
+          roomSingle?.details?.map((detail) => {
             return <ConstructorAccordionWindow name={detail.name} list={detail.options} slug={detail.slug} />;
           })}
       </ul>

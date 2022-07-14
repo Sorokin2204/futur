@@ -1,0 +1,67 @@
+@import '../../../styles/var';
+.ourWorkItemImg {
+  width: 100%;
+  height: auto;
+  // margin-bottom: 24px;
+  height: 450px;
+  object-fit: cover;
+}
+
+.hover {
+  display: flex;
+  align-items: flex-end;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(25, 148, 166, 0.3);
+  padding: 70px 22px;
+  @include semibold-16;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s;
+  &:hover {
+    opacity: 1;
+  }
+}
+.hoverList {
+}
+.hoverItem {
+  list-style: inside;
+  span {
+    display: inline-block;
+    margin-left: -4px;
+    transform: translateY(3px);
+  }
+  user-select: none;
+
+  & + & {
+    margin-top: 14px;
+  }
+  &::marker {
+    font-size: 8px;
+  }
+}
+.ourWorkItemTitle {
+  @include bold-26;
+  margin-bottom: 20px;
+  margin-bottom: 6px;
+}
+.wrap {
+  position: relative;
+}
+.ourWorkItemText {
+  color: $dark-grey;
+  max-width: 506px;
+  @include regular-18;
+  margin-bottom: 32px;
+}
+.ourWorkItemBtn {
+}
+
+@media (max-width: $sm) {
+  .ourWorkItemImg {
+    height: 420px;
+  }
+}

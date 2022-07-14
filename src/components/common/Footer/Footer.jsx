@@ -9,7 +9,10 @@ const Footer = () => {
       <footer className={clsx(styles.footer)}>
         <div className={clsx(styles.container, 'container')}>
           <div className={clsx(styles.footerInner)}>
-            <img src={common.logoFoooter} alt="" className={clsx(styles.footerLogo)} />
+            <Link to={'/'} className={clsx(styles.logoTitle)}>
+              <img src={common.logoFoooter} alt="" />
+            </Link>
+            {/* <img src={common.logoFoooter} alt="" className={clsx(styles.footerLogo)} /> */}
             <ul className={clsx(styles.footerMenu)}>
               {common.menu.map((menuItem) => (
                 <li className={clsx(styles.footerMenuItem)}>

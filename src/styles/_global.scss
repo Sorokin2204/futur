@@ -318,3 +318,23 @@ h6 {
   }
   transform: none;
 }
+.swiper-our-works-button-next,
+.swiper-our-works-button-prev {
+  width: 13px;
+  height: 24px;
+  background-image: url(../../public/icons/chevron-thin.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  right: -40px;
+  transform: translateY(-50%) rotate(180deg);
+  &.swiper-button-disabled {
+    display: none;
+  }
+}
+.swiper-our-works-button-prev {
+  right: auto;
+  left: -40px;
+  transform: translateY(-50%);
+}

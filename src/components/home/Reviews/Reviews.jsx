@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useState } from 'react';
+import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import clsx from 'clsx';
 import styles from './Reviews.module.scss';
 import Title from '../../common/Title/Title';
@@ -11,21 +11,57 @@ import _ from 'lodash';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-
+import { useDispatch, useSelector } from 'react-redux';
+import { getReviews } from '../../../redux/slices/reviewSlice';
+import TitleBold from '../../common/TitleBold/TitleBold';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { gsap } from 'gsap/dist/gsap';
 const HomeReviews = () => {
+  const { data, loading } = useSelector((state) => state.review);
+  const reviewsBlockRef = useRef();
+  const itemsRef = useRef([]);
+  const titleRef = useRef();
+  const leftRef = useRef();
+  const rightRef = useRef();
+  useEffect(() => {
+    if (data) {
+      gsap.registerPlugin(ScrollTrigger);
+      gsap.defaults({ duration: 0.3 });
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: reviewsBlockRef.current,
+            start: 'top 80%',
+          },
+        })
+
+        .fromTo(titleRef.current, { opacity: 0 }, { xPercent: 0, opacity: 1, delay: 0.3 })
+        .fromTo(leftRef.current, { scale: 0 }, { scale: 1 })
+        .fromTo(rightRef.current, { scale: 0 }, { scale: 1 })
+        .fromTo(itemsRef.current, { xPercent: -5, opacity: 0 }, { xPercent: 0, opacity: 1, stagger: 0.3 });
+    }
+  }, [data]);
+
   const isMobile = useMediaQuery({
     query: '(max-width: 500px)',
   });
   const swiperRef = React.useRef(null);
+
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getReviews());
+  }, []);
   return (
     <>
-      <section className={clsx(styles.reviews)}>
+      <section className={clsx(styles.reviews)} ref={reviewsBlockRef}>
         <div className={clsx(styles.container, 'container')}>
           <div className={clsx(styles.reviewsInner)}>
-            <Title className={clsx(styles.reviewsTitle)}>{reviews.title}</Title>
+            <TitleBold titleRef={titleRef} className={clsx(styles.reviewsTitle)}>
+              {reviews.title}
+            </TitleBold>
             <div className={clsx(styles.reviewsSwiperNavigation)}>
-              <div className="swiper-home-reviews-button-prev" />
-              <div className="swiper-home-reviews-button-next" />
+              <div className="swiper-home-reviews-button-prev" ref={leftRef} />
+              <div className="swiper-home-reviews-button-next" ref={rightRef} />
             </div>
 
             <div className={clsx(styles.reviewsSwiperBox)}>
@@ -51,16 +87,22 @@ const HomeReviews = () => {
                   clickable: true,
                 }}>
                 {isMobile
-                  ? _.chunk(reviews.list, 2).map((reviewGroup) => (
+                  ? _.chunk(data, 2)?.map((reviewGroup) => (
                       <SwiperSlide>
-                        {reviewGroup.map((review) => (
-                          <ReviewItem {...review} />
+                        {reviewGroup.map((review, i) => (
+                          <div ref={(e) => (itemsRef.current[i] = e)}>
+                            {' '}
+                            <ReviewItem {...review} />
+                          </div>
                         ))}
                       </SwiperSlide>
                     ))
-                  : reviews.list.map((review) => (
+                  : data?.map((review, i) => (
                       <SwiperSlide key={review.name}>
-                        <ReviewItem {...review} />
+                        <div ref={(e) => (itemsRef.current[i] = e)}>
+                          {' '}
+                          <ReviewItem {...review} />
+                        </div>
                       </SwiperSlide>
                     ))}
               </Swiper>

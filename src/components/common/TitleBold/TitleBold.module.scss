@@ -1,0 +1,7 @@
+@import '../../../styles/var';
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include bold-48;
+}

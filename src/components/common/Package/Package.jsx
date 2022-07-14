@@ -9,7 +9,8 @@ const Package = ({ previewImage, name, price, defaultDetails, small, active, cla
     <>
       <li className={clsx(styles.package, className, small && styles.packageSmall, active && styles.packageActive)}>
         {active && <div className={clsx(styles.packageActiveIcon)}></div>}
-        <LazyLoadImage wrapperClassName={clsx(styles.packageImg)} alt="" effect="blur" src={previewImage} delayTime={200} width={326} height={222} />
+
+        <LazyLoadImage wrapperClassName={clsx(styles.packageImg)} alt="" effect="blur" src={previewImage ?? '/img/no-image.png'} delayTime={200} width={326} height={222} />
         {/* <img src={previewImage} alt="" /> */}
         <div className={clsx(styles.packageContent)}>
           <span className={clsx(styles.packageName)}>{name}</span>
@@ -18,7 +19,7 @@ const Package = ({ previewImage, name, price, defaultDetails, small, active, cla
             <span>{'₸/м²'}</span>
           </span>
           <ul className={clsx(styles.packageList)}>
-            {defaultDetails.map((detail) => (
+            {defaultDetails?.map((detail) => (
               <li className={clsx(styles.packageItem)}>
                 <span className={clsx(styles.packageLabel)}>{detail.label}</span>
                 <span className={clsx(styles.packageValue)}>{detail.value}</span>

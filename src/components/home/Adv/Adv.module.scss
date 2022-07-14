@@ -1,0 +1,54 @@
+@import '../../../styles/var';
+.adv {
+}
+.container {
+}
+.inner {
+  padding: 74px 0 60px;
+}
+.advList {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(auto, 570px));
+  grid-gap: 40px;
+  justify-content: center;
+}
+.advItem {
+  display: flex;
+  flex-direction: column;
+}
+.advItemHead {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.advItemImg {
+  margin-right: 26px;
+}
+.advItemTitle {
+  @include bold-26;
+}
+.advDesc {
+  padding-left: 58px;
+  @include regular-18;
+  color: #585858;
+}
+@media (max-width: $sm) {
+  .advList {
+    grid-template-columns: repeat(1, minmax(auto, 570px));
+    grid-gap: 24px;
+  }
+  .inner {
+    padding: 66px 0 84px;
+  }
+  .advItemImg {
+    width: 24px;
+    height: 24px;
+    margin-right: 22px;
+  }
+  .advDesc {
+    padding-left: 48px;
+  }
+  .advItemHead {
+    margin-bottom: 16px;
+  }
+}

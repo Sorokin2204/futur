@@ -11,7 +11,10 @@ import { useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';
 import { initialStateFeedback, postFeedback } from '../../../redux/slices/feedbackSlice';
 import { openModalThank } from '../../../redux/slices/modalsSlice';
+import useMediaQuery from '../../../utils/useMediaQuery';
+import TitleBold from '../TitleBold/TitleBold';
 const Feedback = ({ light }) => {
+  const isMobile = useMediaQuery('(max-width: 640px)');
   const { formFields } = useSelector((state) => state.feedback);
   const form = useForm({ defaultValues: { ...formFields }, shouldFocusError: false });
   const dispatch = useDispatch();
@@ -23,8 +26,10 @@ const Feedback = ({ light }) => {
     formState: { errors },
   } = form;
   const onSubmit = (data) => {
-    console.log(data);
-    dispatch(postFeedback(data));
+    const phone = data.phone.replace(/-/g, ' ').replace(/ /g, '').replace(/\(/g, '').replace(/\)/g, '');
+    console.log(phone);
+    console.log({ ...data, phone });
+    dispatch(postFeedback({ ...data, phone }));
     reset(initialStateFeedback.formFields);
     dispatch(openModalThank());
   };
@@ -35,7 +40,8 @@ const Feedback = ({ light }) => {
           <div className={clsx(styles.feedbackInner)}>
             <div className={clsx(styles.feedbackPlan)} style={{ backgroundImage: `url(${common.planImgTwo})` }}></div>
             <div className={clsx(styles.feedbackContent)}>
-              <Title className={clsx(styles.feedbackTitle)}>{feedback.title}</Title>
+              {isMobile ? <TitleBold className={clsx(styles.feedbackTitle)}>{feedback.title}</TitleBold> : <Title className={clsx(styles.feedbackTitle)}>{feedback.title}</Title>}
+
               <p className={clsx(styles.feedbackText)}>{feedback.text}</p>
               <form className={clsx(styles.feedbackForm)} onSubmit={handleSubmit(onSubmit)} autoComplete="off">
                 <Input rules={{ required: true }} error={errors.name} type="text" className={clsx(styles.feedbackInput)} label={feedback.name.label} placeholder={feedback.name.placeholder} smallLabel name="name" register={register} />

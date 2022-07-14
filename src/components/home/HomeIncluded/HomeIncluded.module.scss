@@ -1,0 +1,55 @@
+@import '../../../styles/var';
+.accordionHead {
+  background: #1994a6;
+  padding: 25px;
+}
+.accordionHeadContent {
+  user-select: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1994a6;
+  color: #fff;
+}
+.accordionContent {
+  & > div {
+    max-width: 950px;
+    padding: 0 16px;
+  }
+  padding-bottom: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1994a6;
+  color: #fff;
+}
+.title {
+  margin-right: 32px;
+  @include bold-48;
+  color: #fff;
+}
+.iconActive {
+  transform: rotate(0deg) !important;
+}
+.icon {
+  transition: transform 0.5s;
+  transform: rotate(45deg);
+  // margin-top: 4px;
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+@media (max-width: $sm) {
+  .accordionHead {
+    padding: 20px;
+  }
+  .title {
+    @include bold-32;
+    margin-right: 13px;
+  }
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+}

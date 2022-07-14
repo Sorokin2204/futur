@@ -11,7 +11,7 @@ export const initialStateRoom = {
 };
 
 export const getRooms = createAsyncThunk('feedback/getRooms', async () => {
-  return axios.get(`${env.SERVER_URL}/room`);
+  return axios.get(`${env.NEW_SERVER_URL}/api/main/room-short/?format=json`);
 });
 
 export const roomSlice = createSlice({
@@ -47,6 +47,7 @@ export const roomSlice = createSlice({
           if (i === 0) {
             roomsDuplicate.push({
               ...room,
+              name: room.title,
               number: i + 1,
               checked: true,
               show: true,
@@ -54,7 +55,7 @@ export const roomSlice = createSlice({
           } else {
             roomsDuplicate.push({
               ...room,
-              name: `${room.name} №${i + 1}`,
+              name: `${room.title} №${i + 1}`,
               slug: `${room.slug}_${i + 1}`,
               parent: room.slug,
               number: i + 1,

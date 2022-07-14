@@ -10,18 +10,19 @@ import ModalGoBack from '../../common/ModalGoBack/ModalGoBack';
 import RoomPoint from '../../common/RoomPoint/RoomPoint';
 import { roomList } from '../../../data/list/rooms';
 import { packageList } from '../../../data/list/packages';
-import { getPackages, packageListSelector, packageWindowSelectSelector } from '../../../redux/slices/packageSlice';
+import { getPackages, getPackagesList, packageListSelector, packageWindowSelectSelector } from '../../../redux/slices/packageSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { openModalError, openModalGoBack, openModalGoBackClearStorage } from '../../../redux/slices/modalsSlice';
 import { changeDetailPoint, resetRoomSingle, switchFullScreen } from '../../../redux/slices/roomSingleSlice';
 import Loader from '../../common/Loader/Loader';
 import useMediaQuery from '../../../utils/useMediaQuery';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import env from 'react-dotenv';
 
 const ConstructorWindow = ({ className }) => {
   const packagesWindowSelect = useSelector((state) => packageWindowSelectSelector(state.package));
   const [roomWindowSelect, setRoomWindowSelect] = useState([]);
-  const { data: packages, loading: loadingPackages, error: errorPackages, selectedPackage } = useSelector((state) => state.package);
+  const { dataList: packages, loadingList: loadingPackages, error: errorPackages, selectedPackage } = useSelector((state) => state.package);
   const { showFurniture, activePackage, activeRoom, fullScreen, angle, choiceDetails, data: roomSingle, loading: loadingRoomSingle, dataDefault: roomSingleDefault, loadingDefault: loadingRoomSingleDefault, error: errorRoomSingle } = useSelector((state) => state.roomSingle);
   const isMobile = useMediaQuery('(max-width: 1024px)');
 
@@ -49,7 +50,7 @@ const ConstructorWindow = ({ className }) => {
       };
     });
     setRoomWindowSelect(roomsLocalStorage);
-    dispatch(getPackages());
+    dispatch(getPackagesList());
   }, []);
 
   return (
@@ -65,9 +66,9 @@ const ConstructorWindow = ({ className }) => {
             .map((i, angleIndex) => (
               <img
                 style={{ zIndex: roomSingle.imgWithFurnitureOnAngles[angleIndex]?.priority ?? 1 }}
-                key={roomSingle.imgWithFurnitureOnAngles[angleIndex].img}
+                key={roomSingle.imgWithFurnitureOnAngles[angleIndex]?.image}
                 className={clsx(styles.windowRoomDetailImg, angle === angleIndex && styles.windowRoomDetailImgShow)}
-                src={roomSingle.imgWithFurnitureOnAngles[angleIndex].img}
+                src={roomSingle.imgWithFurnitureOnAngles[angleIndex]?.image}
               />
             ))}
 
@@ -75,8 +76,8 @@ const ConstructorWindow = ({ className }) => {
           !loadingRoomSingleDefault &&
           roomSingleDefault &&
           roomSingle &&
-          new Array(roomSingle?.imgWithFurnitureOnAngles?.length).fill(undefined).map((i, angleIndex) => {
-            return roomSingle.details.map((detail) => (
+          new Array(roomSingle?.imgWithFurnitureOnAngles?.length).fill(undefined)?.map((i, angleIndex) => {
+            return roomSingle?.details?.map((detail) => (
               <>
                 {detail.positionOnAngles[angleIndex] && (
                   <RoomPoint
@@ -88,9 +89,9 @@ const ConstructorWindow = ({ className }) => {
                     y={detail.positionOnAngles[angleIndex]?.y}
                   />
                 )}
-                {Array.from(detail.options, ([key, value]) =>
-                  value.map((option) => {
-                    if (choiceDetails[activeRoom.slug][key.slug]?.slug === option.slug && option.fullImgOnAngels[angleIndex]) {
+                {Array.from(detail?.options, ([key, value]) =>
+                  value?.map((option) => {
+                    if (choiceDetails?.[activeRoom?.slug]?.[key?.slug]?.slug === option?.slug && option?.fullImgOnAngels?.[angleIndex]) {
                       return (
                         <img
                           threshold={100}
@@ -99,9 +100,9 @@ const ConstructorWindow = ({ className }) => {
                           width={1500}
                           height={1000}
                           style={{ zIndex: option.fullImgOnAngels[angleIndex].priority }}
-                          key={option.fullImgOnAngels[angleIndex]?.img}
+                          key={option.fullImgOnAngels[angleIndex]?.image}
                           className={clsx(styles.windowRoomDetailImg, angle === angleIndex && styles.windowRoomDetailImgShow)}
-                          src={option.fullImgOnAngels[angleIndex]?.img}
+                          src={env.SERVER_URL + option.fullImgOnAngels[angleIndex]?.image}
                         />
                       );
                     }

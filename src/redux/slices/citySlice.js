@@ -1,9 +1,12 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import env from 'react-dotenv';
 import axios from 'axios';
+import { renameKeys } from '../../utils/renameKeys';
 export const initialStateCity = {};
+
 export const getCities = createAsyncThunk('feedback/getCities', async () => {
-  return axios.get(`${env.SERVER_URL}/city`);
+  console.log(env.NEW_SERVER_URL);
+  return axios.get(`${env.NEW_SERVER_URL}/api/main/city/`);
 });
 
 export const citySlice = createSlice({
@@ -16,8 +19,10 @@ export const citySlice = createSlice({
       console.log('LOADING...');
     },
     [getCities.fulfilled]: (state, { payload }) => {
+      const newKeys = { title: 'name' };
+      const renameData = payload.data.map((city) => renameKeys(city, newKeys));
       state.loading = false;
-      state.data = payload.data;
+      state.data = renameData;
       console.log('SUCCESS');
     },
     [getCities.rejected]: (state) => {

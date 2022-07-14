@@ -12,6 +12,19 @@
   justify-content: start;
   padding: 60px 0 84px;
 }
+.logoTitle {
+  & img {
+    width: 75px;
+    height: 30px;
+  }
+
+  @include semibold-22;
+  color: $bg-light;
+  text-decoration: none;
+  margin-right: 64px;
+  white-space: nowrap;
+}
+
 .footerLogo {
   margin-right: 84px;
 }

@@ -79,6 +79,7 @@
     margin-bottom: 20px !important;
   }
   .feedbackTitle {
+    justify-content: start !important;
     margin-bottom: 30px;
   }
   .feedback {
@@ -121,6 +122,9 @@
   }
 }
 @media (max-width: $xs) {
+  .feedback {
+    padding: 91px 0 49px;
+  }
   .feedbackPlan {
     display: none;
   }

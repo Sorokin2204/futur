@@ -2,9 +2,9 @@ import { reviewsList } from '../list/reviews';
 import { worksList } from '../list/works';
 
 export const banner = {
-  title: `Ремонт квартир под ключ в Алмате`,
-  text: 'Ремонтируем квартиры с готовыми архитектурными проектами и фиксированной ценой.',
-  btnText: 'Расчитать стоимость',
+  title: `Комплексный ремонт квартир под ключ + материалы`,
+  text: 'Возьмём на себя все заботы и сложности по ремонту',
+  btnText: 'Узнать стоимость',
   img: '/img/banner-img.png',
 };
 

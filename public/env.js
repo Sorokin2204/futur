@@ -1,4 +1,5 @@
 window.env = {
   "BASE_URL": "http://localhost:3000",
-  "SERVER_URL": "http://192.168.0.103:3001"
+  "SERVER_URL": "http://91.201.215.243:8009",
+  "NEW_SERVER_URL": "http://91.201.215.243:8009"
 };

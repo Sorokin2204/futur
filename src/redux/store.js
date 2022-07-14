@@ -2,15 +2,19 @@ import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { alertReducer } from './slices/alertSlice';
 import { cityReducer } from './slices/citySlice';
 import { constructorStartReducer } from './slices/constructorStartFormSlice';
+import { faqReducer } from './slices/faqSlice';
 import { feedbackReducer } from './slices/feedbackSlice';
 import { houseTypeReducer } from './slices/houseTypeSlice';
+import { howToWorkReducer } from './slices/howToWorkSlice';
 import { modalsReducer } from './slices/modalsSlice';
 import { packageReducer } from './slices/packageSlice';
 import { packageTypeReducer } from './slices/packageTypeSlice';
+import { reviewReducer } from './slices/reviewSlice';
 import { roomSingleReducer } from './slices/roomSingleSlice';
 import { roomReducer } from './slices/roomSlice';
 import { totalFeedbackReducer } from './slices/totalFeedbackSlice';
 import { totalReducer } from './slices/totalSlice';
+import { workReducer } from './slices/workSlice';
 
 const combinedReducer = combineReducers({
   feedback: feedbackReducer,
@@ -25,6 +29,10 @@ const combinedReducer = combineReducers({
   roomSingle: roomSingleReducer,
   total: totalReducer,
   totalFeedback: totalFeedbackReducer,
+  faq: faqReducer,
+  howToWork: howToWorkReducer,
+  review: reviewReducer,
+  work: workReducer,
 });
 
 const rootReducer = (state, action) => {

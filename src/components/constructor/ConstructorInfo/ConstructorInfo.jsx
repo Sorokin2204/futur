@@ -44,7 +44,7 @@ const ConstructorInfo = ({ form }) => {
                 label="Площадь, м²"
                 placeholder="м²"
               />
-              {watchHouseType === 'chastnyj-dom' && (
+              {watchHouseType === 'chastny_dom' && (
                 <Input
                   rules={{
                     required: true,

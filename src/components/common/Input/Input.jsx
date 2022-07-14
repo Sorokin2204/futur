@@ -18,12 +18,12 @@ const Input = ({ className, responsive, rows, placeholder, name, register, label
                 ...rules,
                 ...(type === 'phone' && {
                   pattern: {
-                    value: /^(8|\+7)[ ][(]\d{3}[)][ ]\d{3}[-]\d{2}[-]\d{2}$/gm,
+                    value: /^(8|\+7)[ ][(][7](00|01|02|07|08|05|71|76|77|75|78|47)[)][ ]\d{3}[-]\d{2}[-]\d{2}$/gm,
                     message: 'Не корректный телефон',
                   },
                 }),
               }}
-              render={({ field: { onChange, name, value } }) => <NumberFormat className={clsx(styles.input)} {...(type !== 'phone' || { format: '+7 (###) ###-##-##', mask: '_' })} name={name} value={value} onChange={onChange} placeholder={placeholder} autoComplete="off" />}
+              render={({ field: { onChange, name, value } }) => <NumberFormat className={clsx(styles.input)} {...(type !== 'phone' || { format: '+7 (7##) ###-##-##', mask: '_' })} name={name} value={value} onChange={onChange} placeholder={placeholder} autoComplete="off" />}
             />
           ) : (
             <input autoComplete="off" placeholder={placeholder} className={clsx(styles.input)} {...(typeof register == 'undefined' || register(name, rules))} />

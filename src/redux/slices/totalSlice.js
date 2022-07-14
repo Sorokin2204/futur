@@ -20,7 +20,7 @@ export const totalSlice = createSlice({
         const roomOptionsFind = [];
         const roomFind = rooms.find((roomItem) => roomItem.slug === roomKey);
         const roomSingleFind = current(state.data).find((roomSingle) => roomSingle.slug === (roomFind.parent ? roomFind.parent : roomFind.slug));
-        roomSingleFind.details.map((detail) => {
+        roomSingleFind?.details?.map((detail) => {
           detail.options.map((option) => {
             if (totalParse[roomKey]) {
               let optionFind = Object.values(totalParse[roomKey]).findIndex((totRoom) => totRoom?.slug === option?.slug);

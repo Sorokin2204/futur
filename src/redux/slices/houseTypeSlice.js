@@ -1,10 +1,11 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 import env from 'react-dotenv';
+import { renameKeys } from '../../utils/renameKeys';
 export const initialStateHouseType = {};
 
 export const getHouseTypes = createAsyncThunk('feedback/getHouseTypes', async () => {
-  return axios.get(`${env.SERVER_URL}/house-type`);
+  return axios.get(`${env.NEW_SERVER_URL}/api/main/house-type/`);
 });
 
 export const houseTypeSlice = createSlice({
@@ -17,8 +18,10 @@ export const houseTypeSlice = createSlice({
       console.log('LOADING...');
     },
     [getHouseTypes.fulfilled]: (state, { payload }) => {
+      const newKeys = { title: 'name' };
+      const renameData = payload.data.map((city) => renameKeys(city, newKeys));
       state.loading = false;
-      state.data = payload.data;
+      state.data = renameData;
       console.log('SUCCESS');
     },
     [getHouseTypes.rejected]: (state) => {
