@@ -13,7 +13,7 @@ const OurWorkItem = ({ img, title, text, path }) => {
       <p className={clsx(styles.ourWorkItemText)}>{text}</p>
       <Button
         onClick={() => {
-          navigate('/works/new-work');
+          navigate(`/works/${path}`);
         }}
         className={clsx(styles.ourWorkItemBtn)}
         text>

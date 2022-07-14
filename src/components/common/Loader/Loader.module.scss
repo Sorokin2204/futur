@@ -1,5 +1,12 @@
 @import '../../../styles/var';
 
+.spinnerWhite {
+  color: $primary !important;
+  & div:after {
+    background: $primary !important;
+  }
+}
+
 .spinner {
   color: $white;
   display: inline-block;

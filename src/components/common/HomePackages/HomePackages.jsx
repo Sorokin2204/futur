@@ -51,7 +51,7 @@ const HomePackages = ({ aboutPage }) => {
               <ul className={clsx(styles.ourWorksList)}>
                 {data.map((work, index) => (
                   <li className={clsx(styles.ourWorksItem)} ref={(e) => (itemsRef.current[index] = e)}>
-                    <HomePackageItem title={work.title} text={work.desc} img={work.preview_image} />
+                    <HomePackageItem title={work.title} text={work?.desc} img={work.preview_image} />
                   </li>
                 ))}
               </ul>

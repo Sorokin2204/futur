@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import styles from './AccordionItemWindow.module.scss';
 import { currencyFormat } from '../../../utils/currencyFormat';
 import env from 'react-dotenv';
+import { calcFormula } from '../../../utils/calcFormula';
 const AccordionItemWindow = ({ previewImg, name, desc, price, active, onClick }) => {
   return (
     <>
@@ -20,7 +21,7 @@ const AccordionItemWindow = ({ previewImg, name, desc, price, active, onClick })
         <div className={clsx(styles.accordionItemContent)}>
           <span className={clsx(styles.accordionItemName)}>{name}</span>
           <p className={clsx(styles.accordionItemDesc)}>{desc}</p>
-          <span className={clsx(styles.accordionItemPrice)}>{`+${currencyFormat(price)} ₸`}</span>
+          <span className={clsx(styles.accordionItemPrice)}>{`+${currencyFormat(calcFormula(price))} ₸`}</span>
         </div>
       </div>
     </>

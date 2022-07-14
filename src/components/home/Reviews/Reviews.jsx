@@ -49,7 +49,7 @@ const HomeReviews = () => {
 
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getReviews());
+    if (!data) dispatch(getReviews());
   }, []);
   return (
     <>

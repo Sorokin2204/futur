@@ -13,6 +13,10 @@
   margin-bottom: 20px;
 }
 .ourWorkItemText {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
   color: $dark-grey;
   max-width: 506px;
   @include regular-18;

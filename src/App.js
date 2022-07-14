@@ -12,6 +12,8 @@ import ConstructorMainPage from './pages/ConstructorMain';
 import TotalPage from './pages/Total';
 import axios from 'axios';
 import { useEffect } from 'react';
+import WorksPage from './pages/Works';
+import AllWorksPage from './pages/AllWorks';
 function App() {
   useEffect(() => {}, []);
 
@@ -24,7 +26,7 @@ function App() {
     { path: '/contacts', element: <ContactPage /> },
     { path: '/packages', element: <PackagesPage /> },
     { path: '/works/:id', element: <WorkSinglePage /> },
-    // { path: '/works', element: <WorksPage /> },
+    { path: '/works', element: <AllWorksPage /> },
     { path: '/constructor-start', element: <ConstructorPage /> },
     { path: '/constructor', element: <ConstructorMainPage /> },
     { path: '/total', element: <TotalPage /> },

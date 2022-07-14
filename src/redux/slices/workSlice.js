@@ -9,11 +9,11 @@ export const initialStateCity = {
 };
 
 export const getWorks = createAsyncThunk('feedback/getWorks', async () => {
-  return axios.get(`http://91.201.215.243:8009/api/main/works/`);
+  return axios.get(`${env.SERVER_URL}/api/main/works/`);
 });
 export const getSingleWork = createAsyncThunk('feedback/getSingleWork', async ({ id }, { rejectWithValue }) => {
   try {
-    const data = await axios.get(`http://91.201.215.243:8009/api/main/works/${id}`);
+    const data = await axios.get(`${env.SERVER_URL}/api/main/works/${id}`);
     return data;
   } catch (error) {
     return rejectWithValue('Error');

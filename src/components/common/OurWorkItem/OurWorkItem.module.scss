@@ -3,6 +3,9 @@
   width: 100%;
   height: auto;
   margin-bottom: 24px;
+  max-height: 412px;
+  height: 100%;
+  object-fit: cover;
 }
 .ourWorkItemTitle {
   @include bold-26;
@@ -10,6 +13,10 @@
   margin-bottom: 6px;
 }
 .ourWorkItemText {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
   color: $dark-grey;
   max-width: 506px;
   @include regular-18;

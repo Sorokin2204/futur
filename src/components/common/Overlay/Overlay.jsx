@@ -4,7 +4,7 @@ import styles from './Overlay.module.scss';
 import { useDispatch } from 'react-redux';
 import { closeAllModal } from '../../../redux/slices/modalsSlice';
 
-const Overlay = ({ onAfterClose, closes, style }) => {
+const Overlay = ({ onAfterClose, closes, style, light }) => {
   const dispatch = useDispatch();
 
   const onClickOverlay = () => {
@@ -12,7 +12,7 @@ const Overlay = ({ onAfterClose, closes, style }) => {
     onAfterClose?.();
   };
 
-  return <div {...(!closes || { onClick: onClickOverlay })} style={style} className={clsx(styles.overlay)}></div>;
+  return <div {...(!closes || { onClick: onClickOverlay })} style={style} className={clsx(styles.overlay, light && styles.overlayWhite)}></div>;
 };
 
 export default Overlay;

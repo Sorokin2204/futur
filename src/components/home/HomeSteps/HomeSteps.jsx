@@ -33,7 +33,7 @@ const HomeSteps = () => {
   const titleRef = useRef();
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    gsap.defaults({ duration: 0.4 });
+    gsap.defaults({ duration: 0.3 });
     gsap
       .timeline({
         scrollTrigger: {
@@ -43,7 +43,7 @@ const HomeSteps = () => {
       })
       .fromTo(stepsBlockRef.current, { opacity: 0 }, { xPercent: 0, opacity: 1, delay: 0.5 })
       .fromTo(titleRef.current, { opacity: 0 }, { xPercent: 0, opacity: 1 })
-      .fromTo(itemsRef.current, { opacity: 0 }, { xPercent: 0, opacity: 1, stagger: 0.5, duration: 0.4 });
+      .fromTo(itemsRef.current, { opacity: 0 }, { xPercent: 0, opacity: 1, stagger: 0.3, duration: 0.3 });
   }, []);
   const isMobile = useMediaQuery('(max-width: 1240px)');
   return (

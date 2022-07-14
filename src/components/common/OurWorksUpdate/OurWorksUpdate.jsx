@@ -16,6 +16,7 @@ import useMediaQuery from '../../../utils/useMediaQuery';
 import { useSelector } from 'react-redux';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { gsap } from 'gsap/dist/gsap';
+import { useNavigate } from 'react-router';
 const OurWorksUpdate = ({ aboutPage }) => {
   const isMobile = useMediaQuery('(max-width: 1024px)');
   const { data } = useSelector((state) => state.work);
@@ -43,7 +44,7 @@ const OurWorksUpdate = ({ aboutPage }) => {
         .fromTo(btnRef.current, { opacity: 0 }, { opacity: 1 });
     }
   }, [data]);
-
+  const navigate = useNavigate();
   return (
     <>
       <section className={clsx(styles.ourWorks, aboutPage && styles.ourWorksAboutPage)} ref={workBlockRef}>
@@ -87,7 +88,7 @@ const OurWorksUpdate = ({ aboutPage }) => {
               </ul>
             )}
 
-            <Button btnRef={btnRef} small={isMobile} className={clsx(styles.btnMore)}>
+            <Button btnRef={btnRef} small={isMobile} className={clsx(styles.btnMore)} onClick={() => navigate('/works')}>
               Показать больше{' '}
             </Button>
           </div>

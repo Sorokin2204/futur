@@ -16,6 +16,8 @@ import { useForm } from 'react-hook-form';
 const ModalFeedback = ({ onClose, onOpenThankModal }) => {
   const navigate = useNavigate();
   const { formFields, data, loading, error } = useSelector((state) => state.totalFeedback);
+  const { data: totals } = useSelector((state) => state.total);
+  const { data: packages } = useSelector((state) => state.package);
   const form = useForm({ defaultValues: { ...formFields }, shouldFocusError: false });
   const dispatch = useDispatch();
   const {
@@ -26,26 +28,47 @@ const ModalFeedback = ({ onClose, onOpenThankModal }) => {
     formState: { errors },
   } = form;
   const onSubmit = (dataForm) => {
-    {
-      const localStorageParse = {
-        ...localStorage,
-        area: parseInt(localStorage['area']),
-        bathroomsQuantity: parseInt(localStorage['bathroomsQuantity']),
-        doorsQuantity: parseInt(localStorage['doorsQuantity']),
-        roomsQuantity: parseInt(localStorage['roomsQuantity']),
-        ceilingHeight: localStorage['ceilingHeight'] !== 'undefined' ? parseInt(localStorage['ceilingHeight']) : 0,
-        isBuildWalls: JSON.parse(localStorage['isBuildWalls']),
-        isNeedDismantling: JSON.parse(localStorage['isNeedDismantling']),
-        total: JSON.parse(localStorage['total']),
+    let options = totals.map((item) => {
+      const ids = item.options.map((opt) => opt.id);
+      return {
+        [`${item.numberSlug}_options`]: ids,
       };
-      delete localStorageParse.rooms;
-      dispatch(
-        postTotalFeedback({
-          ...dataForm,
-          data: localStorageParse,
-        }),
-      );
-    }
+    });
+    let idPackage = packages?.find((packageItem) => packageItem.slug === localStorage['package']).id;
+    const data = {
+      name: dataForm.name,
+      phone: dataForm.phone,
+      text: dataForm.message,
+      email: dataForm.email,
+      is_need_dismantling: JSON.parse(localStorage['isNeedDismantling']),
+      is_build_walls: JSON.parse(localStorage['isBuildWalls']),
+      bathrooms_quantity: parseInt(localStorage['bathroomsQuantity']),
+      address: localStorage['address'],
+      living_complex: localStorage['livingComplex'],
+      doors_quantity: parseInt(localStorage['doorsQuantity']),
+      city: localStorage['city'],
+      ceiling_height: localStorage['ceilingHeight'] !== 'undefined' ? parseInt(localStorage['ceilingHeight']) : 0,
+      house_type: localStorage['houseType'],
+      rooms_quantity: parseInt(localStorage['roomsQuantity']),
+      area: parseInt(localStorage['area']),
+      packet: idPackage,
+      options,
+    };
+    // const localStorageParse = {
+    //   ...localStorage,
+    //   area: parseInt(localStorage['area']),
+    //   bathroomsQuantity: parseInt(localStorage['bathroomsQuantity']),
+    //   doorsQuantity: parseInt(localStorage['doorsQuantity']),
+    //   roomsQuantity: parseInt(localStorage['roomsQuantity']),
+    //   ceilingHeight: localStorage['ceilingHeight'] !== 'undefined' ? parseInt(localStorage['ceilingHeight']) : 0,
+    //   isBuildWalls: JSON.parse(localStorage['isBuildWalls']),
+    //   isNeedDismantling: JSON.parse(localStorage['isNeedDismantling']),
+    //   total: JSON.parse(localStorage['total']),
+    // };
+    // delete localStorageParse.rooms;
+    console.log(data);
+    dispatch(postTotalFeedback(data));
+
     reset(initialStateTotalFeedback.formFields);
   };
 

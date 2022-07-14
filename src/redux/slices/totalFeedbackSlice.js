@@ -11,8 +11,13 @@ export const initialStateTotalFeedback = {
   },
 };
 
-export const postTotalFeedback = createAsyncThunk('totalFeedback/postTotalFeedback', async (totalFeedbackData) => {
-  return axios.post(`${env.SERVER_URL}/total-feedback`, totalFeedbackData);
+export const postTotalFeedback = createAsyncThunk('totalFeedback/postTotalFeedback', async (totalFeedbackData, { rejectWithValue, fulfillWithValue }) => {
+  try {
+    const data = await axios.post(`${env.SERVER_URL}/api/main/total/`, totalFeedbackData);
+    return data;
+  } catch (error) {
+    return rejectWithValue(error.response);
+  }
 });
 
 export const totalFeedbackSlice = createSlice({

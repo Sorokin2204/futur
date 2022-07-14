@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import Feedback from '../components/common/Feedback/Feedback';
 import Footer from '../components/common/Footer/Footer';
 import Header from '../components/common/Header/Header';
@@ -20,10 +20,11 @@ import { getWorks } from '../redux/slices/workSlice';
 import Wrapper from '../Wrapper';
 const HomePage = () => {
   const dispatch = useDispatch();
-
+  const { data: works } = useSelector((state) => state.work);
+  const { data: packages } = useSelector((state) => state.package);
   useEffect(() => {
-    dispatch(getWorks());
-    dispatch(getPackages());
+    if (!works) dispatch(getWorks());
+    if (!packages) dispatch(getPackages());
   }, []);
 
   return (
